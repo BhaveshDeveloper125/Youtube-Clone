@@ -1,54 +1,50 @@
-import React, { createContext, useRef, useState } from 'react';
-
-// Import Component
-import Card from '../../Components/Cards/Card';
-import TopMenu from '../../Components/Menu/TopMenu';
+import React, { useState } from 'react';
+import TopMenu from '../../Components/TopMenu/TopMenu';
 import SideMenu from '../../Components/SideMenu/SideMenu';
-import Shorts from '../Shorts/Shorts';
-
-export const MenuData = createContext();
+import '../../index.css';
+import Context from '../../Context/Context';
+import { useContext } from 'react';
+import Shorts from '../../Pages/Shorts/Shorts.jsx';
+import Subscription from '../../Pages/Subscription/Subscription.jsx';
+import Cards from '../../Components/Cards/Cards.jsx';
 
 function Home() {
-  const [sidebar, setsidebar] = useState(false);
-
   return (
     <>
-      <MenuData.Provider value={{ sidebar, setsidebar }}>
+      <Context>
         <TopMenu />
 
         <div className="h-screen w-fit flex ">
           <SideMenu />
 
           <div className="flex flex-1 flex-wrap  overflow-auto">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
+            <Cards />
           </div>
         </div>
-
-        {/* To provide the Menu expand functionality on the page Register the page here  */}
-      </MenuData.Provider>
+      </Context>
     </>
   );
 }

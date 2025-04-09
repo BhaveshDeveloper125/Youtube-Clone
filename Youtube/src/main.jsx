@@ -1,14 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
+import App from './App.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Import Pages
 
-import App from './App.jsx';
 import Home from './Pages/Home/Home.jsx';
 import Shorts from './Pages/Shorts/Shorts.jsx';
-import Subscription from './Pages/Subscriptions/Subscription.jsx';
+import Subscription from './Pages/Subscription/Subscription.jsx';
 import You from './Pages/You/You.jsx';
 import YourSection from './Pages/YouSection/YourSection.jsx';
 import History from './Pages/History/History.jsx';

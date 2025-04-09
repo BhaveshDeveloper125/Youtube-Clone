@@ -1,10 +1,6 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { MenuData } from '../../Pages/Home/Home';
+import React, { useContext, useState } from 'react';
+import { Menudata } from '../../Context/Context';
 import { Link } from 'react-router-dom';
-
-// Import Component
-import Card from '../../Components/Cards/Card';
-import SideMenu from '../SideMenu/SideMenu';
 
 // Import Icons
 import YouTUbe from '../../assets/Icons/YouTube.png';
@@ -30,8 +26,7 @@ function TopMenu() {
   const [uploadToggle, setuploadToggle] = useState(false);
   const [ToggleNotification, setToggleNotification] = useState(false);
   const [ToggleUserMenu, setToggleUserMenu] = useState(false);
-
-  const { sidebar, setsidebar } = useContext(MenuData);
+  const { menu, setmenu } = useContext(Menudata);
 
   let li_hover = 'hover:bg-gray-300 cursor-pointer flex items-center gap-2 p-4';
   let li_img = 'size-8';
@@ -47,51 +42,11 @@ function TopMenu() {
     'h-fit w-80 bg-white p-1 rounded-lg absolute right-0 top-12  shadow-black';
   let HideUserMenu = 'hidden';
 
-  function ChangeMenuState() {
-    setmenuexpand(!menuexpand);
-  }
-
-  function ChangeUploadToggle() {
-    setuploadToggle(!uploadToggle);
-    if (ToggleNotification) {
-      setToggleNotification(!ToggleNotification);
-    }
-    if (ToggleUserMenu) {
-      setToggleUserMenu(!ToggleUserMenu);
-    }
-  }
-
-  function Toggle_Notifications() {
-    setToggleNotification(!ToggleNotification);
-    if (uploadToggle) {
-      setuploadToggle(!uploadToggle);
-    }
-
-    if (ToggleUserMenu) {
-      setToggleUserMenu(!ToggleUserMenu);
-    }
-  }
-
-  function ToggleUserMenus() {
-    setToggleUserMenu(!ToggleUserMenu);
-    if (uploadToggle) {
-      setuploadToggle(!uploadToggle);
-    }
-
-    if (ToggleNotification) {
-      setToggleNotification(!ToggleNotification);
-    }
-  }
-
-  function ExpandMenu() {
-    setsidebar(!sidebar);
-  }
-
   return (
     <>
       <div className="h-12 w-full bg-white flex  sticky top-0">
         <button
-          onClick={ExpandMenu}
+          onClick={() => setmenu(!menu)}
           className="h-full w-12  flex flex-col justify-center items-center rounded-full cursor-pointer hover:bg-gray-200"
         >
           <div className="h-1 w-[50%] bg-black mt-1"></div>
@@ -99,11 +54,13 @@ function TopMenu() {
           <div className="h-1 w-[50%] bg-black mt-1"></div>
         </button>
 
-        <img
-          src={YouTUbe}
-          alt="youtube icon"
-          className="h-full w-[8rem] object-cover"
-        />
+        <Link to="/">
+          <img
+            src={YouTUbe}
+            alt="youtube icon"
+            className="h-full w-[8rem] object-cover"
+          />
+        </Link>
 
         <span className="h-full w-[70%] flex justify-center items-center ">
           <form
@@ -125,7 +82,15 @@ function TopMenu() {
         <div className=" flex-1 flex justify-center items-center p-1 gap-4 z-50">
           <span className="">
             <button
-              onClick={ChangeUploadToggle}
+              onClick={() => {
+                setuploadToggle(!uploadToggle);
+                if (ToggleNotification) {
+                  setToggleNotification(!ToggleNotification);
+                }
+                if (ToggleUserMenu) {
+                  setToggleUserMenu(!ToggleUserMenu);
+                }
+              }}
               className="h-full w-full bg-gray-200 cursor-pointer rounded-xl flex justify-center items-center p-2 hover:bg-gray-400"
             >
               + Create
@@ -155,7 +120,16 @@ function TopMenu() {
             <img
               src={bell}
               alt="Notification"
-              onClick={Toggle_Notifications}
+              onClick={() => {
+                setToggleNotification(!ToggleNotification);
+                if (uploadToggle) {
+                  setuploadToggle(!uploadToggle);
+                }
+
+                if (ToggleUserMenu) {
+                  setToggleUserMenu(!ToggleUserMenu);
+                }
+              }}
               className="h-10 w-10 p-[1px] bg-gray-200 rounded-full hover:bg-gray-400 cursor-pointer"
             />
 
@@ -215,7 +189,16 @@ function TopMenu() {
             <img
               src={cutie}
               alt="Notification"
-              onClick={ToggleUserMenus}
+              onClick={() => {
+                setToggleUserMenu(!ToggleUserMenu);
+                if (uploadToggle) {
+                  setuploadToggle(!uploadToggle);
+                }
+
+                if (ToggleNotification) {
+                  setToggleNotification(!ToggleNotification);
+                }
+              }}
               className="h-10 w-10 p-[1px] bg-gray-200 object-cover rounded-full hover:bg-gray-400 cursor-pointer"
             />
             <div
@@ -313,11 +296,11 @@ function TopMenu() {
                   </li>
                 </Link>
                 <hr />
-                <Link>
-                  <li className="hover:bg-gray-300 cursor-pointer  gap-2 text-red-800 text-center p-4 flex justify-center items-center">
-                    <span>Sign out</span>
-                  </li>
-                </Link>
+                {/* <Link> */}
+                <li className="hover:bg-gray-300 cursor-pointer  gap-2 text-red-800 text-center p-4 flex justify-center items-center">
+                  <span>Sign out</span>
+                </li>
+                {/* </Link> */}
               </ul>
             </div>
           </span>

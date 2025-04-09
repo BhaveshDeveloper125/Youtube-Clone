@@ -1,18 +1,11 @@
-import React, { useRef, useState } from 'react';
-import './Card.css';
-import checkmark from '../../assets/Icons/checked.svg';
+import React, { useState } from 'react';
 import goku from '../../assets/Images/5.jpg';
-import cutie from '../../assets/Images/cute.jpg';
+import checkmark from '../../assets/Icons/checked.svg';
 
-function Card() {
-  const [subcardAppearance, setsubcardAppearance] = useState(false);
+function Cards() {
   const [showbar, setshowbar] = useState(false);
   let subcard = 'absolute  bg-white rounded-sm';
   let subcardstyle = 'text-center hover:bg-gray-200 p-2';
-
-  function Togglebar() {
-    setshowbar(!showbar);
-  }
 
   return (
     <>
@@ -48,7 +41,7 @@ function Card() {
           </span>
 
           <div
-            onClick={Togglebar}
+            onClick={() => setshowbar(!showbar)}
             className="h-fit w-fit rounded-full flex flex-col justify-center items-center gap-2 p-1 hover:bg-gray-400 active:bg-gray-500"
           >
             <div className="min-h-1 min-w-1 bg-black rounded-full"></div>
@@ -68,4 +61,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default Cards;
