@@ -17,7 +17,7 @@ function ShortsVideo(props) {
   return (
     <>
       <div className="h-[100%] w-full flex">
-        <video src={props.v} controls className="h-[98%] w-[85%] mt-3.5" />
+        <video src={props.v} controls className="h-[98%] w-[85%] mt-1" />
         <div className=" flex-1 flex flex-col justify-end items-center gap-4">
           <button
             onClick={() => {
