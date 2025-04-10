@@ -12,8 +12,8 @@ function ShortsVideo(props) {
   console.log(`btn : ${liked}`);
 
   let btn =
-    'size-10 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-300';
-  let btnico = 'size-4 object-cover';
+    'size-14 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-300';
+  let btnico = 'size-6 object-cover';
   return (
     <>
       <div className="h-[100%] w-full flex">
