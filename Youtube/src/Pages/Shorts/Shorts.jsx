@@ -20,11 +20,11 @@ function Shorts() {
           <SideMenu />
           <div className="flex flex-1 justify-center items-center">
             <div className="h-screen w-1/3  overflow-auto">
-              <ShortsVideo v={b} />
-              <ShortsVideo v={a} />
               <ShortsVideo v={c} />
               <ShortsVideo v={d} />
               <ShortsVideo v={e} />
+              <ShortsVideo v={b} />
+              <ShortsVideo v={a} />
             </div>
           </div>
         </div>
