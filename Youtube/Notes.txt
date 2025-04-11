@@ -1,2 +1,3 @@
 Complete the Card Component
 Lazy Loading
+Video title on the <title> of the shorts section page
