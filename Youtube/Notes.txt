@@ -1,0 +1,2 @@
+Complete the Card Component
+Lazy Loading
