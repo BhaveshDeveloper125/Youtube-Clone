@@ -75,7 +75,7 @@ function ShortsVideo(props) {
           </div>
 
           <div className="h-12 absolute bottom-0 bg-red-500 flex justify-around">
-            Bhavesh
+              Bhavesh
           </div>
         </div>
         <div className="flex flex-1  flex-col gap-4 justify-center items-center">

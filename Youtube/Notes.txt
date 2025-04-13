@@ -2,3 +2,4 @@
 ->Lazy Loading
 ->Video title on the <title> of the shorts section page
 ->In the card section use the useRef or the useRffect hook to handle the submenu wich appears any thime by just clicking the button
+->Responsive Home Pages
