@@ -131,7 +131,7 @@ function ShortsVideo(props) {
               <img
                 src={screen ? minimize : fullscreen}
                 alt="fullscreen"
-                className="size-10 invert object-cover"
+                className="size-6 invert object-cover"
                 onClick={() => {
                   setscreen(!screen);
                   if (!document.fullscreenElement) {
