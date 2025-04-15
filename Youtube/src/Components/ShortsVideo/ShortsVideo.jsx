@@ -25,6 +25,15 @@ function ShortsVideo(props) {
 
   const videocontrols = useRef(null);
   const [playing, setplaying] = useState(false);
+  const [videVolume, setvideVolume] = useState(1);
+
+  function HandleVolume(e) {
+    let volumes = e.target.value;
+    setvideVolume(volumes);
+    if (videocontrols.current) {
+      videocontrols.current.volume = volumes;
+    }
+  }
 
   let btn =
     'size-10 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-300';
@@ -39,7 +48,7 @@ function ShortsVideo(props) {
             className="h-full w-full rounded-xl object-cover"
           />
           {/* Notice : after applying the positin absolute we apply the top: 0, right: 0, bottom: 0, and left: 0 and the shorthand for the top: 0, right: 0, bottom: 0, and left: 0, is the inset-0 */}
-          <div className="h-12 absolute inset-0 flex justify-around mt-4 rounded-xl opacity-5 hover:opacity-90">
+          <div className="h-12 absolute inset-0 flex justify-around mt-4 rounded-xl opacity-0 hover:opacity-90">
             <button
               onClick={() => {
                 if (playing) {
@@ -53,7 +62,7 @@ function ShortsVideo(props) {
               className="h-full w-12 bg-white opacity-50 rounded-full cursor-pointer object-cover"
             >
               <img
-                src={videplay ? play : pause}
+                src={videplay ? pause : play}
                 alt="play"
                 className="h-full w-full  object-cover "
                 onClick={() => setvidplay(!videplay)}
@@ -62,7 +71,7 @@ function ShortsVideo(props) {
 
             <div className="h-full w-[50%] bg-black opacity-50 rounded-full flex gap-2 justify-around items-center overflow-hidden  pl-2 pr-2">
               <img
-                src={vol ? mute : volume}
+                src={vol ? volume : mute}
                 alt="volume"
                 // 9 and 6
                 className="size-9 invert object-cover cursor-pointer
@@ -73,10 +82,12 @@ function ShortsVideo(props) {
                 type="range"
                 name="volume"
                 min={0}
-                max={100}
+                max={1}
+                step={0.01}
                 value={vol ? undefined : 0}
                 id="volume"
                 className=" flex flex-1 cursor-pointer"
+                onChange={HandleVolume}
               />
             </div>
 
