@@ -38,8 +38,6 @@ function SideMenu() {
   let shrink_menu =
     'h-[8%] w-full flex justify-center items-center gap-4 pl-0 p-4 rounded-lg cursor-pointer hover:bg-gray-300';
 
-  console.log('SideMenu', menu);
-
   return (
     <>
       <div className={menu ? expand : shrink}>

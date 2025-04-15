@@ -25,11 +25,39 @@ function ShortsVideo(props) {
 
   const videocontrols = useRef(null);
   const [playing, setplaying] = useState(false);
-  const [videVolume, setvideVolume] = useState(1);
+  const [videVolume, setvideVolume] = useState(0.5);
+
+  const Volumebar = vol ? (
+    <input
+      type="range"
+      name="volume"
+      min={0}
+      max={1}
+      step={0.01}
+      value={videVolume}
+      id="volume"
+      className=" flex flex-1 cursor-pointer"
+      onChange={HandleVolume}
+    />
+  ) : (
+    <input
+      type="range"
+      name="volume"
+      min={0}
+      max={0}
+      step={0.01}
+      value={videVolume}
+      id="volume"
+      className=" flex flex-1 cursor-pointer"
+      onChange={HandleVolume}
+      readOnly
+    />
+  );
 
   function HandleVolume(e) {
     let volumes = e.target.value;
     setvideVolume(volumes);
+
     if (videocontrols.current) {
       videocontrols.current.volume = volumes;
     }
@@ -76,19 +104,15 @@ function ShortsVideo(props) {
                 // 9 and 6
                 className="size-9 invert object-cover cursor-pointer
               "
-                onClick={() => setvol(!vol)}
+                onClick={() => {
+                  if (videocontrols.current) {
+                    videocontrols.current.muted = !videocontrols.current.muted;
+                  }
+
+                  setvol(!vol);
+                }}
               />
-              <input
-                type="range"
-                name="volume"
-                min={0}
-                max={1}
-                step={0.01}
-                value={vol ? undefined : 0}
-                id="volume"
-                className=" flex flex-1 cursor-pointer"
-                onChange={HandleVolume}
-              />
+              <span>{Volumebar}</span>
             </div>
 
             <button className="h-full w-12 bg-black flex justify-center items-center opacity-50  rounded-full object-cover cursor-pointer">
@@ -101,7 +125,7 @@ function ShortsVideo(props) {
             </button>
           </div>
 
-          <div className="h-12 absolute bottom-0 bg-red-500 flex justify-around">
+          <div className="h-12 absolute bottom-0 bg-red-500 rounded-4xl flex justify-around">
             Bhavesh
           </div>
         </div>
