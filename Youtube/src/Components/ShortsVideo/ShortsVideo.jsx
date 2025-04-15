@@ -26,6 +26,7 @@ function ShortsVideo(props) {
   const videocontrols = useRef(null);
   const [playing, setplaying] = useState(false);
   const [videVolume, setvideVolume] = useState(0.5);
+  const [progress, setprogress] = useState(0);
 
   const Volumebar = vol ? (
     <input
@@ -63,6 +64,16 @@ function ShortsVideo(props) {
     }
   }
 
+  function HandleProgressBar() {
+    if (videocontrols.current) {
+      let currentTime = videocontrols.current.currentTime;
+      let duration = videocontrols.current.duration;
+      let ProgressPercentage = (currentTime / duration) * 100;
+      setprogress(!ProgressPercentage);
+      console.log(`Progress : ${ProgressPercentage}`);
+    }
+  }
+
   let btn =
     'size-10 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-300';
   let btnico = 'size-6 object-cover';
@@ -73,6 +84,7 @@ function ShortsVideo(props) {
           <video
             ref={videocontrols}
             src={props.v}
+            onTimeUpdate={HandleProgressBar}
             className="h-full w-full rounded-xl object-cover"
           />
           {/* Notice : after applying the positin absolute we apply the top: 0, right: 0, bottom: 0, and left: 0 and the shorthand for the top: 0, right: 0, bottom: 0, and left: 0, is the inset-0 */}
@@ -127,6 +139,18 @@ function ShortsVideo(props) {
 
           <div className="h-12 absolute bottom-0 bg-red-500 rounded-4xl flex justify-around">
             Bhavesh
+            <div
+            // className="progress-bar relative h-2 bg-gray-300 rounded cursor-pointer"
+            // onClick={handleProgressClick}
+            >
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={progress}
+                className="w-full"
+              />
+            </div>
           </div>
         </div>
         <div className="flex flex-1  flex-col gap-4 justify-center items-center">
