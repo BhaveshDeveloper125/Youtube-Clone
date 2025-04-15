@@ -22,11 +22,13 @@ function ShortsVideo(props) {
   const [screen, setscreen] = useState(false);
 
   // Controllers Settings and satets
-
   const videocontrols = useRef(null);
   const [playing, setplaying] = useState(false);
   const [videVolume, setvideVolume] = useState(0.5);
   const [progress, setprogress] = useState(0);
+
+  //Fullscreen Settings and State
+  const FullscreenRef = useRef(document.documentElement);
 
   const Volumebar = vol ? (
     <input
@@ -69,11 +71,9 @@ function ShortsVideo(props) {
       let currentTime = videocontrols.current.currentTime;
       let duration = videocontrols.current.duration;
       let ProgressPercentage = (currentTime / duration) * 100;
-      setprogress(!ProgressPercentage);
-      console.log(`Progress : ${ProgressPercentage}`);
+      setprogress(ProgressPercentage);
     }
   }
-
   let btn =
     'size-10 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-300';
   let btnico = 'size-6 object-cover';
@@ -132,25 +132,33 @@ function ShortsVideo(props) {
                 src={screen ? minimize : fullscreen}
                 alt="fullscreen"
                 className="size-10 invert object-cover"
-                onClick={() => setscreen(!screen)}
+                onClick={() => {
+                  setscreen(!screen);
+                  if (!document.fullscreenElement) {
+                    FullscreenRef.current.requestFullscreen();
+                  } else {
+                    document.exitFullscreen();
+                  }
+                }}
               />
             </button>
           </div>
 
-          <div className="h-12 absolute bottom-0 bg-red-500 rounded-4xl flex justify-around">
-            Bhavesh
-            <div
-            // className="progress-bar relative h-2 bg-gray-300 rounded cursor-pointer"
-            // onClick={handleProgressClick}
-            >
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value={progress}
-                className="w-full"
-              />
-            </div>
+          <div className=" h-fit w-full absolute bottom-0 bg-red-500 p-2 rounded-xl ">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              step={0.01}
+              value={progress}
+              onChange={(e) => {
+                const seekTime =
+                  (e.target.value / 100) * videocontrols.current.duration;
+                videocontrols.current.currentTime = seekTime;
+                setprogress(e.target.value);
+              }}
+              className="w-full"
+            />
           </div>
         </div>
         <div className="flex flex-1  flex-col gap-4 justify-center items-center">
