@@ -1,4 +1,8 @@
 import React, { useRef, useState, useTransition } from 'react';
+import { Link } from 'react-router-dom';
+
+// Import Css files
+import './Shorts.css';
 
 // Importing Icons
 import like from '../../assets/Icons/like.svg';
@@ -144,20 +148,51 @@ function ShortsVideo(props) {
             </button>
           </div>
 
-          <div className=" h-fit w-full absolute bottom-0 bg-red-500 p-2 rounded-xl ">
+          <div className=" h-fit w-full absolute bottom-0 p-4 rounded-xl ">
+            <div className="h-13 w-full flex ">
+              <Link className="h-13 w-full bg-red-500 p-1 flex">
+                <img
+                  src={cutie}
+                  alt="channel-icon"
+                  className="h-full w-1/6 object-cover rounded-full"
+                />
+                <h2 className="w-fit p-2 text-white font-bold text-sm flex items-center truncate overflow-auto">
+                  The Valley of Music
+                </h2>
+              </Link>
+              <button className="bg-white rounded-4xl cursor-pointer p-4 font-bold text-sm flex justify-center items-center ">
+                Subscribe
+              </button>
+            </div>
+
+            <div className="h-13 w-full  p-2 text-white font-bold  line-clamp-2">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              velit rerum natus atque ullam corrupti sequi alias maxime
+              inventore pariatur, consequatur, magni officia ab? Suscipit eos
+              exercitationem corporis quasi velit? Exercitationem, dolor? Modi
+              distinctio porro voluptate, sit id reprehenderit sunt repellat et
+              beatae quos molestias iure voluptates cum eligendi rem veritatis.
+              Reiciendis sapiente, minima accusantium voluptatum cum commodi
+              sint? Assumenda.
+            </div>
             <input
               type="range"
               min="0"
               max="100"
               step={0.01}
               value={progress}
+              id="slider"
               onChange={(e) => {
                 const seekTime =
                   (e.target.value / 100) * videocontrols.current.duration;
                 videocontrols.current.currentTime = seekTime;
                 setprogress(e.target.value);
               }}
-              className="w-full"
+              className="h-1 w-full accent-red-500 cursor-pointer
+                          [&::-webkit-slider-thumb]:opacity-0 
+                          hover:[&::-webkit-slider-thumb]:opacity-100 
+                          [&::-moz-range-thumb]:opacity-0 
+                          hover:[&::-moz-range-thumb]:opacity-100"
             />
           </div>
         </div>
