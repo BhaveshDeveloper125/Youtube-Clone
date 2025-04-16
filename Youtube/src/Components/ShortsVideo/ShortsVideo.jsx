@@ -83,12 +83,23 @@ function ShortsVideo(props) {
   let btnico = 'size-6 object-cover';
   return (
     <>
-      <div className="h-full w-full flex">
+      <div className="h-full w-full flex cursor-pointer">
         <div className="h-[90%] w-[85%] rounded-xl aspect-[16/9] relative">
           <video
             ref={videocontrols}
             src={props.v}
             onTimeUpdate={HandleProgressBar}
+            onClick={() => {
+              if (playing) {
+                videocontrols.current.pause();
+                setplaying(false);
+                setvidplay(false);
+              } else {
+                videocontrols.current.play();
+                setplaying(true);
+                setvidplay(true);
+              }
+            }}
             className="h-full w-full rounded-xl object-cover"
           />
           {/* Notice : after applying the positin absolute we apply the top: 0, right: 0, bottom: 0, and left: 0 and the shorthand for the top: 0, right: 0, bottom: 0, and left: 0, is the inset-0 */}
@@ -149,15 +160,17 @@ function ShortsVideo(props) {
           </div>
 
           <div className=" h-fit w-full absolute bottom-0 p-4 rounded-xl ">
-            <div className="h-13 w-full flex ">
-              <Link className="h-13 w-full bg-red-500 p-1 flex">
+            <div className="h-13 w-full flex p-2 ">
+              <Link className="h-full w-[75%]  p-1 flex  items-center ">
                 <img
                   src={cutie}
                   alt="channel-icon"
-                  className="h-full w-1/6 object-cover rounded-full"
+                  className="size-13 object-cover rounded-full"
                 />
-                <h2 className="w-fit p-2 text-white font-bold text-sm flex items-center truncate overflow-auto">
-                  The Valley of Music
+                <h2 className="w-[70%]  p-2 text-white font-bold text-sm truncate">
+                  Channel Name TitlesChannel Name TitlesChannel Name
+                  TitlesChannel Name TitlesChannel Name TitlesChannel Name
+                  TitlesChannel Name TitlesChannel Name Titles
                 </h2>
               </Link>
               <button className="bg-white rounded-4xl cursor-pointer p-4 font-bold text-sm flex justify-center items-center ">
@@ -196,7 +209,7 @@ function ShortsVideo(props) {
             />
           </div>
         </div>
-        <div className="flex flex-1  flex-col gap-4 justify-center items-center">
+        <div className="h-screen pt-25 flex  flex-col gap-4 justify-center items-center">
           <button
             onClick={() => {
               setliked(!liked);
@@ -234,11 +247,11 @@ function ShortsVideo(props) {
             <div className="size-1 bg-black rounded-full"></div>
             <div className="size-1 bg-black rounded-full"></div>
           </button>
-          <div className="size-14 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-300">
+          <div className="size-14 bg-gray-100 p-1 rounded-xl m-1 flex justify-center items-center cursor-pointer hover:bg-gray-300">
             <img
               src={cutie}
               alt="img"
-              className="size-full rounded-full object-cover"
+              className="size-full rounded-xl object-cover"
             />
           </div>
         </div>
