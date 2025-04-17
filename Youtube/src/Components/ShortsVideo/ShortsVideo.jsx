@@ -22,6 +22,7 @@ function ShortsVideo(props) {
   const [videplay, setvidplay] = useState(false);
   const [vol, setvol] = useState(true);
   const [screen, setscreen] = useState(false);
+  const [showbar, setshowbar] = useState(true);
 
   // Controllers Settings and satets
   const videocontrols = useRef(null);
@@ -79,6 +80,7 @@ function ShortsVideo(props) {
   let btn =
     'size-10 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-300';
   let btnico = 'size-6 object-cover';
+  let subcardstyle = 'text-center hover:bg-gray-200 p-2';
   return (
     <>
       <div className="h-full w-full flex cursor-pointer">
@@ -176,14 +178,14 @@ function ShortsVideo(props) {
             </div>
 
             <div className="h-13 w-full  p-2 text-white font-bold  line-clamp-2">
-              https://www.youtube.com/shorts/wVneenXYZIU Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Vitae velit rerum natus atque
-              ullam corrupti sequi alias maxime inventore pariatur, consequatur,
-              magni officia ab? Suscipit eos exercitationem corporis quasi
-              velit? Exercitationem, dolor? Modi distinctio porro voluptate, sit
-              id reprehenderit sunt repellat et beatae quos molestias iure
-              voluptates cum eligendi rem veritatis. Reiciendis sapiente, minima
-              accusantium voluptatum cum commodi sint? Assumenda.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              velit rerum natus atque ullam corrupti sequi alias maxime
+              inventore pariatur, consequatur, magni officia ab? Suscipit eos
+              exercitationem corporis quasi velit? Exercitationem, dolor? Modi
+              distinctio porro voluptate, sit id reprehenderit sunt repellat et
+              beatae quos molestias iure voluptates cum eligendi rem veritatis.
+              Reiciendis sapiente, minima accusantium voluptatum cum commodi
+              sint? Assumenda.
             </div>
             <input
               type="range"
@@ -239,10 +241,12 @@ function ShortsVideo(props) {
             <img src={share} alt="share" className={btnico} />
           </button>
           <p className=" text-sm font-semibold">Share</p>
-          <button className={`${btn} flex flex-col gap-1`}>
-            <div className="size-1 bg-black rounded-full"></div>
-            <div className="size-1 bg-black rounded-full"></div>
-            <div className="size-1 bg-black rounded-full"></div>
+          <button className={`${btn} `}>
+            <span className="flex flex-col gap-1">
+              <div className="size-1 bg-black rounded-full"></div>
+              <div className="size-1 bg-black rounded-full"></div>
+              <div className="size-1 bg-black rounded-full"></div>
+            </span>
           </button>
           <div className="size-14 bg-gray-100 p-1 rounded-xl m-1 flex justify-center items-center cursor-pointer hover:bg-gray-300">
             <img
