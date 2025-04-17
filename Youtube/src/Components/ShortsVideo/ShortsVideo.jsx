@@ -1,9 +1,6 @@
 import React, { useRef, useState, useTransition } from 'react';
 import { Link } from 'react-router-dom';
 
-// Import Css files
-import './Shorts.css';
-
 // Importing Icons
 import like from '../../assets/Icons/like.svg';
 import comment from '../../assets/Icons/comment.svg';
@@ -14,6 +11,7 @@ import fullscreen from '../../assets/Icons/fullscreen.svg';
 import minimize from '../../assets/Icons/minimize.svg';
 import volume from '../../assets/Icons/volume.svg';
 import mute from '../../assets/Icons/mute.svg';
+import music from '../../assets/Icons/music.svg';
 
 // Importing Images
 import cutie from '../../assets/Images/cute.jpg';
@@ -103,7 +101,7 @@ function ShortsVideo(props) {
             className="h-full w-full rounded-xl object-cover"
           />
           {/* Notice : after applying the positin absolute we apply the top: 0, right: 0, bottom: 0, and left: 0 and the shorthand for the top: 0, right: 0, bottom: 0, and left: 0, is the inset-0 */}
-          <div className="h-12 absolute inset-0 flex justify-around mt-4 rounded-xl opacity-0 hover:opacity-90">
+          <div className="h-12 absolute inset-0 flex justify-around mt-4 rounded-xl opacity-0 hover:opacity-100">
             <button
               onClick={() => {
                 if (playing) {
@@ -114,7 +112,7 @@ function ShortsVideo(props) {
                   setplaying(true);
                 }
               }}
-              className="h-full w-12 bg-white opacity-50 rounded-full cursor-pointer object-cover"
+              className="h-full w-12   rounded-full cursor-pointer object-cover"
             >
               <img
                 src={videplay ? pause : play}
@@ -124,11 +122,10 @@ function ShortsVideo(props) {
               />
             </button>
 
-            <div className="h-full w-[50%] bg-black opacity-50 rounded-full flex gap-2 justify-around items-center overflow-hidden  pl-2 pr-2">
+            <div className="h-full w-[60%] bg-black/50 rounded-full flex gap-2 justify-around items-center overflow-hidden  pl-2 pr-2">
               <img
                 src={vol ? volume : mute}
                 alt="volume"
-                // 9 and 6
                 className="size-9 invert object-cover cursor-pointer
               "
                 onClick={() => {
@@ -142,7 +139,7 @@ function ShortsVideo(props) {
               <span>{Volumebar}</span>
             </div>
 
-            <button className="h-full w-12 bg-black flex justify-center items-center opacity-50  rounded-full object-cover cursor-pointer">
+            <button className="h-full w-12 bg-black/50 flex justify-center items-center  rounded-full object-cover cursor-pointer">
               <img
                 src={screen ? minimize : fullscreen}
                 alt="fullscreen"
@@ -179,14 +176,14 @@ function ShortsVideo(props) {
             </div>
 
             <div className="h-13 w-full  p-2 text-white font-bold  line-clamp-2">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              velit rerum natus atque ullam corrupti sequi alias maxime
-              inventore pariatur, consequatur, magni officia ab? Suscipit eos
-              exercitationem corporis quasi velit? Exercitationem, dolor? Modi
-              distinctio porro voluptate, sit id reprehenderit sunt repellat et
-              beatae quos molestias iure voluptates cum eligendi rem veritatis.
-              Reiciendis sapiente, minima accusantium voluptatum cum commodi
-              sint? Assumenda.
+              https://www.youtube.com/shorts/wVneenXYZIU Lorem, ipsum dolor sit
+              amet consectetur adipisicing elit. Vitae velit rerum natus atque
+              ullam corrupti sequi alias maxime inventore pariatur, consequatur,
+              magni officia ab? Suscipit eos exercitationem corporis quasi
+              velit? Exercitationem, dolor? Modi distinctio porro voluptate, sit
+              id reprehenderit sunt repellat et beatae quos molestias iure
+              voluptates cum eligendi rem veritatis. Reiciendis sapiente, minima
+              accusantium voluptatum cum commodi sint? Assumenda.
             </div>
             <input
               type="range"
