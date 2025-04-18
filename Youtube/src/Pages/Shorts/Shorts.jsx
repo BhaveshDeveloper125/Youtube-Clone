@@ -7,6 +7,7 @@ import ShortsVideo from '../../Components/ShortsVideo/ShortsVideo';
 // Importing Icons
 import arrow from '../../assets/Icons/up_arrow.svg';
 import cross from '../../assets/Icons/close.svg';
+import sorting from '../../assets/Icons/sort.svg';
 
 // Importing Videos
 import a from '../../assets/Videos/s1.mp4';
@@ -18,6 +19,10 @@ import e from '../../assets/Videos/s5.mp4';
 function Shorts() {
   const [shortsMenu, setshortsMenu] = useState(false);
   const [comment, setcomment] = useState(false);
+
+  // let sorting_comment =
+  //   'p-4 rounded-2xl text-center font-bold hover:bg-gray-200';
+
   return (
     <>
       <Context>
@@ -74,14 +79,37 @@ function Shorts() {
             <div
               className={
                 comment
-                  ? 'h-150 w-100 bg-green-500 p-1 transition duration-1000 '
+                  ? 'h-150 w-100 border border-black rounded-2xl overflow-auto p-1 transition duration-1000 '
                   : ' hidden w-0 transition duration-1000'
               }
             >
-              <div className="h-10 w-full bg-red-500 flex  ">
-                <h1>comments</h1>
-                <button onClick={() => setcomment(!comment)}>
-                  <img src={cross} alt="close" className="size-10" />
+              <div className="h-10 w-full flex  ">
+                <h1 className="text-xl font-bold  p-2">comments</h1>
+                <h1 className=" p-2">100</h1>
+                <div className="flex flex-1 p-1"></div>
+
+                <div className="w-20 flex flex-col  p-2 justify-center items-center relative cursor-pointer ">
+                  <img
+                    src={sorting}
+                    alt="sort"
+                    className="h-6 active:bg-gray-200"
+                  />
+                  <div className="h-20 w-40 border border-black rounded-2xl p-1 absolute top-10 right-8 hidden">
+                    <ul className="size-full">
+                      <li className="h-[50%] w-full bg-gray-300 p-2 text-center hover:bg-gray-100">
+                        Top Comments
+                      </li>
+                      <li className="h-[50%] w-full  p-2 text-center hover:bg-gray-100">
+                        Newest First
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setcomment(!comment)}
+                  className="cursor-pointer"
+                >
+                  <img src={cross} alt="close" className="size-6" />
                 </button>
               </div>
               <hr />
