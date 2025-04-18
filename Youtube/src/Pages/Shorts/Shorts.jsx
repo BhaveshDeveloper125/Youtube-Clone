@@ -6,6 +6,7 @@ import ShortsVideo from '../../Components/ShortsVideo/ShortsVideo';
 
 // Importing Icons
 import arrow from '../../assets/Icons/up_arrow.svg';
+import cross from '../../assets/Icons/close.svg';
 
 // Importing Videos
 import a from '../../assets/Videos/s1.mp4';
@@ -74,9 +75,17 @@ function Shorts() {
               className={
                 comment
                   ? 'h-150 w-100 bg-green-500 p-1 transition duration-1000 '
-                  : ' w-0 transition duration-1000'
+                  : ' hidden w-0 transition duration-1000'
               }
-            ></div>
+            >
+              <div className="h-10 w-full bg-red-500 flex  ">
+                <h1>comments</h1>
+                <button onClick={() => setcomment(!comment)}>
+                  <img src={cross} alt="close" className="size-10" />
+                </button>
+              </div>
+              <hr />
+            </div>
           </div>
         </div>
       </Context>
