@@ -208,7 +208,7 @@ function ShortsVideo(props) {
             />
           </div>
         </div>
-        <div className="h-screen pt-25 flex  flex-col gap-4 justify-center items-center">
+        <div className="h-screen pt-25 relative flex  flex-col gap-4 justify-center items-center">
           <button
             onClick={() => {
               setliked(!liked);
@@ -241,6 +241,25 @@ function ShortsVideo(props) {
             <img src={share} alt="share" className={btnico} />
           </button>
           <p className=" text-sm font-semibold">Share</p>
+
+          <ul className="h-fit w-80 bg-white rounded-2xl p-1 absolute right-6 bottom-50 z-10 hidden">
+            <li className="p-4 rounded-2xl text-center hover:bg-gray-200 ">
+              Description
+            </li>
+            <li className="p-4 rounded-2xl text-center hover:bg-gray-200 ">
+              Save to Playlist
+            </li>
+            <li className="p-4 rounded-2xl text-center hover:bg-gray-200 ">
+              Dont recommend this channel
+            </li>
+            <li className="p-4 rounded-2xl text-center hover:bg-gray-200 ">
+              Report
+            </li>
+            <li className="p-4 rounded-2xl text-center hover:bg-gray-200 ">
+              Feedback
+            </li>
+          </ul>
+
           <button className={`${btn} `}>
             <span className="flex flex-col gap-1">
               <div className="size-1 bg-black rounded-full"></div>
