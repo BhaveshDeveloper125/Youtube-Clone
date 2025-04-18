@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // Importing Icons
 import like from '../../assets/Icons/like.svg';
-import comment from '../../assets/Icons/comment.svg';
+import commentico from '../../assets/Icons/comment.svg';
 import share from '../../assets/Icons/share.svg';
 import play from '../../assets/Icons/play.svg';
 import pause from '../../assets/Icons/pause.png';
@@ -29,6 +29,8 @@ function ShortsVideo(props) {
   const [playing, setplaying] = useState(false);
   const [videVolume, setvideVolume] = useState(0.5);
   const [progress, setprogress] = useState(0);
+
+  const { v, shortsMenu, setshortsMenu, comment, setcomment } = props;
 
   //Fullscreen Settings and State
   const FullscreenRef = useRef(document.documentElement);
@@ -80,6 +82,7 @@ function ShortsVideo(props) {
   let btn =
     'size-10 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-300';
   let btnico = 'size-6 object-cover';
+  let shorts_menu = 'p-4 rounded-2xl text-center font-bold hover:bg-gray-200';
   let subcardstyle = 'text-center hover:bg-gray-200 p-2';
   return (
     <>
@@ -233,8 +236,13 @@ function ShortsVideo(props) {
             <img src={like} alt="dislike" className={`${btnico} rotate-180 `} />
           </button>
           <p className=" text-sm font-semibold">Dislike</p>
-          <button className={btn}>
-            <img src={comment} alt="comment" className={btnico} />
+          <button
+            onClick={() => {
+              setcomment(!comment);
+            }}
+            className={btn}
+          >
+            <img src={commentico} alt="comment" className={btnico} />
           </button>
           <p className=" text-sm font-semibold">999</p>
           <button className={btn}>
@@ -242,25 +250,28 @@ function ShortsVideo(props) {
           </button>
           <p className=" text-sm font-semibold">Share</p>
 
-          <ul className="h-fit w-80 bg-white rounded-2xl p-1 absolute right-6 bottom-50 z-10 hidden">
-            <li className="p-4 rounded-2xl text-center hover:bg-gray-200 ">
-              Description
-            </li>
-            <li className="p-4 rounded-2xl text-center hover:bg-gray-200 ">
-              Save to Playlist
-            </li>
-            <li className="p-4 rounded-2xl text-center hover:bg-gray-200 ">
-              Dont recommend this channel
-            </li>
-            <li className="p-4 rounded-2xl text-center hover:bg-gray-200 ">
-              Report
-            </li>
-            <li className="p-4 rounded-2xl text-center hover:bg-gray-200 ">
+          <ul
+            className={
+              shortsMenu
+                ? 'h-fit w-80 bg-white rounded-2xl p-1 absolute right-6 bottom-50 z-10 '
+                : 'hidden'
+            }
+          >
+            <li className={shorts_menu}>Description</li>
+            <li className={shorts_menu}>Save to Playlist</li>
+            <li className={shorts_menu}>Dont recommend this channel</li>
+            <li className={shorts_menu}>Report</li>
+            <li className="p-4 rounded-2xl text-center font-bold hover:bg-gray-200 ">
               Feedback
             </li>
           </ul>
 
-          <button className={`${btn} `}>
+          <button
+            onClick={() => {
+              setshortsMenu(!shortsMenu);
+            }}
+            className={`${btn} `}
+          >
             <span className="flex flex-col gap-1">
               <div className="size-1 bg-black rounded-full"></div>
               <div className="size-1 bg-black rounded-full"></div>
