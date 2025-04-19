@@ -124,6 +124,9 @@ function Shorts() {
               </div>
               <hr />
               <Comments />
+              <Comments />
+              <Comments />
+              <Comments />
             </div>
           </div>
         </div>

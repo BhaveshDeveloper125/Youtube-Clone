@@ -8,7 +8,7 @@ function Comments() {
   const [expand, setexpand] = useState(false);
   return (
     <>
-      <div className="h-fit w-full flex gap-4">
+      <div className="h-fit w-full p-4 flex gap-4">
         <div className="h-full w-fit ">
           <img
             src={cutie}
@@ -17,7 +17,10 @@ function Comments() {
           />
         </div>
         <div className="flex flex-col flex-1">
-          <span className="text-black font-bold">@Bhavesh</span>
+          <span>
+            <span className="text-black font-bold">@Bhavesh</span>
+            <span className="text-gray-400 p-2">1 hour ago</span>
+          </span>
           <span className={expand ? '' : 'line-clamp-4'}>
             comment comment comment comment comment comment comment comment
             comment comment comment comment comment comment comment comment
@@ -25,7 +28,7 @@ function Comments() {
             comment comment comment comment comment comment comment comment
             comment comment comment comment comment comment comment comment{' '}
           </span>
-          <Link onClick={() => setexpand(!expand)}>
+          <Link onClick={() => setexpand(!expand)} className="">
             {' '}
             {expand ? 'show less ' : 'show more'}{' '}
           </Link>
