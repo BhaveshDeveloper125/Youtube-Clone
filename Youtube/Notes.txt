@@ -7,3 +7,10 @@
 ->On the Shorts Section play the video when on the screen else pause the video (mounting and unmounting)
 ->In the card section use the useRef or the useRffect hook to handle the submenu wich appears any thime by just clicking the button
 ->Responsive Home Pages
+
+
+
+
+
+**While writing backend**
+->in the shorts comment section of the sorting the comment section see change the design  , if the top comment is selected then the bg color of it shoud be different

@@ -3,6 +3,7 @@ import TopMenu from '../../Components/TopMenu/TopMenu';
 import SideMenu from '../../Components/SideMenu/SideMenu';
 import Context from '../../Context/Context';
 import ShortsVideo from '../../Components/ShortsVideo/ShortsVideo';
+import Comments from '../../Components/Comments/Comments';
 
 // Importing Icons
 import arrow from '../../assets/Icons/up_arrow.svg';
@@ -19,6 +20,7 @@ import e from '../../assets/Videos/s5.mp4';
 function Shorts() {
   const [shortsMenu, setshortsMenu] = useState(false);
   const [comment, setcomment] = useState(false);
+  const [sortcomment, setsortcomment] = useState(false);
 
   // let sorting_comment =
   //   'p-4 rounded-2xl text-center font-bold hover:bg-gray-200';
@@ -92,14 +94,22 @@ function Shorts() {
                   <img
                     src={sorting}
                     alt="sort"
-                    className="h-6 active:bg-gray-200"
+                    onClick={() => setsortcomment(!sortcomment)}
+                    className="h-8 p-2 rounded-md flex justify-center items-center
+                     active:bg-gray-200"
                   />
-                  <div className="h-20 w-40 border border-black rounded-2xl p-1 absolute top-10 right-8 hidden">
+                  <div
+                    className={
+                      sortcomment
+                        ? 'h-fit w-40 border border-gray-200 rounded-2xl p-1 absolute top-10 right-8 '
+                        : 'hidden'
+                    }
+                  >
                     <ul className="size-full">
-                      <li className="h-[50%] w-full bg-gray-300 p-2 text-center hover:bg-gray-100">
+                      <li className="h-[50%] w-full bg-gray-300 rounded-xl p-2 text-center hover:bg-gray-100">
                         Top Comments
                       </li>
-                      <li className="h-[50%] w-full  p-2 text-center hover:bg-gray-100">
+                      <li className="h-[50%] w-full rounded-xl p-2 text-center hover:bg-gray-100">
                         Newest First
                       </li>
                     </ul>
@@ -113,6 +123,7 @@ function Shorts() {
                 </button>
               </div>
               <hr />
+              <Comments />
             </div>
           </div>
         </div>
