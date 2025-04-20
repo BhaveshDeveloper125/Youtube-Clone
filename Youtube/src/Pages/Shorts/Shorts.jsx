@@ -81,11 +81,11 @@ function Shorts() {
             <div
               className={
                 comment
-                  ? 'h-150 w-100 border border-black rounded-2xl overflow-auto p-1 transition duration-1000 '
+                  ? 'h-150 w-100 border  border-black rounded-2xl overflow-auto [&::-webkit-scrollbar]:hidden p-1 transition duration-1000 '
                   : ' hidden w-0 transition duration-1000'
               }
             >
-              <div className="h-10 w-full flex  ">
+              <div className="h-12 w-full bg-white sticky top-0 rounded-2xl  flex  ">
                 <h1 className="text-xl font-bold  p-2">comments</h1>
                 <h1 className=" p-2">100</h1>
                 <div className="flex flex-1 p-1"></div>
@@ -123,10 +123,12 @@ function Shorts() {
                 </button>
               </div>
               <hr />
-              <Comments />
-              <Comments />
-              <Comments />
-              <Comments />
+              <div className="overflow-auto">
+                <Comments />
+                <Comments />
+                <Comments />
+                <Comments />
+              </div>
             </div>
           </div>
         </div>

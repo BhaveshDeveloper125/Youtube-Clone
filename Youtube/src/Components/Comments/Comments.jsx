@@ -28,7 +28,10 @@ function Comments() {
             comment comment comment comment comment comment comment comment
             comment comment comment comment comment comment comment comment{' '}
           </span>
-          <Link onClick={() => setexpand(!expand)} className="">
+          <Link
+            onClick={() => setexpand(!expand)}
+            className="text-gray-500 hover:underline"
+          >
             {' '}
             {expand ? 'show less ' : 'show more'}{' '}
           </Link>
