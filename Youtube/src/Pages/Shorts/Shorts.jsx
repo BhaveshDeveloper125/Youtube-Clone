@@ -105,7 +105,7 @@ function Shorts() {
                         : 'hidden'
                     }
                   >
-                    <ul className="size-full">
+                    <ul className="size-full bg-white">
                       <li className="h-[50%] w-full bg-gray-300 rounded-xl p-2 text-center hover:bg-gray-100">
                         Top Comments
                       </li>
@@ -123,12 +123,13 @@ function Shorts() {
                 </button>
                 <hr />
               </div>
-              <div className="overflow-auto">
+              <div>
                 <Comments />
                 <Comments />
                 <Comments />
                 <Comments />
               </div>
+              <div>add commment</div>
             </div>
           </div>
         </div>
