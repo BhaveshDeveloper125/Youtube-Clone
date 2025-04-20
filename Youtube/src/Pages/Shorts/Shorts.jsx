@@ -85,7 +85,7 @@ function Shorts() {
                   : ' hidden w-0 transition duration-1000'
               }
             >
-              <div className="h-12 w-full bg-white sticky top-0 rounded-2xl  flex  ">
+              <div className="h-12 w-full bg-white border-b border-black sticky top-0  flex  ">
                 <h1 className="text-xl font-bold  p-2">comments</h1>
                 <h1 className=" p-2">100</h1>
                 <div className="flex flex-1 p-1"></div>
@@ -121,8 +121,8 @@ function Shorts() {
                 >
                   <img src={cross} alt="close" className="size-6" />
                 </button>
+                <hr />
               </div>
-              <hr />
               <div className="overflow-auto">
                 <Comments />
                 <Comments />
