@@ -34,44 +34,54 @@ function Shorts() {
         <TopMenu />
         <div className="flex">
           <SideMenu />
-          <div className="flex flex-1   justify-center items-center">
+          <div className="flex flex-1  justify-center items-center">
             {/* shorts */}
-            <div className="h-screen w-1/3  overflow-auto">
-              <ShortsVideo
-                v={a}
-                shortsMenu={shortsMenu}
-                setshortsMenu={setshortsMenu}
-                comment={comment}
-                setcomment={setcomment}
-              />
-              <ShortsVideo
-                v={b}
-                shortsMenu={shortsMenu}
-                setshortsMenu={setshortsMenu}
-                comment={comment}
-                setcomment={setcomment}
-              />
-              <ShortsVideo
-                v={c}
-                shortsMenu={shortsMenu}
-                setshortsMenu={setshortsMenu}
-                comment={comment}
-                setcomment={setcomment}
-              />
-              <ShortsVideo
-                v={d}
-                shortsMenu={shortsMenu}
-                setshortsMenu={setshortsMenu}
-                comment={comment}
-                setcomment={setcomment}
-              />
-              <ShortsVideo
-                v={e}
-                shortsMenu={shortsMenu}
-                setshortsMenu={setshortsMenu}
-                comment={comment}
-                setcomment={setcomment}
-              />
+            <div className="h-screen w-1/3 overflow-y-auto scroll-smooth snap-y snap-mandatory">
+              <div className="h-screen snap-start">
+                <ShortsVideo
+                  v={a}
+                  shortsMenu={shortsMenu}
+                  setshortsMenu={setshortsMenu}
+                  comment={comment}
+                  setcomment={setcomment}
+                />
+              </div>
+              <div className="h-screen snap-start">
+                <ShortsVideo
+                  v={b}
+                  shortsMenu={shortsMenu}
+                  setshortsMenu={setshortsMenu}
+                  comment={comment}
+                  setcomment={setcomment}
+                />
+              </div>
+              <div className="h-screen snap-start">
+                <ShortsVideo
+                  v={c}
+                  shortsMenu={shortsMenu}
+                  setshortsMenu={setshortsMenu}
+                  comment={comment}
+                  setcomment={setcomment}
+                />
+              </div>
+              <div className="h-screen snap-start">
+                <ShortsVideo
+                  v={d}
+                  shortsMenu={shortsMenu}
+                  setshortsMenu={setshortsMenu}
+                  comment={comment}
+                  setcomment={setcomment}
+                />
+              </div>
+              <div className="h-screen snap-start">
+                <ShortsVideo
+                  v={e}
+                  shortsMenu={shortsMenu}
+                  setshortsMenu={setshortsMenu}
+                  comment={comment}
+                  setcomment={setcomment}
+                />
+              </div>
             </div>
             {/* shorts */}
             <div className="flex  flex-col ">
