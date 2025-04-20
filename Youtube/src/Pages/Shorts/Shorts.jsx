@@ -5,6 +5,9 @@ import Context from '../../Context/Context';
 import ShortsVideo from '../../Components/ShortsVideo/ShortsVideo';
 import Comments from '../../Components/Comments/Comments';
 
+// Importing Images
+import cutie from '../../assets/Images/cute.jpg';
+
 // Importing Icons
 import arrow from '../../assets/Icons/up_arrow.svg';
 import cross from '../../assets/Icons/close.svg';
@@ -81,7 +84,7 @@ function Shorts() {
             <div
               className={
                 comment
-                  ? 'h-150 w-100 border  border-black rounded-2xl overflow-auto [&::-webkit-scrollbar]:hidden p-1 transition duration-1000 '
+                  ? 'h-150 w-100 border  border-gray-400 rounded-2xl overflow-auto [&::-webkit-scrollbar]:hidden p-1 transition duration-1000 '
                   : ' hidden w-0 transition duration-1000'
               }
             >
@@ -129,7 +132,7 @@ function Shorts() {
                 <Comments />
                 <Comments />
               </div>
-              <div>add commment</div>
+              <div className="h-12 w-full bg-white border-b border-black sticky bottom-0  flex  "></div>
             </div>
           </div>
         </div>
