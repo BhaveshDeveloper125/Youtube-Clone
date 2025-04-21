@@ -36,7 +36,7 @@ function Shorts() {
           <SideMenu />
           <div className="flex flex-1  justify-center items-center">
             {/* shorts */}
-            <div className="h-screen w-1/3 overflow-y-auto scroll-smooth snap-y snap-mandatory">
+            <div className="h-screen w-1/3 overflow-y-auto [&::-webkit-scrollbar]:hidden scroll-smooth snap-y snap-mandatory">
               <div className="h-screen snap-start">
                 <ShortsVideo
                   v={a}
