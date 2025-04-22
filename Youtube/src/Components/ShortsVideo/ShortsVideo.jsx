@@ -30,7 +30,15 @@ function ShortsVideo(props) {
   const [videVolume, setvideVolume] = useState(0.5);
   const [progress, setprogress] = useState(0);
 
-  const { v, shortsMenu, setshortsMenu, comment, setcomment } = props;
+  const {
+    v,
+    shortsMenu,
+    setshortsMenu,
+    comment,
+    setcomment,
+    description,
+    setdescription,
+  } = props;
 
   //Fullscreen Settings and State
   const FullscreenRef = useRef(document.documentElement);
@@ -180,9 +188,16 @@ function ShortsVideo(props) {
               </button>
             </div>
 
-            <div className="h-13 w-full  p-2 text-white font-bold  line-clamp-2">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              velit rerum natus atque ullam corrupti sequi alias maxime
+            <div
+              onClick={() => {
+                setcomment(false);
+                setdescription(!description);
+              }}
+              className="h-13 w-full  p-2 text-white font-bold  line-clamp-2"
+            >
+              Vidoe title Vidoe title Vidoe title Vidoe title Vidoe title Vidoe
+              title Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Vitae velit rerum natus atque ullam corrupti sequi alias maxime
               inventore pariatur, consequatur, magni officia ab? Suscipit eos
               exercitationem corporis quasi velit? Exercitationem, dolor? Modi
               distinctio porro voluptate, sit id reprehenderit sunt repellat et
@@ -238,6 +253,7 @@ function ShortsVideo(props) {
           <p className=" text-sm font-semibold">Dislike</p>
           <button
             onClick={() => {
+              setdescription(false);
               setcomment(!comment);
             }}
             className={btn}

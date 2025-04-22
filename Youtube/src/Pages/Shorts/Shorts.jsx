@@ -28,9 +28,6 @@ function Shorts() {
 
   const containerref = useRef(null);
 
-  // let sorting_comment =
-  //   'p-4 rounded-2xl text-center font-bold hover:bg-gray-200';
-
   return (
     <>
       <Context>
@@ -50,6 +47,8 @@ function Shorts() {
                   setshortsMenu={setshortsMenu}
                   comment={comment}
                   setcomment={setcomment}
+                  description={description}
+                  setdescription={setdescription}
                 />
               </div>
               <div className="h-screen snap-start">
@@ -59,6 +58,8 @@ function Shorts() {
                   setshortsMenu={setshortsMenu}
                   comment={comment}
                   setcomment={setcomment}
+                  description={description}
+                  setdescription={setdescription}
                 />
               </div>
               <div className="h-screen snap-start">
@@ -68,6 +69,8 @@ function Shorts() {
                   setshortsMenu={setshortsMenu}
                   comment={comment}
                   setcomment={setcomment}
+                  description={description}
+                  setdescription={setdescription}
                 />
               </div>
               <div className="h-screen snap-start">
@@ -77,6 +80,8 @@ function Shorts() {
                   setshortsMenu={setshortsMenu}
                   comment={comment}
                   setcomment={setcomment}
+                  description={description}
+                  setdescription={setdescription}
                 />
               </div>
               <div className="h-screen snap-start">
@@ -86,6 +91,8 @@ function Shorts() {
                   setshortsMenu={setshortsMenu}
                   comment={comment}
                   setcomment={setcomment}
+                  description={description}
+                  setdescription={setdescription}
                 />
               </div>
             </div>
@@ -182,7 +189,82 @@ function Shorts() {
                   : 'hidden w-0 transition duration-1000'
               }
             >
-              Description
+              <div className=" flex bg-white border border-t-transparent border-l-transparent border-r-transparent sticky top-0 border-b-gray-500 justify-between p-2 ">
+                <h1 className="text-2xl font-bold">Description</h1>
+                <button
+                  onClick={() => setdescription(!description)}
+                  className="cursor-pointer"
+                >
+                  <img src={cross} alt="close" className="size-6" />
+                </button>
+              </div>
+              <div className="  border border-t-transparent border-l-transparent border-r-transparent border-b-gray-500 text-justify mt-2 pl-4 pr-4">
+                video title video title video title video title video title
+                video title video title video title Lorem ipsum dolor sit, amet
+                consectetur adipisicing elit. Vitae iusto aperiam molestias ab,
+              </div>
+              <div className=" h-fit w-full flex ">
+                <div className=" h-20 w-1/3 flex justify-center items-center ">
+                  <span className="flex flex-col justify-center items-center">
+                    <span className="text-xl font-semibold">1M</span>
+                    <span className="text-gray-500">likes</span>
+                  </span>
+                </div>
+                <div className=" h-20 w-1/3 flex justify-center items-center ">
+                  <span className="flex flex-col justify-center items-center">
+                    <span className="text-xl font-semibold">1M</span>
+                    <span className="text-gray-500">views</span>
+                  </span>
+                </div>
+                <div className=" h-20 w-1/3 flex justify-center items-center ">
+                  <span className="flex flex-col justify-center items-center">
+                    <span className="text-xl font-semibold">1 Jan</span>
+                    <span className="text-gray-500">2025</span>
+                  </span>
+                </div>
+              </div>
+
+              <div className="min-h-2 max-h-100 bg-gray-300 text-justify overflow-auto [&::-webkit-scrollbar]:hidden rounded-2xl cursor-pointer p-4 hover:bg-gray-200">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aliquam mollitia, porro modi nesciunt, vero assumenda
+                perspiciatis soluta ex quaerat accusantium odit tempore aliquid
+                praesentium possimus temporibus dolores at recusandae ipsa?
+                Autem architecto nobis sapiente consectetur porro harum alias
+                ipsa facere consequatur doloremque culpa fugiat nihil id
+                pariatur dolorem voluptas, saepe voluptates numquam magni minus
+                tenetur aliquam asperiores possimus. Tenetur, eius. Et tempore
+                omnis voluptates eum minus illum quia voluptatibus? Fugiat
+                repudiandae voluptas atque doloremque ipsum tempore, eius, rem
+                hic expedita tenetur culpa incidunt asperiores maxime sequi
+                aliquid cupiditate, nisi eaque. Ab provident laboriosam culpa
+                commodi, repellendus obcaecati possimus eum minus aliquid
+                tenetur repellat ex architecto quia quisquam atque optio.
+                Pariatur porro quo veritatis. Veritatis facere enim architecto
+                quam quasi reprehenderit! Nihil delectus esse officiis modi
+                consequuntur maiores iusto, doloremque maxime magnam optio
+                perferendis dolorem minima quos nam, hic, ab ducimus quia?
+                Consequuntur provident repellat error minus a, dignissimos
+                similique voluptate! Itaque, voluptatibus? Provident maiores at
+                alias quibusdam, repellat nostrum aspernatur? Ea unde,
+                cupiditate delectus vel, aut voluptates voluptas maxime culpa
+                quisquam error autem perferendis saepe. Non vero debitis dolor
+                dolores. Eius exercitationem dolores eveniet minus impedit!
+                Maiores officia dolorum consequatur. Ut ad, unde nam enim
+                inventore iste aspernatur, error fugit veritatis aliquam
+                consequatur eum earum. Sit voluptatem ab rem quasi. Accusamus,
+                quam cumque voluptatum, ea voluptatem eum aliquam delectus
+                laboriosam voluptates consequatur beatae excepturi, labore
+                quaerat facilis sapiente omnis cupiditate sunt quisquam
+                incidunt? Consequatur officiis, nemo tempore maxime iure
+                voluptate. Atque, amet. Eos ab debitis doloribus commodi. Ea
+                error velit consequuntur? Accusantium illo veritatis quod
+                doloribus ipsam nam atque nobis obcaecati, voluptates sed illum
+                nihil praesentium reiciendis in! Expedita, aut! Modi, nemo cum
+                deleniti ab veritatis quidem amet quas iusto facilis, ad
+                cupiditate eveniet nobis quod iste tempora obcaecati praesentium
+                consequuntur corrupti repellendus corporis eos voluptates vero.
+                Nostrum, reprehenderit atque!
+              </div>
             </div>
           </div>
         </div>
