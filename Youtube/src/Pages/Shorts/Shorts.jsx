@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import TopMenu from '../../Components/TopMenu/TopMenu';
 import SideMenu from '../../Components/SideMenu/SideMenu';
 import Context from '../../Context/Context';
@@ -23,7 +23,10 @@ import e from '../../assets/Videos/s5.mp4';
 function Shorts() {
   const [shortsMenu, setshortsMenu] = useState(false);
   const [comment, setcomment] = useState(false);
+  const [description, setdescription] = useState(true);
   const [sortcomment, setsortcomment] = useState(false);
+
+  const containerref = useRef(null);
 
   // let sorting_comment =
   //   'p-4 rounded-2xl text-center font-bold hover:bg-gray-200';
@@ -36,7 +39,10 @@ function Shorts() {
           <SideMenu />
           <div className="flex flex-1  justify-center items-center">
             {/* shorts */}
-            <div className="h-screen w-1/3 overflow-y-auto [&::-webkit-scrollbar]:hidden scroll-smooth snap-y snap-mandatory">
+            <div
+              ref={containerref}
+              className="h-screen w-1/3 overflow-y-auto [&::-webkit-scrollbar]:hidden scroll-smooth snap-y snap-mandatory"
+            >
               <div className="h-screen snap-start">
                 <ShortsVideo
                   v={a}
@@ -85,11 +91,33 @@ function Shorts() {
             </div>
             {/* shorts */}
             <div className="flex  flex-col ">
-              <button className="bg-gray-100 cursor-pointer rounded-full p-2 hover:bg-gray-200 active:bg-gray-300">
+              <button
+                onClick={() => {
+                  if (containerref.current) {
+                    setcomment(false);
+                    containerref.current.scrollBy({
+                      top: -window.innerHeight,
+                      behaviour: 'auto',
+                    });
+                  }
+                }}
+                className="bg-gray-100 cursor-pointer rounded-full p-2 hover:bg-gray-200 active:bg-gray-300"
+              >
                 <img src={arrow} alt="up" className="size-8" />
               </button>
               <br />
-              <button className="bg-gray-100 cursor-pointer rounded-full p-2 hover:bg-gray-200 active:bg-gray-300">
+              <button
+                onClick={() => {
+                  if (containerref.current) {
+                    setcomment(false);
+                    containerref.current.scrollBy({
+                      top: window.innerHeight,
+                      behaviour: 'auto',
+                    });
+                  }
+                }}
+                className="bg-gray-100 cursor-pointer rounded-full p-2 hover:bg-gray-200 active:bg-gray-300"
+              >
                 <img src={arrow} alt="up" className="size-8 rotate-180" />
               </button>
             </div>
@@ -145,6 +173,16 @@ function Shorts() {
                 <Comments />
               </div>
               <div className="h-12 w-full bg-white border-b border-black sticky bottom-0  flex  "></div>
+            </div>
+
+            <div
+              className={
+                description
+                  ? 'h-150 w-100 border  border-gray-400 rounded-2xl overflow-auto [&::-webkit-scrollbar]:hidden p-1 transition duration-1000'
+                  : 'hidden w-0 transition duration-1000'
+              }
+            >
+              Description
             </div>
           </div>
         </div>
