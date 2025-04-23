@@ -1,10 +1,11 @@
 import React, { useRef, useState, useTransition } from 'react';
+import Sharesection from '../ShareSection/Sharesection';
 import { Link } from 'react-router-dom';
 
 // Importing Icons
 import like from '../../assets/Icons/like.svg';
 import commentico from '../../assets/Icons/comment.svg';
-import share from '../../assets/Icons/share.svg';
+import shareico from '../../assets/Icons/share.svg';
 import play from '../../assets/Icons/play.svg';
 import pause from '../../assets/Icons/pause.png';
 import fullscreen from '../../assets/Icons/fullscreen.svg';
@@ -23,6 +24,7 @@ function ShortsVideo(props) {
   const [vol, setvol] = useState(true);
   const [screen, setscreen] = useState(false);
   const [showbar, setshowbar] = useState(true);
+  const [share, setshare] = useState(true);
 
   // Controllers Settings and satets
   const videocontrols = useRef(null);
@@ -95,6 +97,7 @@ function ShortsVideo(props) {
   return (
     <>
       <div className="h-full w-full flex cursor-pointer">
+        <Sharesection share={share} setshare={setshare} />
         <div className="h-[90%] w-[85%] rounded-xl aspect-[16/9] relative">
           <video
             ref={videocontrols}
@@ -262,7 +265,7 @@ function ShortsVideo(props) {
           </button>
           <p className=" text-sm font-semibold">999</p>
           <button className={btn}>
-            <img src={share} alt="share" className={btnico} />
+            <img src={shareico} alt="share" className={btnico} />
           </button>
           <p className=" text-sm font-semibold">Share</p>
 

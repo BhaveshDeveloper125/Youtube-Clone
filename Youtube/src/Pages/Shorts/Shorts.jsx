@@ -23,7 +23,7 @@ import e from '../../assets/Videos/s5.mp4';
 function Shorts() {
   const [shortsMenu, setshortsMenu] = useState(false);
   const [comment, setcomment] = useState(false);
-  const [description, setdescription] = useState(true);
+  const [description, setdescription] = useState(false);
   const [sortcomment, setsortcomment] = useState(false);
 
   const containerref = useRef(null);
