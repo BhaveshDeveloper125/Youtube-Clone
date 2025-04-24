@@ -1,6 +1,5 @@
-import React, { useRef, useState, useTransition } from 'react';
-import Sharesection from '../ShareSection/Sharesection';
-import { Link } from 'react-router-dom';
+import React, { useRef, useState, useEffect } from 'react';
+import { Link, StaticRouterProvider } from 'react-router-dom';
 
 // Importing Icons
 import like from '../../assets/Icons/like.svg';
@@ -13,6 +12,12 @@ import minimize from '../../assets/Icons/minimize.svg';
 import volume from '../../assets/Icons/volume.svg';
 import mute from '../../assets/Icons/mute.svg';
 import music from '../../assets/Icons/music.svg';
+import cross from '../../assets/Icons/close.svg';
+import twitter from '../../assets/Icons/twitter.svg';
+import facebook from '../../assets/Icons/facebook.svg';
+import instagram from '../../assets/Icons/instagram.svg';
+import reddit from '../../assets/Icons/reddit.svg';
+import whatsapp from '../../assets/Icons/whatsapp-_1_.svg';
 
 // Importing Images
 import cutie from '../../assets/Images/cute.jpg';
@@ -24,13 +29,19 @@ function ShortsVideo(props) {
   const [vol, setvol] = useState(true);
   const [screen, setscreen] = useState(false);
   const [showbar, setshowbar] = useState(true);
-  const [share, setshare] = useState(true);
+  const [share, setshare] = useState(false);
 
   // Controllers Settings and satets
   const videocontrols = useRef(null);
   const [playing, setplaying] = useState(false);
   const [videVolume, setvideVolume] = useState(0.5);
   const [progress, setprogress] = useState(0);
+
+  let btn =
+    'size-10 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-300';
+  let btnico = 'size-6 object-cover';
+  let shorts_menu = 'p-4 rounded-2xl text-center font-bold hover:bg-gray-200';
+  let subcardstyle = 'text-center hover:bg-gray-200 p-2';
 
   const {
     v,
@@ -44,6 +55,36 @@ function ShortsVideo(props) {
 
   //Fullscreen Settings and State
   const FullscreenRef = useRef(document.documentElement);
+
+  // On screen video playing code
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (videos) => {
+        const [video] = videos;
+        if (video.isIntersecting && shortsMenu == false) {
+          videocontrols.current.play();
+          setplaying(true);
+          setvidplay(true);
+        } else {
+          videocontrols.current.pause();
+          setplaying(false);
+          setvidplay(false);
+        }
+      },
+      { threshold: 1 },
+    );
+
+    if (videocontrols.current) {
+      observer.observe(videocontrols.current);
+    }
+
+    return () => {
+      if (videocontrols.current) {
+        observer.unobserve(videocontrols.current);
+      }
+    };
+  }, []);
 
   const Volumebar = vol ? (
     <input
@@ -72,6 +113,78 @@ function ShortsVideo(props) {
     />
   );
 
+  // Share video section
+  const share_notification = share ? (
+    <div
+      className={
+        share
+          ? 'size-full bg-black/80 flex justify-center items-center p-1 absolute inset-0 z-9'
+          : 'hidden'
+      }
+    >
+      <div className="h-50 w-100 bg-white rounded-2xl p-4">
+        <div className="h-[20%] w-full  flex justify-between items-center p-1">
+          <span>share</span>
+          <img
+            src={cross}
+            alt="cross"
+            onClick={() => setshare(false)}
+            className="size-5 cursor-pointer active:bg-gray-500"
+          />
+        </div>
+        <div className="h-[60%] w-full  flex justify-center items-center ">
+          <Link className="size-full flex justify-center items-center ">
+            <img src={whatsapp} alt="twitter" className="size-1/2 " />
+          </Link>
+          <Link className="size-full flex justify-center items-center ">
+            <img src={facebook} alt="twitter" className="size-1/2 " />
+          </Link>
+          <Link className="size-full flex justify-center items-center ">
+            <img src={instagram} alt="twitter" className="size-1/2 " />
+          </Link>
+          <Link className="size-full flex justify-center items-center ">
+            <img src={twitter} alt="twitter" className="size-1/2 " />
+          </Link>
+          <Link className="size-full flex justify-center items-center ">
+            <img src={reddit} alt="twitter" className="size-1/2 " />
+          </Link>
+        </div>
+
+        <div className="h-[20%] border  border-gray-400 rounded-2xl flex justify-between p-1">
+          <Link className="line-clamp-1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
+            temporibus nihil quisquam animi non a ad. Debitis, nobis laborum!
+            Reiciendis aut esse veniam rerum rem architecto inventore commodi
+            consequuntur cum.
+          </Link>
+          <button className="size-full bg-blue-500 rounded-lg text-white flex justify-center items-center p-0.5 cursor-pointer hover:bg-blue-400 active:bg-blue-800">
+            copy
+          </button>
+        </div>
+      </div>
+    </div>
+  ) : null;
+
+  // Subcard Section
+
+  const subcard = shortsMenu ? (
+    <ul
+      className={
+        shortsMenu
+          ? 'h-fit w-80 bg-white rounded-2xl p-1 absolute right-6 bottom-50 z-10 '
+          : 'hidden'
+      }
+    >
+      <li className={shorts_menu}>Description</li>
+      <li className={shorts_menu}>Save to Playlist</li>
+      <li className={shorts_menu}>Dont recommend this channel</li>
+      <li className={shorts_menu}>Report</li>
+      <li className="p-4 rounded-2xl text-center font-bold hover:bg-gray-200 ">
+        Feedback
+      </li>
+    </ul>
+  ) : null;
+
   function HandleVolume(e) {
     let volumes = e.target.value;
     setvideVolume(volumes);
@@ -89,15 +202,10 @@ function ShortsVideo(props) {
       setprogress(ProgressPercentage);
     }
   }
-  let btn =
-    'size-10 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-300';
-  let btnico = 'size-6 object-cover';
-  let shorts_menu = 'p-4 rounded-2xl text-center font-bold hover:bg-gray-200';
-  let subcardstyle = 'text-center hover:bg-gray-200 p-2';
   return (
     <>
       <div className="h-full w-full flex cursor-pointer">
-        <Sharesection share={share} setshare={setshare} />
+        {share_notification}
         <div className="h-[90%] w-[85%] rounded-xl aspect-[16/9] relative">
           <video
             ref={videocontrols}
@@ -264,26 +372,17 @@ function ShortsVideo(props) {
             <img src={commentico} alt="comment" className={btnico} />
           </button>
           <p className=" text-sm font-semibold">999</p>
-          <button className={btn}>
+          <button
+            onClick={() => {
+              setshare(!share);
+            }}
+            className={btn}
+          >
             <img src={shareico} alt="share" className={btnico} />
           </button>
           <p className=" text-sm font-semibold">Share</p>
 
-          <ul
-            className={
-              shortsMenu
-                ? 'h-fit w-80 bg-white rounded-2xl p-1 absolute right-6 bottom-50 z-10 '
-                : 'hidden'
-            }
-          >
-            <li className={shorts_menu}>Description</li>
-            <li className={shorts_menu}>Save to Playlist</li>
-            <li className={shorts_menu}>Dont recommend this channel</li>
-            <li className={shorts_menu}>Report</li>
-            <li className="p-4 rounded-2xl text-center font-bold hover:bg-gray-200 ">
-              Feedback
-            </li>
-          </ul>
+          {subcard}
 
           <button
             onClick={() => {

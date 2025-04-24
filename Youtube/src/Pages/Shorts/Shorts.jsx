@@ -102,6 +102,7 @@ function Shorts() {
                 onClick={() => {
                   if (containerref.current) {
                     setcomment(false);
+                    setdescription(false);
                     containerref.current.scrollBy({
                       top: -window.innerHeight,
                       behaviour: 'auto',
@@ -117,6 +118,7 @@ function Shorts() {
                 onClick={() => {
                   if (containerref.current) {
                     setcomment(false);
+                    setdescription(false);
                     containerref.current.scrollBy({
                       top: window.innerHeight,
                       behaviour: 'auto',
