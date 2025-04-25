@@ -15,8 +15,8 @@ function Subscription() {
         <div className="h-screen w-fit flex ">
           <SideMenu />
 
-          <div className="flex flex-col flex-1 flex-wrap  overflow-auto">
-            <div className="h-20 w-[96%] bg-white flex justify-between items-center absolute">
+          <div className=" flex flex-col flex-1 flex-wrap overflow-x-hidden  overflow-auto">
+            <div className="h-20 w-[96%] bg-white flex justify-between items-center p-8 absolute">
               <h1 className=" font-bold text-xl">Latest</h1>
               <Link to="/allsubs" className="text-blue-500 font-bold text-xl">
                 Manage
