@@ -9,7 +9,7 @@ function Cards() {
 
   return (
     <>
-      <div className="h-[44%] w-1/4  p-2 mt-4 mb-4 rounded-lg cursor-pointer hover:bg-gray-200 active:bg-gray-300">
+      <div className="h-[50%] w-1/4  p-2 mt-4 mb-4 rounded-lg cursor-pointer hover:bg-gray-200 active:bg-gray-300">
         <img src={goku} alt="thumb nail image" className="rounded-lg" />
         <div className="h-[20%] w-full mt-2 flex ">
           <img src={goku} className=" size-14 object-cover rounded-full" />
