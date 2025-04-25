@@ -18,7 +18,9 @@ function Subscription() {
           <div className="flex flex-col flex-1 flex-wrap  overflow-auto">
             <div className="h-20 w-[96%] bg-white flex justify-between items-center absolute">
               <h1 className=" font-bold text-xl">Latest</h1>
-              <Link className="text-blue-500 font-bold text-xl">Manage</Link>
+              <Link to="/allsubs" className="text-blue-500 font-bold text-xl">
+                Manage
+              </Link>
             </div>
             <br />
             <br />

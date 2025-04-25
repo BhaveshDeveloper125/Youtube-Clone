@@ -34,6 +34,7 @@ import Restriction from './Pages/TopMenuUserMenu/Restrictions/Restriction.jsx';
 import TopMenuSettings from './Pages/TopMenuUserMenu/Settings/Settings.jsx';
 import TopMenuHelp from './Pages/TopMenuUserMenu/Help/Help.jsx';
 import TopMenuFeedback from './Pages/TopMenuUserMenu/Feedback/Feedback.jsx';
+import AllSubscription from './Pages/AllSubscription/AllSubscription.jsx';
 
 const router = createBrowserRouter([
   {
@@ -174,6 +175,11 @@ const router = createBrowserRouter([
   {
     path: '/topfeedback',
     element: <TopMenuFeedback />,
+  },
+
+  {
+    path: '/allsubs',
+    element: <AllSubscription />,
   },
 ]);
 
