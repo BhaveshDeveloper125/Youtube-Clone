@@ -1,18 +1,14 @@
 ->Complete the Card Component
 ->Lazy Loading
-->Video title on the <title> of the shorts section page
-->in shorts section play and pause the video by clicking the vide tag
-->On the Shorts Secion set the like and deslike at the bottom section
-->On the Shorts sextion loop the current video
-->On the Shorts Section play the video when on the screen else pause the video (mounting and unmounting)
 ->In the card section use the useRef or the useRffect hook to handle the submenu wich appears any thime by just clicking the button
-->Responsive Home Pages
+
+
 ->Create a code to show a message when the user is not connected to the internet
-
-
 
 
 
 **While writing backend**
 ->in the shorts comment section of the sorting the comment section see change the design  , if the top comment is selected then the bg color of it shoud be different
+->Video title on the <title> of the shorts section page
 ->In the shorts section fetch the api in a way that user get infinite scroll each time they get video in different order
+->in the allsubs page set the in the dropdown set the bell icon according the user choice in subscribed section (if the user has set the notification on then in the subscribed section notification icon should display  , for the more details see the actual subscribed page on YT)

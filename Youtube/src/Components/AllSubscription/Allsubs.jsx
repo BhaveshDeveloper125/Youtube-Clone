@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cutie from '../../assets/Images/cute.jpg';
 import { Link } from 'react-router-dom';
 
 function Allsubs() {
+  const [dropdown, setdropdown] = useState(false);
   return (
     <>
       <div className="w-full  flex  p-1">
@@ -25,36 +26,35 @@ function Allsubs() {
             </p>
           </div>
         </Link>
-        <div className=" w-[20%] bg-pink-500 flex flex-col flex-1">
-          {/* <select
-            name=""
-            id=""
-            className="h-fit bg-gray-200 rounded-lg p-2 m-1
-          "
+        <div className=" w-[20%]  flex flex-col justify-center items-center p-2 flex-1">
+          <button
+            onClick={() => {
+              setdropdown(!dropdown);
+            }}
+            className="h-8 w-40 bg-gray-200 rounded-4xl text-center p-1 cursor-pointer active:bg-gray-300"
           >
-            <option value="" className="inline-block p-4">
-              All
-            </option>
-            <option value="" className="inline-block p-4">
-              Personalized
-            </option>
-            <option value="" className="inline-block p-4">
-              None
-            </option>
-            <option value="" className="inline-block p-4">
-              Unsubscribe
-            </option>
-          </select> */}
-
-          <div className="h-8 w-40 bg-red-500 rounded-4xl text-center p-1 mt-2 cursor-pointer">
             Subscribed
-          </div>
-          <div className=" h-fit w-40 bg-yellow-500 flex flex-col p-1">
-            <span className="text-center">All</span>
-            <span className="text-center">None</span>
-            <span className="text-center">Unsubscribed</span>
-            <span className="text-center">Subscribed</span>
-          </div>
+          </button>
+          <ul
+            className={
+              dropdown
+                ? 'h-fit w-40 shadow-black shadow-lg rounded-xl  flex flex-col p-1'
+                : 'hidden'
+            }
+          >
+            <li className=" rounded-xl text-center p-2 cursor-pointer hover:bg-gray-200">
+              All
+            </li>
+            <li className=" rounded-xl text-center p-2 cursor-pointer hover:bg-gray-200">
+              None
+            </li>
+            <li className=" rounded-xl text-center p-2 cursor-pointer hover:bg-gray-200">
+              Unsubscribed
+            </li>
+            <li className=" rounded-xl text-center p-2 cursor-pointer hover:bg-gray-200">
+              Subscribed
+            </li>
+          </ul>
         </div>
       </div>
       <br />
