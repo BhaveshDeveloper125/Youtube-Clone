@@ -54,7 +54,7 @@ function You() {
               </span>
               <br />
             </div>
-            <div className=" h-100 w-full bg-orange-500 flex flex-row overflow-x-auto">
+            <div className=" h-80 w-full bg-orange-500 flex flex-row overflow-y-auto">
               <Cards />
               <Cards />
               <Cards />
