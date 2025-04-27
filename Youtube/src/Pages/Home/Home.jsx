@@ -17,7 +17,7 @@ function Home() {
         <div className="h-screen w-fit flex ">
           <SideMenu />
 
-          <div className="flex flex-1 flex-wrap  overflow-auto">
+          <div className="flex flex-1 flex-wrap gap-x-0.5  gap-y-4 overflow-auto">
             <Cards />
             <Cards />
             <Cards />

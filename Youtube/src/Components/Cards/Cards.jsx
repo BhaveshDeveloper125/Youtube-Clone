@@ -9,7 +9,7 @@ function Cards() {
 
   return (
     <>
-      <div className="h-[50%] w-1/4  p-2 mt-4 mb-4 rounded-lg cursor-pointer hover:bg-gray-200 active:bg-gray-300">
+      {/* <div className="h-[50%] w-1/4  p-2 mt-4 mb-4 rounded-lg cursor-pointer hover:bg-gray-200 active:bg-gray-300">
         <img src={goku} alt="thumb nail image" className="rounded-lg" />
         <div className="h-[20%] w-full mt-2 flex ">
           <img src={goku} className=" size-14 object-cover rounded-full" />
@@ -55,6 +55,22 @@ function Cards() {
             The Valley Of MusicThe Valley Of MusicThe Valley Of Music
           </div>
           <div className="flex-1 text-gray-400">1M views : 1 month ago</div>
+        </div>
+      </div> */}
+
+      <div className="h-100 w-121  rounded-xl p-2 cursor-pointer hover:bg-gray-200 active:bg-gray-300">
+        <div className="h-70 w-full  rounded-xl">
+          <img
+            src={goku}
+            alt="thumbnail"
+            className=" object-cover rounded-xl"
+          />
+        </div>
+        <div className="flex felx-1 bg-green-500 rounded-xl">
+          <span className="size-20 bg-red-500 p-1"></span>
+          <br />
+          <br />
+          <br />
         </div>
       </div>
     </>
