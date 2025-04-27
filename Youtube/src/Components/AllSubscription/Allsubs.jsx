@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import cutie from '../../assets/Images/cute.jpg';
 import { Link } from 'react-router-dom';
 
+// Import Icons
+import bell from '../../assets/Icons/bell.svg';
+import VideoNotification from '../../assets/Icons/videoNotification.svg';
+import NoNotification from '../../assets/Icons/no-notification.svg';
+import Unsubscribe from '../../assets/Icons/Unsubscribe.svg';
+
 function Allsubs() {
   const [dropdown, setdropdown] = useState(false);
   return (
@@ -31,9 +37,14 @@ function Allsubs() {
             onClick={() => {
               setdropdown(!dropdown);
             }}
-            className="h-8 w-40 bg-gray-200 rounded-4xl text-center p-1 cursor-pointer active:bg-gray-300"
+            className="h-8 w-40 bg-gray-200 rounded-4xl flex justify-center items-center text-center p-2 cursor-pointer active:bg-gray-300"
           >
-            Subscribed
+            <img
+              src={VideoNotification}
+              alt="bell"
+              className="size-8 object-cover"
+            />
+            <span className=" p-2">Subscribed</span>
           </button>
           <ul
             className={
@@ -42,17 +53,53 @@ function Allsubs() {
                 : 'hidden'
             }
           >
-            <li className=" rounded-xl text-center p-2 cursor-pointer hover:bg-gray-200">
-              All
+            <li
+              onClick={() => {
+                setdropdown(!dropdown);
+              }}
+              className="flex items-center rounded-xl p-2 cursor-pointer hover:bg-gray-200"
+            >
+              <img
+                src={VideoNotification}
+                alt="bell"
+                className="size-8 object-cover"
+              />
+              <span className=" p-2">All</span>
             </li>
-            <li className=" rounded-xl text-center p-2 cursor-pointer hover:bg-gray-200">
-              None
+            <li
+              onClick={() => {
+                setdropdown(!dropdown);
+              }}
+              className="flex items-center rounded-xl p-2 cursor-pointer hover:bg-gray-200"
+            >
+              <img src={bell} alt="bell" className="size-8 object-cover" />
+              <span className=" p-2">Personalised</span>
             </li>
-            <li className=" rounded-xl text-center p-2 cursor-pointer hover:bg-gray-200">
-              Unsubscribed
+            <li
+              onClick={() => {
+                setdropdown(!dropdown);
+              }}
+              className="flex items-center rounded-xl p-2 cursor-pointer hover:bg-gray-200"
+            >
+              <img
+                src={NoNotification}
+                alt="bell"
+                className="size-8 object-cover"
+              />
+              <span className=" p-2">None</span>
             </li>
-            <li className=" rounded-xl text-center p-2 cursor-pointer hover:bg-gray-200">
-              Subscribed
+            <li
+              onClick={() => {
+                setdropdown(!dropdown);
+              }}
+              className="flex items-center rounded-xl p-2 cursor-pointer hover:bg-gray-200"
+            >
+              <img
+                src={Unsubscribe}
+                alt="bell"
+                className="size-8 object-cover"
+              />
+              <span className=" p-2">Unsubscribed</span>
             </li>
           </ul>
         </div>
