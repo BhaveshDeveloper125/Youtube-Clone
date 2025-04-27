@@ -25,8 +25,8 @@ function Allsubs() {
             </p>
           </div>
         </Link>
-        <div className=" w-[20%]  flex flex-1 justify-center ">
-          <select
+        <div className=" w-[20%] bg-pink-500 flex flex-col flex-1">
+          {/* <select
             name=""
             id=""
             className="h-fit bg-gray-200 rounded-lg p-2 m-1
@@ -44,7 +44,17 @@ function Allsubs() {
             <option value="" className="inline-block p-4">
               Unsubscribe
             </option>
-          </select>
+          </select> */}
+
+          <div className="h-8 w-40 bg-red-500 rounded-4xl text-center p-1 mt-2 cursor-pointer">
+            Subscribed
+          </div>
+          <div className=" h-fit w-40 bg-yellow-500 flex flex-col p-1">
+            <span className="text-center">All</span>
+            <span className="text-center">None</span>
+            <span className="text-center">Unsubscribed</span>
+            <span className="text-center">Subscribed</span>
+          </div>
         </div>
       </div>
       <br />
