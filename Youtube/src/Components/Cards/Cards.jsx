@@ -33,6 +33,27 @@ function Cards() {
               minima officia exercitationem reprehenderit mollitia, vel eaque
               excepturi iure commodi doloribus fugiat illum! Officia, doloribus.
             </h1>
+            <span
+              className={`relative ${showbar ? ' w-[80%] left-25' : 'hidden'}`}
+            >
+              <div
+                className={`absolute bg-white rounded-sm ${
+                  showbar ? 'block ' : 'hidden'
+                } right-4`}
+              >
+                <ul className="">
+                  <li className={subcardstyle}>Add to queue</li>
+                  <li className={subcardstyle}>Save to watch Later</li>
+                  <li className={subcardstyle}>Save ti Playlist</li>
+                  <li className={subcardstyle}>Download</li>
+                  <li className={subcardstyle}>Sahre</li>
+                  <hr />
+                  <li className={subcardstyle}>Not interested</li>
+                  <li className={subcardstyle}>Dont Recommend This Channel</li>
+                  <li className={subcardstyle}>Report</li>
+                </ul>
+              </div>
+            </span>
             <span className="flex">
               <h1 className="h-fit w-90 text-gray-400 truncate">
                 Channel Name : Lorem ipsum dolor sit amet consectetur,
@@ -61,25 +82,6 @@ function Cards() {
             <div className="size-0.5 bg-black rounded-full p-0.5"></div>
             <div className="size-0.5 bg-black rounded-full p-0.5"></div>
             <div className="size-0.5 bg-black rounded-full p-0.5"></div>
-          </span>
-          <span className={`relative ${showbar ? ' w-[80%]' : 'hidden'}`}>
-            {/* <div
-                className={`absolute bg-white rounded-sm ${
-                  showbar ? 'block ' : 'hidden'
-                } right-4`}
-              >
-                <ul className="">
-                  <li className={subcardstyle}>Add to queue</li>
-                  <li className={subcardstyle}>Save to watch Later</li>
-                  <li className={subcardstyle}>Save ti Playlist</li>
-                  <li className={subcardstyle}>Download</li>
-                  <li className={subcardstyle}>Sahre</li>
-                  <hr />
-                  <li className={subcardstyle}>Not interested</li>
-                  <li className={subcardstyle}>Dont Recommend This Channel</li>
-                  <li className={subcardstyle}>Report</li>
-                </ul>
-              </div> */}
           </span>
         </div>
       </Link>
