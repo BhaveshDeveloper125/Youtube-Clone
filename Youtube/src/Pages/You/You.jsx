@@ -13,32 +13,34 @@ function You() {
     <>
       <Context>
         <TopMenu />
-        <div className="flex p-2">
+        <div className="flex p-2 overflow-auto">
           <SideMenu />
-          <div className="flex flex-1 flex-col  p-2">
-            <Link className="h-40 w-fit bg-red-500 flex  p-2">
-              <img
-                src={user}
-                alt="user"
-                className="size-30 object-cover rounded-full"
-              />
-              <span className="h-20 w-100 p-2 mt-5">
-                <h1 className="text-black font-bold text-4xl">
-                  User Channel Name
-                </h1>
-                <div className=" w-80 flex justify-around p-2">
-                  <span className=" text-gray-500 line-clamp-1">
-                    @Channel ID{' '}
-                  </span>
-                  <span className=" text-gray-500 line-clamp-1">
-                    view Chanel
-                  </span>
-                </div>
-              </span>
-            </Link>
+          <div className=" bg-blue-500 flex flex-1 flex-col  p-2 overflow-auto">
+            <div className=" p-1">
+              <Link className="h-40 w-fit flex  p-2">
+                <img
+                  src={user}
+                  alt="user"
+                  className="size-30 object-cover rounded-full"
+                />
+                <span className="h-20 w-100 p-2 mt-5">
+                  <h1 className="text-black font-bold text-4xl">
+                    User Channel Name
+                  </h1>
+                  <div className=" w-80 flex justify-around p-2">
+                    <span className=" text-gray-500 line-clamp-1">
+                      @Channel ID{' '}
+                    </span>
+                    <span className=" text-gray-500 line-clamp-1">
+                      view Chanel
+                    </span>
+                  </div>
+                </span>
+              </Link>
+            </div>
 
-            <div className="h-fit w-full bg-green-500  flex flex-col">
-              <span className="h-8 w-full flex justify-between ">
+            <div className="h-fit w-full  flex flex-col p-2">
+              <span className="h-8 w-full bg-red-500 flex justify-between ">
                 <h1 className="font-bold text-2xl">History</h1>
                 <div className=" h-8 w-fit flex justify-center items-center gap-1">
                   <Link className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 ">
@@ -52,20 +54,17 @@ function You() {
                   </button>
                 </div>
               </span>
-              <br />
-            </div>
-            <div className=" h-80 w-full bg-orange-500 flex flex-row overflow-y-auto">
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-            </div>
 
-            {/* <div className="h-fit w-full bg-pink-500 p-1">
-              <HistoryBox />
-            </div> */}
+              <span className="h-100 w-359 bg-orange-500 flex flex-row overflow-x-auto whitespace-nowrap p-1">
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+              </span>
+            </div>
+            <br />
           </div>
         </div>
       </Context>
