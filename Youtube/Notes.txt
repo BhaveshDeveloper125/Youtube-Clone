@@ -12,3 +12,4 @@
 ->Video title on the <title> of the shorts section page
 ->In the shorts section fetch the api in a way that user get infinite scroll each time they get video in different order
 ->in the allsubs page set the in the dropdown set the bell icon according the user choice in subscribed section (if the user has set the notification on then in the subscribed section notification icon should display  , for the more details see the actual subscribed page on YT)
+->in the history section fetch only limited amount of videos and fetch the rest of the videos on the specific history page
