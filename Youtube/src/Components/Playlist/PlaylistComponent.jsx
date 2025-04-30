@@ -3,23 +3,26 @@ import { Link } from 'react-router-dom';
 
 // Import Icons
 import playlist from '../../assets/Icons/playlist.svg';
+import play from '../../assets/Icons/play.png';
 
 // Import Images
-import cutie from '../../assets/Images/cute.jpg';
+import cutie from '../../assets/Images/1.jpeg';
 
 function PlaylistComponent() {
+  let hovereffect =
+    ' h-50.5 w-full bg-black/50 rounded-2xl flex justify-center items-center p-1 absolute bottom-0';
   return (
     <>
-      <Link className="shadow-black-800 rounded-xl shadow-2xl text-center flex flex-col justify-center items-center relative hover:shadow-none">
+      <div className="shadow-black-800 shadow-2xl rounded-xl text-center flex flex-col justify-center items-center relative hover:shadow-none group">
         <img
           src={cutie}
           alt="playlist thumbnail"
-          className="h-1.5 w-70 rounded-xl blur-[1px] opacity-100 object-cover"
+          className="h-1.5 w-65 rounded-xl blur-[1px] opacity-100 object-cover"
         />
         <img
           src={cutie}
           alt="playlist thumbnail"
-          className="h-1.5 w-80 rounded-xl blur-[1px] opacity-100 object-cover"
+          className="h-1.5 w-75 rounded-xl blur-[1px] opacity-100 object-cover"
         />
         <img
           src={cutie}
@@ -30,7 +33,13 @@ function PlaylistComponent() {
           <img src={playlist} alt="playlist" className="size-4 invert" />
           <span className="invert">100 videos</span>
         </span>
-      </Link>
+        <Link className={`hidden  ${hovereffect}  group-hover:flex`}>
+          <div className="p-1 flex justify-center items-center gap-2 invert">
+            <img src={play} alt="play" className="size-8" />
+            <span>Play all</span>
+          </div>
+        </Link>
+      </div>
     </>
   );
 }

@@ -81,7 +81,7 @@ function You() {
                 </Link>
               </div>
             </span>
-            <div className="h-115 w-full flex gap-2 over p-10">
+            <div className="h-115 w-full flex gap-2 over p-5">
               <PlaylistComponent />
               <PlaylistComponent />
               <PlaylistComponent />
@@ -113,8 +113,31 @@ function You() {
                 <Cards />
               </span>
             </div>
-            <br />
-            <br />
+            <div className="h-fit w-full  flex flex-col p-2 ">
+              <span className="h-8 w-full flex justify-between  ">
+                <h1 className="font-bold text-2xl">Liked Videos</h1>
+                <div className=" h-8 w-fit flex justify-center items-center gap-1">
+                  <Link className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 ">
+                    View All
+                  </Link>
+                  {/* <button className=" size-2.5 bg-gray-200 rounded-full font-bold flex justify-center items-center p-4 cursor-pointer hover:bg-gray-300 ">
+                    &lt;
+                  </button>
+                  <button className=" size-2.5 bg-gray-200 rounded-full font-bold flex justify-center items-center p-4 cursor-pointer hover:bg-gray-300 ">
+                    &gt;
+                  </button> */}
+                </div>
+              </span>
+
+              <span className="h-108 w-359 flex flex-row overflow-auto whitespace-nowrap p-1 [&::-webkit-scrollbar:horizontal]:hidden">
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+              </span>
+            </div>
             <br />
             <br />
             <br />
