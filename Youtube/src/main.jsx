@@ -35,6 +35,7 @@ import TopMenuSettings from './Pages/TopMenuUserMenu/Settings/Settings.jsx';
 import TopMenuHelp from './Pages/TopMenuUserMenu/Help/Help.jsx';
 import TopMenuFeedback from './Pages/TopMenuUserMenu/Feedback/Feedback.jsx';
 import AllSubscription from './Pages/AllSubscription/AllSubscription.jsx';
+import ChannelOwnerPage from './Pages/ChannelOwnerPage/ChannelOwnerPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -180,6 +181,10 @@ const router = createBrowserRouter([
   {
     path: '/allsubs',
     element: <AllSubscription />,
+  },
+  {
+    path: '/user/:id',
+    element: <ChannelOwner />,
   },
 ]);
 

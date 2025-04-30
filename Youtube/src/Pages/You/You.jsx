@@ -19,7 +19,7 @@ function You() {
           <SideMenu />
 
           <div className=" flex flex-col flex-1 gap-x-0.5  gap-y-4 overflow-auto">
-            <Link className="h-40 w-fit flex  p-2">
+            <Link to="/user/1000" className="h-40 w-fit  flex  p-2">
               <img
                 src={user}
                 alt="user"
@@ -46,12 +46,6 @@ function You() {
                   <Link className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 ">
                     View All
                   </Link>
-                  {/* <button className=" size-2.5 bg-gray-200 rounded-full font-bold flex justify-center items-center p-4 cursor-pointer hover:bg-gray-300 ">
-                    &lt;
-                  </button>
-                  <button className=" size-2.5 bg-gray-200 rounded-full font-bold flex justify-center items-center p-4 cursor-pointer hover:bg-gray-300 ">
-                    &gt;
-                  </button> */}
                 </div>
               </span>
 
@@ -64,13 +58,9 @@ function You() {
                 <Cards />
               </span>
             </div>
-            {/* playlist */}
             <span className="h-8 w-full flex justify-between  ">
               <h1 className="font-bold text-2xl">Playlists</h1>
               <div className=" h-8 w-fit flex justify-center items-center gap-1">
-                {/* <button className=" size-6  text-4xl flex justify-center items-center  cursor-pointer hover:bg-gray-300 ">
-                  <span> +</span>
-                </button> */}
                 <img
                   src={plus}
                   alt="add new playlist"
@@ -87,7 +77,6 @@ function You() {
               <PlaylistComponent />
               <PlaylistComponent />
             </div>
-            {/* playlist */}
             <div className="h-fit w-full  flex flex-col p-2 ">
               <span className="h-8 w-full flex justify-between  ">
                 <h1 className="font-bold text-2xl">Watch Later</h1>
@@ -95,12 +84,6 @@ function You() {
                   <Link className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 ">
                     View All
                   </Link>
-                  {/* <button className=" size-2.5 bg-gray-200 rounded-full font-bold flex justify-center items-center p-4 cursor-pointer hover:bg-gray-300 ">
-                    &lt;
-                  </button>
-                  <button className=" size-2.5 bg-gray-200 rounded-full font-bold flex justify-center items-center p-4 cursor-pointer hover:bg-gray-300 ">
-                    &gt;
-                  </button> */}
                 </div>
               </span>
 
@@ -120,12 +103,6 @@ function You() {
                   <Link className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 ">
                     View All
                   </Link>
-                  {/* <button className=" size-2.5 bg-gray-200 rounded-full font-bold flex justify-center items-center p-4 cursor-pointer hover:bg-gray-300 ">
-                    &lt;
-                  </button>
-                  <button className=" size-2.5 bg-gray-200 rounded-full font-bold flex justify-center items-center p-4 cursor-pointer hover:bg-gray-300 ">
-                    &gt;
-                  </button> */}
                 </div>
               </span>
 

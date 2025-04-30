@@ -3,7 +3,7 @@ import React from 'react';
 function Feedback() {
   return (
     <>
-      <h1>Feedback Section</h1>
+      <h1>User Feedback</h1>
     </>
   );
 }
