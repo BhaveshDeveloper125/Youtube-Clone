@@ -4,9 +4,11 @@ import TopMenu from '../../Components/TopMenu/TopMenu';
 import SideMenu from '../../Components/SideMenu/SideMenu';
 import { Link } from 'react-router-dom';
 import Cards from '../../Components/Cards/Cards.jsx';
+import PlaylistComponent from '../../Components/Playlist/PlaylistComponent.jsx';
 
 // Importing Icons
 import user from '../../assets/Icons/user.svg';
+import plus from '../../assets/Icons/plus.svg';
 
 function You() {
   return (
@@ -63,7 +65,28 @@ function You() {
               </span>
             </div>
             {/* playlist */}
-            <div className="h-100 w-full bg-orange-500  flex flex-col p-2"></div>
+            <span className="h-8 w-full flex justify-between  ">
+              <h1 className="font-bold text-2xl">Playlists</h1>
+              <div className=" h-8 w-fit flex justify-center items-center gap-1">
+                {/* <button className=" size-6  text-4xl flex justify-center items-center  cursor-pointer hover:bg-gray-300 ">
+                  <span> +</span>
+                </button> */}
+                <img
+                  src={plus}
+                  alt="add new playlist"
+                  className="size-8 rounded-full p-1 cursor-pointer hover:bg-gray-300 active:bg-gray-400 "
+                />
+                <Link className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 ">
+                  View All
+                </Link>
+              </div>
+            </span>
+            <div className="h-115 w-full flex gap-2 over p-10">
+              <PlaylistComponent />
+              <PlaylistComponent />
+              <PlaylistComponent />
+              <PlaylistComponent />
+            </div>
             {/* playlist */}
             <div className="h-fit w-full  flex flex-col p-2 ">
               <span className="h-8 w-full flex justify-between  ">
