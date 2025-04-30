@@ -81,7 +81,7 @@ function You() {
                 </Link>
               </div>
             </span>
-            <div className="h-115 w-full flex gap-2 over p-5">
+            <div className="h-115 w-full flex gap-2 p-5">
               <PlaylistComponent />
               <PlaylistComponent />
               <PlaylistComponent />

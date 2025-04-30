@@ -27,7 +27,7 @@ function Cards() {
             />
           </span>
           <div className="flex flex-col flex-1 p-1">
-            <h1 className=" h-fit w-98 font-bold truncate">
+            <h1 className=" h-fit w-98 font-bold line-clamp-2">
               VIDEO TITLE : Lorem, ipsum dolor sit amet consectetur adipisicing
               elit. Error aliquid aliquam cupiditate, nobis corporis culpa
               minima officia exercitationem reprehenderit mollitia, vel eaque

@@ -10,10 +10,10 @@ import cutie from '../../assets/Images/1.jpeg';
 
 function PlaylistComponent() {
   let hovereffect =
-    ' h-50.5 w-full bg-black/50 rounded-2xl flex justify-center items-center p-1 absolute bottom-0';
+    ' h-53 w-full bg-black/50 rounded-2xl flex justify-center items-center p-1 absolute top-0';
   return (
     <>
-      <div className="shadow-black-800 shadow-2xl rounded-xl text-center flex flex-col justify-center items-center relative hover:shadow-none group">
+      <div className=" shadow-black-800 shadow-2xl rounded-xl text-center flex flex-col justify-center items-center relative hover:shadow-none group">
         <img
           src={cutie}
           alt="playlist thumbnail"
@@ -29,7 +29,7 @@ function PlaylistComponent() {
           alt="playlist thumbnail"
           className="h-50 w-130 rounded-xl object-cover"
         />
-        <span className="h-5 w-32 bg-black/50 rounded-sm flex justify-center items-center gap-2 absolute bottom-1 right-2 p-2">
+        <span className="h-5 w-32 bg-black/50 rounded-sm flex justify-center items-center gap-2 absolute bottom-25 right-2 p-2">
           <img src={playlist} alt="playlist" className="size-4 invert" />
           <span className="invert">100 videos</span>
         </span>
@@ -39,6 +39,21 @@ function PlaylistComponent() {
             <span>Play all</span>
           </div>
         </Link>
+        <Link className="h-fit w-85  line-clamp-2">
+          Video Title : Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Quam doloribus omnis vero illum maxime molestiae amet aperiam
+          esse assumenda animi. Expedita mollitia consectetur illum ad
+          dignissimos tenetur placeat alias. Eligendi.
+        </Link>
+
+        <Link className="h-fit w-85 text-gray-400 truncate">
+          Channel Name : Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Quam doloribus omnis vero illum maxime molestiae amet aperiam
+          esse assumenda animi. Expedita mollitia consectetur illum ad
+          dignissimos tenetur placeat alias. Eligendi.
+        </Link>
+
+        <Link className="h-fit w-85 line-clamp-2">View Playlist</Link>
       </div>
     </>
   );
