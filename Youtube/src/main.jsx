@@ -185,26 +185,32 @@ const router = createBrowserRouter([
     path: '/allsubs',
     element: <AllSubscription />,
   },
+
   {
     path: '/user/:id',
     element: <ChannelOwner />,
   },
+
   {
     path: '/mychannel/:id',
     element: <ChannelOwnerPage />,
   },
+
   {
     path: '/history_of/:his',
     element: <ViewPages />,
   },
+
   {
     path: '/playlistPlayer/:list',
     element: <VideoPlayer />,
   },
+
   {
     path: '/playlists/:playlist',
     element: <PlaylistVideos />,
   },
+
   {
     path: '/Allplaylist/:allplay',
     element: <AllPlaylist />,
