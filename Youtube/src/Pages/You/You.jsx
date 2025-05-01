@@ -10,6 +10,9 @@ import PlaylistComponent from '../../Components/Playlist/PlaylistComponent.jsx';
 import user from '../../assets/Icons/user.svg';
 import plus from '../../assets/Icons/plus.svg';
 
+// Import Images
+import cutie from '../../assets/Images/1.jpeg';
+
 function You() {
   return (
     <>
@@ -19,7 +22,7 @@ function You() {
           <SideMenu />
 
           <div className=" flex flex-col flex-1 gap-x-0.5  gap-y-4 overflow-auto">
-            <Link to="/user/1000" className="h-40 w-fit  flex  p-2">
+            <Link to="/mychannel/1000" className="h-40 w-fit  flex  p-2">
               <img
                 src={user}
                 alt="user"
@@ -43,7 +46,10 @@ function You() {
               <span className="h-8 w-full flex justify-between ">
                 <h1 className="font-bold text-2xl">History</h1>
                 <div className=" h-8 w-fit flex justify-center items-center gap-1">
-                  <Link className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 ">
+                  <Link
+                    to="/history_of/history"
+                    className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 "
+                  >
                     View All
                   </Link>
                 </div>
@@ -66,22 +72,28 @@ function You() {
                   alt="add new playlist"
                   className="size-8 rounded-full p-1 cursor-pointer hover:bg-gray-300 active:bg-gray-400 "
                 />
-                <Link className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 ">
+                <Link
+                  to="/Allplaylist/:My all the playlist that i have maded"
+                  className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 "
+                >
                   View All
                 </Link>
               </div>
             </span>
             <div className="h-115 w-full flex gap-2 p-5">
-              <PlaylistComponent />
-              <PlaylistComponent />
-              <PlaylistComponent />
-              <PlaylistComponent />
+              <PlaylistComponent img={cutie} lnk={1} plink={4} />
+              <PlaylistComponent img={cutie} lnk={2} plink={3} />
+              <PlaylistComponent img={cutie} lnk={3} plink={2} />
+              <PlaylistComponent img={cutie} lnk={4} plink={1} />
             </div>
             <div className="h-fit w-full  flex flex-col p-2 ">
               <span className="h-8 w-full flex justify-between  ">
                 <h1 className="font-bold text-2xl">Watch Later</h1>
                 <div className=" h-8 w-fit flex justify-center items-center gap-1">
-                  <Link className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 ">
+                  <Link
+                    to="/history_of/WatchLater"
+                    className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 "
+                  >
                     View All
                   </Link>
                 </div>
@@ -100,7 +112,10 @@ function You() {
               <span className="h-8 w-full flex justify-between  ">
                 <h1 className="font-bold text-2xl">Liked Videos</h1>
                 <div className=" h-8 w-fit flex justify-center items-center gap-1">
-                  <Link className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 ">
+                  <Link
+                    to="/history_of/likedVideos"
+                    className="h-fit w-fit border rounded-full font-bold pl-2 pr-2 border-gray-200 hover:bg-gray-400 "
+                  >
                     View All
                   </Link>
                 </div>

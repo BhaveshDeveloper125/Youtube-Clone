@@ -1,13 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-function ViewPages() {
+function VideoPlayer() {
   const params = useParams();
   return (
     <>
-      <h1>{params.his} Page</h1>
+      <h1>Video Player {params.list} </h1>
     </>
   );
 }
 
-export default ViewPages;
+export default VideoPlayer;

@@ -5,6 +5,7 @@ function ChannelOwner() {
   const params = useParams();
   return (
     <>
+      <h1>The Page of Youtuber You Subscribed</h1>
       <h1>Channel Owner Pager {params.id}</h1>
     </>
   );

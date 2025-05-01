@@ -27,15 +27,18 @@ import Settings from './Pages/Settings/Settings.jsx';
 import ReportHistory from './Pages/ReportHistory/ReportHistory.jsx';
 import Help from './Pages/Help/Help.jsx';
 import Feedback from './Pages/FeedBack/Feedback.jsx';
-import SwitchAccount from './Pages/TopMenuUserMenu/SwitchAccount/SwitchAccount.jsx';
-import CreaterStudioDashboard from './Pages/TopMenuUserMenu/CreaterStudioDashboard/CreaterStudioDashboard.jsx';
-import YourDataInYoutube from './Pages/TopMenuUserMenu/YourDataInYoutube/YourDataInYoutube.jsx';
-import Restriction from './Pages/TopMenuUserMenu/Restrictions/Restriction.jsx';
-import TopMenuSettings from './Pages/TopMenuUserMenu/Settings/Settings.jsx';
-import TopMenuHelp from './Pages/TopMenuUserMenu/Help/Help.jsx';
-import TopMenuFeedback from './Pages/TopMenuUserMenu/Feedback/Feedback.jsx';
+import SwitchAccount from '../src/Pages/SwitchAccount/SwitchAccount.jsx';
+import CreaterStudioDashboard from './Pages/CreaterStudioDashboard/CreaterStudioDashboard.jsx';
+import YourDataInYoutube from './Pages/YourDataInYoutube/YourDataInYoutube.jsx';
+import Restriction from './Pages/Restrictions/Restriction.jsx';
+import TopMenuSettings from './Pages/Settings/Settings.jsx';
+import TopMenuHelp from './Pages/Help/Help.jsx';
+import TopMenuFeedback from './Pages/TopMenuUserMenu/TopMenuUserMenu.jsx';
 import AllSubscription from './Pages/AllSubscription/AllSubscription.jsx';
 import ChannelOwnerPage from './Pages/ChannelOwnerPage/ChannelOwnerPage.jsx';
+import ViewPages from './Pages/ViewPages/ViewPages.jsx';
+import VideoPlayer from './Pages/VideoPlayer/VideoPlayer.jsx';
+import PlaylistVideos from './Pages/PlaylistVideos/PlaylistVideos.jsx';
 
 const router = createBrowserRouter([
   {
@@ -93,10 +96,10 @@ const router = createBrowserRouter([
     element: <ChannelOwner />,
   },
 
-  {
-    path: '/allplaylist',
-    element: <AllPlaylist />,
-  },
+  // {
+  //   path: '/allplaylist',
+  //   element: <AllPlaylist />,
+  // },
 
   {
     path: '/trending',
@@ -185,6 +188,26 @@ const router = createBrowserRouter([
   {
     path: '/user/:id',
     element: <ChannelOwner />,
+  },
+  {
+    path: '/mychannel/:id',
+    element: <ChannelOwnerPage />,
+  },
+  {
+    path: '/history_of/:his',
+    element: <ViewPages />,
+  },
+  {
+    path: '/playlistPlayer/:list',
+    element: <VideoPlayer />,
+  },
+  {
+    path: '/playlists/:playlist',
+    element: <PlaylistVideos />,
+  },
+  {
+    path: '/Allplaylist/:allplay',
+    element: <AllPlaylist />,
   },
 ]);
 

@@ -97,7 +97,7 @@ function SideMenu() {
           </Link>
 
           <hr className={menu ? 'w-[90%]' : 'hidden'} />
-          <Link to="/Yoursection">
+          {/* <Link to="/Yoursection">
             <li
               className={
                 menu
@@ -107,7 +107,7 @@ function SideMenu() {
             >
               <p className={menu ? '' : 'hidden'}>You &gt;</p>
             </li>
-          </Link>
+          </Link> */}
 
           <Link to="/history">
             <li
