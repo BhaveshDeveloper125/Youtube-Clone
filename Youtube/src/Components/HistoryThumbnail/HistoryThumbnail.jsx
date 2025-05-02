@@ -24,7 +24,7 @@ function HistoryThumbnail() {
           </Link>
 
           <span className=" w-full flex item-center flex-1">
-            <Link className="p-2">Channel Name . view channel </Link>{' '}
+            <Link className="">Channel Name . view channel </Link>{' '}
           </span>
 
           <Link className="line-clamp-2">

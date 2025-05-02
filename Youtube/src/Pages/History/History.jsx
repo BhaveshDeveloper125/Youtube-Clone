@@ -19,6 +19,11 @@ function History() {
                 <HistoryThumbnail />
                 <HistoryThumbnail />
                 <HistoryThumbnail />
+                <HistoryThumbnail />
+                <HistoryThumbnail />
+                <HistoryThumbnail />
+                <HistoryThumbnail />
+                <HistoryThumbnail />
               </div>
             </div>
             <div className="h-full w-[40%] bg-red-400 p-1"></div>
