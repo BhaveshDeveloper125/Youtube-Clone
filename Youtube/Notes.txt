@@ -14,3 +14,7 @@
 ->in the allsubs page set the in the dropdown set the bell icon according the user choice in subscribed section (if the user has set the notification on then in the subscribed section notification icon should display  , for the more details see the actual subscribed page on YT)
 ->in the history section fetch only limited amount of videos and fetch the rest of the videos on the specific history page
 ->in the playlist component in the playlist section there are 3 images so get the first image for the first video and 2nd and 3rd for the background image
+
+
+
+->In laravel uploading the large files such as the video(more than 10 gb) is not possible so we have to use the  Resumable.js and Laravel-Chunk-Upload package of the larvel.

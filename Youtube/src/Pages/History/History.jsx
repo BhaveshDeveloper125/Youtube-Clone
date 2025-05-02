@@ -13,7 +13,7 @@ function History() {
           <SideMenu />
           <div className="flex flex-1">
             <div className="h-full w-[60%] p-1">
-              <h1 className="text-4xl font-bold p-15 ">Watch Later </h1>
+              <h1 className="text-4xl font-bold p-15 ">Watch History </h1>
               <div className=" h-131 w-full  p-2 overflow-auto">
                 <HistoryThumbnail />
                 <HistoryThumbnail />
