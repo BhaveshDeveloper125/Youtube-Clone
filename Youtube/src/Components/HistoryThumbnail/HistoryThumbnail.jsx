@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // Import Icon
@@ -8,6 +8,9 @@ import cross from '../../assets/Icons/close.svg';
 import rengoku from '../../assets/Images/rengoku.jpg';
 
 function HistoryThumbnail() {
+  const [showbar, setshowbar] = useState(false);
+  let subcardstyle = 'text-center hover:bg-gray-200 p-2';
+
   return (
     <>
       <div className=" h-50 w-full rounded-xl flex p-2 hover:bg-gray-300">
@@ -30,10 +33,32 @@ function HistoryThumbnail() {
               pariatur porro ipsam dolorum repellat cumque! Ducimus natus cumque
               quam distinctio praesentium delectus!
             </Link>
+            <span
+              className={`relative ${
+                showbar ? ' w-[80%]  left-10 z-50' : 'hidden'
+              }`}
+            >
+              <div
+                className={`absolute bg-white rounded-sm ${
+                  showbar ? 'block ' : 'hidden'
+                } right-4`}
+              >
+                <ul className="">
+                  <li className={subcardstyle}>Add to queue</li>
+                  <li className={subcardstyle}>Save to watch Later</li>
+                  <li className={subcardstyle}>Save ti Playlist</li>
+                  <li className={subcardstyle}>Download</li>
+                  <li className={subcardstyle}>Sahre</li>
+                </ul>
+              </div>
+            </span>
             <div className=" size-10 rounded-full cursor-pointer p-2 hover:bg-gray-400">
               <img src={cross} alt="cross" className="object-cover" />
             </div>
-            <div className=" h-fit w-3 rounded-xl flex flex-col j  ustify-center items-center gap-1 p-1 cursor-pointer active:bg-gray-400">
+            <div
+              onClick={() => setshowbar(!showbar)}
+              className=" h-fit w-3 rounded-xl flex flex-col j  ustify-center items-center gap-1 p-1 cursor-pointer active:bg-gray-400"
+            >
               <div className="size-0.5 bg-black rounded-full p-0.5"></div>
               <div className="size-0.5 bg-black rounded-full p-0.5"></div>
               <div className="size-0.5 bg-black rounded-full p-0.5"></div>
