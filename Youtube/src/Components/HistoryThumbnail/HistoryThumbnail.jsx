@@ -9,7 +9,7 @@ import rengoku from '../../assets/Images/rengoku.jpg';
 
 function HistoryThumbnail() {
   const [showbar, setshowbar] = useState(false);
-  let subcardstyle = 'text-center hover:bg-gray-200 p-2';
+  let subcardstyle = 'text-center hover:bg-gray-200 cursor-pointer p-2';
 
   return (
     <>
@@ -35,7 +35,7 @@ function HistoryThumbnail() {
             </Link>
             <span
               className={`relative ${
-                showbar ? ' w-[80%]  left-10 z-50' : 'hidden'
+                showbar ? ' w-[60%] left-10 z-50' : 'hidden'
               }`}
             >
               <div

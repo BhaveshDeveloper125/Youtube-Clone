@@ -26,7 +26,13 @@ function History() {
                 <HistoryThumbnail />
               </div>
             </div>
-            <div className="h-full w-[40%] bg-red-400 p-1"></div>
+            <div className="h-full w-[40%] flex justify-center items-center p-1">
+              <div className=" h-120 w-100 bg-red-500 p-1">
+                <form action="" method="post">
+                  <input type="text" placeholder="Search Watch History" />
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </Context>
