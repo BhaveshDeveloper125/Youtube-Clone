@@ -1,19 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 // Import Icons
-import playlist from '../../assets/Icons/playlist.svg';
-import play from '../../assets/Icons/play.png';
+import playlist from "../../assets/Icons/playlist.svg";
+import play from "../../assets/Icons/play.png";
 
 // Import Images
-import cutie from '../../assets/Images/1.jpeg';
+import cutie from "../../assets/Images/1.jpeg";
 
 function PlaylistComponent(prop) {
   let hovereffect =
-    ' h-53 w-full bg-black/50 rounded-2xl flex justify-center items-center p-1 absolute top-0';
+    " h-53 w-full bg-black/50 rounded-2xl flex justify-center items-center p-1 absolute top-0";
   return (
     <>
-      <div className=" shadow-black-800 shadow-2xl rounded-xl text-center flex flex-col justify-center items-center relative hover:shadow-xl group">
+      <div className="size-100 shadow-black-800 shadow-2xl rounded-xl text-center flex flex-col justify-center items-center relative hover:shadow-xl group">
         <img
           src={prop.img}
           alt="playlist thumbnail"
