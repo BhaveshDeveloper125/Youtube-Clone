@@ -7,7 +7,7 @@ import goku from "../../assets/Images/5.jpg";
 function Playsection(prop) {
   return (
     <Link className="h-fit w-full rounded-xl p-2 flex flex-col items-center shadow-2xl shadow-black/50 transform translate-y-0 transition duration-300  hover:-translate-y-1 ">
-      <div className=" flex flex-col items-center relative">
+      <div className="h-fit w-full flex flex-col items-center relative">
         <img
           src={prop.img}
           alt=""
