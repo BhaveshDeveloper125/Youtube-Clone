@@ -2,10 +2,7 @@ import React from "react";
 
 function Playsection(prop) {
   return (
-    <div
-      style={{ flexBasis: "200", flexGrow: "1" }}
-      className="size-50 bg-red-500 flex flex-grow basis-50"
-    >
+    <div className="h-60 w-full rounded-2xl bg-green-500 flex justify-center items-center ">
       <h1>Hello</h1>
     </div>
   );
