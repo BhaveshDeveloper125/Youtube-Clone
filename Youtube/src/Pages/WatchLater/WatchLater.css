@@ -1,0 +1,9 @@
+@media (max-width: 860px) {
+    #watchlater_container{
+        flex-direction: column;
+    }
+
+    #watchlater_left_container{
+        width: 100%;
+    }
+}

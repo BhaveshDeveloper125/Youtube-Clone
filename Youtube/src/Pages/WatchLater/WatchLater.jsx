@@ -7,21 +7,35 @@ import { Link } from "react-router-dom";
 // import images
 import goku from "../../assets/Images/5.jpg";
 
+// Import Css File
+import "./WatchLater.css";
+
 function WatchLater() {
   return (
     <>
       <Context>
         <TopMenu />
-        <div className="h-full w-full flex bg-red-500">
+        <div className="h-full w-full bg-red-500 flex">
           <SideMenu />
-          <div className=" flex flex-1 ">
-            <div className="h-full w-[30%] bg-[url('assets/Images/5.jpg')] bg-cover bg-center flex justify-center relative">
+          <div id="watchlater_container" className=" flex flex-1 ">
+            <div
+              id="watchlater_left_container"
+              className="h-full lg:w-[30%] bg-[url('assets/Images/5.jpg')] bg-cover bg-center flex justify-center relative
+              md:flex-col md:w-[100%]
+              "
+            >
               <div className="h-full w-full p-4 backdrop-blur-2xl">
-                <img
-                  src={goku}
-                  alt=""
-                  className="h-40 w-full rounded-xl object-cover backdrop-blur-2xl"
-                />
+                <Link className="h-60 w-full rounded-xl relative backdrop-blur-2xl group">
+                  <img
+                    src={goku}
+                    alt=""
+                    className="h-60 w-full rounded-xl object-cover backdrop-blur-2xl"
+                  />
+                  <div className="size-full bg-black/50 rounded-xl p-2 text-white hidden group-hover:flex gap-2 justify-center items-center absolute top-0 left-0   ">
+                    <i className="fas fa-play"></i>
+                    <span>Play all</span>
+                  </div>
+                </Link>
                 <h1 className="p-6 text-white text-2xl font-bold ">
                   Watch Later
                 </h1>
@@ -29,13 +43,38 @@ function WatchLater() {
                 <span className="pl-6 text-white ">
                   20 videos Updated today
                 </span>
-                <div className="h-fit w-full p-4 flex gap-2 ">
+                <br />
+                <br />
+
+                <div className="h-fit w-full relative flex justify-center ">
+                  <button className=" size-8 bg-white/20 hover:bg-white/10 rounded-full flex gap-1 flex-col justify-center items-center cursor-pointer group">
+                    <div className="size-[4px] bg-white rounded-full"></div>
+                    <div className="size-[4px] bg-white rounded-full"></div>
+                    <div className="size-[4px] bg-white rounded-full"></div>
+
+                    <div className="h-fit w-60 absolute top-8 left-8 hidden group-hover:block">
+                      <ul className="size-full bg-white rounded-2xl">
+                        <li className=" hover:bg-black/10 rounded-xl flex gap-2 justify-center items-center p-2">
+                          <i className="fa-regular fa-plus text-3xl"></i>
+                          <span>Add Videos</span>
+                        </li>
+                        <li className=" hover:bg-black/10 rounded-xl flex gap-2 justify-center items-center p-2">
+                          <i className="fa-solid fa-minus text-3xl"></i>
+                          <span>Remove Videos</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </button>
+                </div>
+
+                <br />
+
+                <div className="h-fit w-full p-4  flex gap-2  ">
                   <Link className="w-40 bg-white rounded-full text-black p-2 flex gap-2 justify-center items-center">
                     <i className="fas fa-play"></i> <span>Play all</span>
                   </Link>
                   <Link className="w-40 bg-white rounded-full text-black p-2 flex gap-2 justify-center items-center">
-                    <i className="fa-solid fa-shuffle"></i>{" "}
-                    <span>Play all</span>
+                    <i className="fa-solid fa-shuffle"></i> <span>Shuffle</span>
                   </Link>
                 </div>
               </div>
