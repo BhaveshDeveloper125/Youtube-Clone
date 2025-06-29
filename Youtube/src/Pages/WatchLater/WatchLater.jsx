@@ -2,6 +2,7 @@ import React from "react";
 import Context from "../../Context/Context";
 import TopMenu from "../../Components/TopMenu/TopMenu";
 import SideMenu from "../../Components/SideMenu/SideMenu";
+import WatchLaterVideo from "../../Components/WatchLaterVideo/WatchLaterVideo";
 import { Link } from "react-router-dom";
 
 // import images
@@ -15,13 +16,19 @@ function WatchLater() {
     <>
       <Context>
         <TopMenu />
-        <div className="h-full w-full bg-red-500 flex">
+        <div className="h-full w-full flex overflow-auto">
           <SideMenu />
-          <div id="watchlater_container" className=" flex flex-1 ">
+          <div
+            id="watchlater_container"
+            className=" h-screen flex flex-1 lg:overflow-auto "
+          >
             <div
               id="watchlater_left_container"
               className="h-full lg:w-[30%] bg-[url('assets/Images/5.jpg')] bg-cover bg-center flex justify-center relative
               md:flex-col md:w-[100%]
+              lg:sticky lg:top-0
+              xl:sticky xl:top-0
+              2xl:sticky 2xl:top-0
               "
             >
               <div className="h-full w-full p-4 backdrop-blur-2xl">
@@ -79,7 +86,19 @@ function WatchLater() {
                 </div>
               </div>
             </div>
-            <div className="h-full w-[100%] bg-yellow-500 p-2">Bhavesh</div>
+            <div className="h-screen w-[100%] p-1">
+              <WatchLaterVideo />
+              <WatchLaterVideo />
+              <WatchLaterVideo />
+              <WatchLaterVideo />
+              <WatchLaterVideo />
+              <WatchLaterVideo />
+
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
           </div>
         </div>
       </Context>
