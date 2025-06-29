@@ -87,12 +87,48 @@ function WatchLater() {
               </div>
             </div>
             <div className="h-screen w-[100%] p-1">
-              <WatchLaterVideo />
-              <WatchLaterVideo />
-              <WatchLaterVideo />
-              <WatchLaterVideo />
-              <WatchLaterVideo />
-              <WatchLaterVideo />
+              <WatchLaterVideo
+                img={goku}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
+              <WatchLaterVideo
+                img={goku}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
+              <WatchLaterVideo
+                img={goku}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
+              <WatchLaterVideo
+                img={goku}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
+              <WatchLaterVideo
+                img={goku}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
+              <WatchLaterVideo
+                img={goku}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
               <br />
               <br />
               <br />

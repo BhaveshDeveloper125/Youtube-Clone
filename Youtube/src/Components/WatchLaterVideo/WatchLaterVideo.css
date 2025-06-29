@@ -1,0 +1,19 @@
+@media (max-width: 550px){
+    #watchlater_threedots_menu{
+        display: none;
+    }
+
+    #watchlater_videos_container{
+        flex-direction: column;
+    }
+
+    #watchlater_img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px){
+     #watchlater_container{
+        flex-direction: row;
+    }
+}

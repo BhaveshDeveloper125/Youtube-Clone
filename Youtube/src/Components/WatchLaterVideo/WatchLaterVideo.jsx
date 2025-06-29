@@ -1,21 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+// Import Css
+import "./WatchLaterVideo.css";
+
 // import images
 import goku from "../../assets/Images/5.jpg";
-import { Link } from "react-router-dom";
 
 function WatchLaterVideo(prop) {
   return (
     <>
-      <Link className="w-full flex p-2 hover:bg-gray-100">
+      <Link
+        id="watchlater_videos_container"
+        className="w-full flex flex-row p-2 hover:bg-gray-100"
+      >
         <img
+          id="watchlater_img"
           src={prop.img}
           alt="thumbnail"
           className="h-40 w-80 rounded-xl object-cover"
         />
-        <div className="w-full flex felx-1 p-2">
+        <div className=" w-full flex felx-1 p-2">
           <div className=" w-[98%]">
             <h1 className="h-fit w-full p-1 line-clamp-1">{prop.title}</h1>
-            <div className="w-full flex">
+            <div className=" w-full flex">
               <h1 className="h-fit w-[50%] p-1 line-clamp-1">
                 {prop.channelName}
               </h1>
@@ -24,7 +32,7 @@ function WatchLaterVideo(prop) {
               </h1>
             </div>
           </div>
-          <div className=" w-[2%]">
+          <div id="watchlater_threedots_menu" className=" w-[2%] ">
             <button className="size-full p-2 flex gap-1 flex-col justify-center relative group cursor-pointer">
               <div className="size-[4px] bg-black rounded-full"></div>
               <div className="size-[4px] bg-black rounded-full"></div>
