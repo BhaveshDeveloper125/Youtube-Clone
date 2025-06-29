@@ -2,6 +2,7 @@
 ->Complete the Card Component
 ->Lazy Loading
 ->In the card section use the useRef or the useRffect hook to handle the submenu wich appears any thime by just clicking the button
+->Learn the GraphQL APIS
 
 
 ->Create a code to show a message when the user is not connected to the internet
