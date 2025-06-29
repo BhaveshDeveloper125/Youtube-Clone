@@ -6,7 +6,7 @@ import WatchLaterVideo from "../../Components/WatchLaterVideo/WatchLaterVideo";
 import { Link } from "react-router-dom";
 
 // import images
-import goku from "../../assets/Images/5.jpg";
+import cutie from "../../assets/Images/cute.jpg";
 
 // Import Css File
 
@@ -23,7 +23,7 @@ function LikedVideos() {
           >
             <div
               id="likedvideo_left_container"
-              className="h-full lg:w-[30%] bg-[url('assets/Images/5.jpg')] bg-cover bg-center flex justify-center relative
+              className="h-full lg:w-[30%] bg-[url('assets/Images/cute.jpg')] bg-cover bg-center flex justify-center relative
               md:flex-col md:w-[100%]
               lg:sticky lg:top-0
               xl:sticky xl:top-0
@@ -33,7 +33,7 @@ function LikedVideos() {
               <div className="h-full w-full p-4 backdrop-blur-2xl">
                 <Link className="h-60 w-full rounded-xl relative backdrop-blur-2xl group">
                   <img
-                    src={goku}
+                    src={cutie}
                     alt=""
                     className="h-60 w-full rounded-xl object-cover backdrop-blur-2xl"
                   />
@@ -86,12 +86,48 @@ function LikedVideos() {
               </div>
             </div>
             <div className="h-screen w-[100%] p-1">
-              <WatchLaterVideo />
-              <WatchLaterVideo />
-              <WatchLaterVideo />
-              <WatchLaterVideo />
-              <WatchLaterVideo />
-              <WatchLaterVideo />
+              <WatchLaterVideo
+                img={cutie}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
+              <WatchLaterVideo
+                img={cutie}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
+              <WatchLaterVideo
+                img={cutie}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
+              <WatchLaterVideo
+                img={cutie}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
+              <WatchLaterVideo
+                img={cutie}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
+              <WatchLaterVideo
+                img={cutie}
+                title="video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
+                channelName="Channel Name Channel Name Channel Name Channel Name "
+                views="1M"
+                time="1 year"
+              />
               <br />
               <br />
               <br />
