@@ -4,6 +4,11 @@ import TopMenu from "../../Components/TopMenu/TopMenu";
 import SideMenu from "../../Components/SideMenu/SideMenu";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+
+// Import Components
+import HomeSectionOfChannelOwner from "../../Components/ChannelOwnerComponents/HomeSectionOfChannelOwner";
+
+// Import Icons
 import ringBell from "../../assets/Icons/ring bell.svg";
 
 // import Images
@@ -31,10 +36,9 @@ function ChannelOwner() {
                   alt="channel logo"
                   className="size-50 rounded-full p-2 object-cover"
                 />
-                <div className="bg-green-500 p-2 flex flex-1 flex-col">
+                <div className=" p-2 flex flex-1 flex-col">
                   <h1 className="text-3xl font-bold flex justify-self-auto ">
-                    Channel Name Channel Name Channel Name Channel Name
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    Channel Name Channel Name Channel Name Channel Name &nbsp;
                     <i className="fas fa-check size-8 bg-blue-700 rounded-full p-2 text-sm text-white text-center"></i>
                   </h1>
                   <div className="flex gap-2 p-2">
@@ -80,15 +84,15 @@ function ChannelOwner() {
                         />
                         All
                       </li>
-                      <li className="p-2 rounded-xl cursor-pointer hover:bg-gray-200">
+                      <li className="p-2 rounded-xl flex gap-2 justify-center items-center cursor-pointer hover:bg-gray-200">
                         <i className="fas fa-bell"></i>
                         personalized
                       </li>
-                      <li className="p-2 rounded-xl cursor-pointer hover:bg-gray-200">
+                      <li className="p-2 rounded-xl flex gap-2 justify-center items-center cursor-pointer hover:bg-gray-200">
                         <i className="fas fa-bell-slash "></i>
                         None
                       </li>
-                      <li className=" p-2 rounded-xl cursor-pointer hover:bg-gray-200">
+                      <li className=" p-2 rounded-xl flex gap-2 justify-center items-center cursor-pointer hover:bg-gray-200">
                         <i className="fas fa-minus"></i>
                         <i class="fas fa-bell"></i>
                         Unsubscribe
@@ -97,6 +101,8 @@ function ChannelOwner() {
                   </button>
                 </div>
               </div>
+
+              <h1>Bhavesh</h1>
 
               {/* <h1>The Page of Youtuber You Subscribed</h1>
               <h1>Channel Owner Pager {params.id}</h1> */}
