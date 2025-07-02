@@ -23,18 +23,30 @@ function ChannelOwner() {
         <div className="flex">
           <SideMenu />
           <div className="flex justify-center items-center flex-1">
-            <div className="h-screen w-[85%]  ">
+            <div
+              className="h-screen 
+                        lg:w-[85%]
+                        xl:w-[85%]
+                        2xl:w-[85%]
+              "
+            >
               <img
                 src={rengoku}
                 alt="channel banner"
-                className="h-60 w-full rounded-3xl object-cover"
+                className="h-60 w-full rounded-3xl object-cover
+                "
               />
 
               <div className="h-fit w-full flex">
                 <img
                   src={rengoku}
                   alt="channel logo"
-                  className="size-50 rounded-full p-2 object-cover"
+                  className="size-50 rounded-full p-2 object-cover
+                  hidden
+                  lg:block
+                  xl:block
+                  2xl:block
+                  "
                 />
                 <div className=" p-2 flex flex-1 flex-col">
                   <h1 className="text-3xl font-bold flex justify-self-auto ">
@@ -69,7 +81,7 @@ function ChannelOwner() {
                     </Link>
                     and 2 more
                   </div>
-                  <button className="w-fit bg-white rounded-xl p-2 shadow-2xl shadow-black/50 relative group ">
+                  <button className="w-fit bg-white rounded-xl p-2 shadow-2xl shadow-black/50 relative cursor-pointer group ">
                     <div className="flex gap-2 justify-center items-center">
                       <i className="fas fa-bell"></i>
                       personalized
@@ -94,15 +106,39 @@ function ChannelOwner() {
                       </li>
                       <li className=" p-2 rounded-xl flex gap-2 justify-center items-center cursor-pointer hover:bg-gray-200">
                         <i className="fas fa-minus"></i>
-                        <i class="fas fa-bell"></i>
+                        <i className="fas fa-bell"></i>
                         Unsubscribe
                       </li>
                     </ul>
                   </button>
                 </div>
               </div>
+              <br />
 
-              <h1>Bhavesh</h1>
+              <nav className="h-fit w-full mb-2">
+                <ul className="flex">
+                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                    Home
+                  </Link>
+                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                    Video
+                  </Link>
+                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                    Shorts
+                  </Link>
+                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                    Live
+                  </Link>
+                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                    Playlists
+                  </Link>
+                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                    Posts
+                  </Link>
+                </ul>
+              </nav>
+
+              <hr />
 
               {/* <h1>The Page of Youtuber You Subscribed</h1>
               <h1>Channel Owner Pager {params.id}</h1> */}

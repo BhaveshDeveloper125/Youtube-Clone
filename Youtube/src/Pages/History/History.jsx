@@ -4,6 +4,9 @@ import TopMenu from "../../Components/TopMenu/TopMenu";
 import SideMenu from "../../Components/SideMenu/SideMenu";
 import HistoryThumbnail from "../../Components/HistoryThumbnail/HistoryThumbnail";
 
+// Channel Owner Section Components
+import HomeSectionOfChannelOwner from "../../Components/ChannelOwnerComponents/HomeSectionOfChannelOwner";
+
 function History() {
   return (
     <>
@@ -34,7 +37,7 @@ function History() {
                   className="flex flex-col justify-center items-center p-4"
                 >
                   <div className="w-full  p-4 flex justify-center items-center gap-3">
-                    <i class="fas fa-magnifying-glass"></i>
+                    <i className="fas fa-magnifying-glass"></i>
                     <input
                       type="search"
                       name=""
@@ -71,7 +74,6 @@ function History() {
                       posts
                     </button>
                   </div>
-                  
                 </form>
               </div>
             </div>
