@@ -1,12 +1,17 @@
-import React from "react";
+import React, { Component, useState } from "react";
 import Context from "../../Context/Context";
 import TopMenu from "../../Components/TopMenu/TopMenu";
 import SideMenu from "../../Components/SideMenu/SideMenu";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-// Import Components
+// Import ChannelOwner Components
 import HomeSectionOfChannelOwner from "../../Components/ChannelOwnerComponents/HomeSectionOfChannelOwner";
+import LiveSectionOfChannelOwner from "../../Components/ChannelOwnerComponents/LiveSectionOfChannelOwner";
+import PlaylistsSectionOfChannelOwner from "../../Components/ChannelOwnerComponents/PlaylistsSectionOfChannelOwner";
+import PostSectionOfChannelOwner from "../../Components/ChannelOwnerComponents/PostSectionOfChannelOwner";
+import ShortsSectionOfChannelOwner from "../../Components/ChannelOwnerComponents/ShortsSectionOfChannelOwner";
+import VideosSectionOfChannelOwner from "../../Components/ChannelOwnerComponents/VideosSectionOfChannelOwner";
 
 // Import Icons
 import ringBell from "../../assets/Icons/ring bell.svg";
@@ -16,6 +21,17 @@ import rengoku from "../../assets/Images/rengoku.jpg";
 
 function ChannelOwner() {
   const params = useParams();
+  const [ActiveComponent, setActiveComponent] = useState(1);
+
+  const ChannelOwnerComponents = {
+    1: <HomeSectionOfChannelOwner />,
+    2: <VideosSectionOfChannelOwner />,
+    3: <ShortsSectionOfChannelOwner />,
+    4: <LiveSectionOfChannelOwner />,
+    5: <PlaylistsSectionOfChannelOwner />,
+    6: <PostSectionOfChannelOwner />,
+  };
+
   return (
     <>
       <Context>
@@ -117,28 +133,92 @@ function ChannelOwner() {
 
               <nav className="h-fit w-full mb-2">
                 <ul className="flex">
-                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  <li
+                    onClick={() => {
+                      setActiveComponent(1);
+                    }}
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                      ${
+                        ActiveComponent == 1
+                          ? "text-black border-b-2 border-black"
+                          : "text-gray-600 border-b-2 border-transparent"
+                      } `}
+                  >
                     Home
                   </li>
-                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  <li
+                    onClick={() => {
+                      setActiveComponent(2);
+                    }}
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                      ${
+                        ActiveComponent == 2
+                          ? "text-black border-b-2 border-black"
+                          : "text-gray-600 border-b-2 border-transparent"
+                      } `}
+                  >
                     Video
                   </li>
-                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  <li
+                    onClick={() => {
+                      setActiveComponent(3);
+                    }}
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                      ${
+                        ActiveComponent == 3
+                          ? "text-black border-b-2 border-black"
+                          : "text-gray-600 border-b-2 border-transparent"
+                      } `}
+                  >
                     Shorts
                   </li>
-                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  <li
+                    onClick={() => {
+                      setActiveComponent(4);
+                    }}
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                      ${
+                        ActiveComponent == 4
+                          ? "text-black border-b-2 border-black"
+                          : "text-gray-600 border-b-2 border-transparent"
+                      } `}
+                  >
                     Live
                   </li>
-                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  <li
+                    onClick={() => {
+                      setActiveComponent(5);
+                    }}
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                      ${
+                        ActiveComponent == 5
+                          ? "text-black border-b-2 border-black"
+                          : "text-gray-600 border-b-2 border-transparent"
+                      } `}
+                  >
                     Playlists
                   </li>
-                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  <li
+                    onClick={() => {
+                      setActiveComponent(6);
+                    }}
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                      ${
+                        ActiveComponent == 6
+                          ? "text-black border-b-2 border-black"
+                          : "text-gray-600 border-b-2 border-transparent"
+                      } `}
+                  >
                     Posts
                   </li>
                 </ul>
               </nav>
 
               <hr />
+
+              <div className=" flex-1">
+                {ChannelOwnerComponents[ActiveComponent]}
+              </div>
 
               {/* <h1>The Page of Youtuber You Subscribed</h1>
               <h1>Channel Owner Pager {params.id}</h1> */}
