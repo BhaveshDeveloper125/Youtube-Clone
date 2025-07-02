@@ -28,7 +28,7 @@ function WatchLaterVideo(prop) {
                 {prop.channelName}
               </h1>
               <h1 className="h-fit w-[50%] p-1 line-clamp-1">
-                {prop.views} . {prop.time}
+                {prop.views} views . {prop.time}
               </h1>
             </div>
           </div>

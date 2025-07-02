@@ -38,9 +38,9 @@ function ChannelOwner() {
         <TopMenu />
         <div className="flex">
           <SideMenu />
-          <div className="flex justify-center items-center flex-1">
+          <div className=" h-screen flex justify-center items-center flex-1 overflow-auto">
             <div
-              className="h-screen 
+              className="h-screen
                         lg:w-[85%]
                         xl:w-[85%]
                         2xl:w-[85%]
@@ -97,7 +97,7 @@ function ChannelOwner() {
                     </Link>
                     and 2 more
                   </div>
-                  <button className="w-fit bg-white rounded-xl p-2 shadow-2xl shadow-black/50 relative cursor-pointer group ">
+                  <button className="w-fit bg-gray-200 hover:bg-gray-300 rounded-xl p-2  relative cursor-pointer group ">
                     <div className="flex gap-2 justify-center items-center">
                       <i className="fas fa-bell"></i>
                       personalized
@@ -131,13 +131,13 @@ function ChannelOwner() {
               </div>
               <br />
 
-              <nav className="h-fit w-full mb-2">
+              <nav className="h-fit w-full mb-1 ">
                 <ul className="flex">
                   <li
                     onClick={() => {
                       setActiveComponent(1);
                     }}
-                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black m-2
                       ${
                         ActiveComponent == 1
                           ? "text-black border-b-2 border-black"
@@ -150,7 +150,7 @@ function ChannelOwner() {
                     onClick={() => {
                       setActiveComponent(2);
                     }}
-                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black m-2 
                       ${
                         ActiveComponent == 2
                           ? "text-black border-b-2 border-black"
@@ -163,7 +163,7 @@ function ChannelOwner() {
                     onClick={() => {
                       setActiveComponent(3);
                     }}
-                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black m-2 
                       ${
                         ActiveComponent == 3
                           ? "text-black border-b-2 border-black"
@@ -176,7 +176,7 @@ function ChannelOwner() {
                     onClick={() => {
                       setActiveComponent(4);
                     }}
-                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black m-2
                       ${
                         ActiveComponent == 4
                           ? "text-black border-b-2 border-black"
@@ -189,7 +189,7 @@ function ChannelOwner() {
                     onClick={() => {
                       setActiveComponent(5);
                     }}
-                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black m-2
                       ${
                         ActiveComponent == 5
                           ? "text-black border-b-2 border-black"
@@ -202,7 +202,7 @@ function ChannelOwner() {
                     onClick={() => {
                       setActiveComponent(6);
                     }}
-                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black 
+                    className={`p-2 font-bold cursor-pointer hover:border-black hover:text-black m-2
                       ${
                         ActiveComponent == 6
                           ? "text-black border-b-2 border-black"
@@ -218,6 +218,13 @@ function ChannelOwner() {
 
               <div className=" flex-1">
                 {ChannelOwnerComponents[ActiveComponent]}
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
               </div>
 
               {/* <h1>The Page of Youtuber You Subscribed</h1>
