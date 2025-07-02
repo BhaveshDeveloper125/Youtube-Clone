@@ -1,8 +1,9 @@
 ** Before Writing the backend learn the Software architectuer , software design  **
-->Complete the Card Component
-->Lazy Loading
-->In the card section use the useRef or the useRffect hook to handle the submenu wich appears any thime by just clicking the button
-->Learn the GraphQL APIS
+->Complete the Card Component.
+->Lazy Loading.
+->In the card section use the useRef or the useRffect hook to handle the submenu wich appears any thime by just clicking the button.
+->Learn the GraphQL APIS.
+->Learn the prop types in react and apply on the all pages and components.
 
 
 ->Create a code to show a message when the user is not connected to the internet
@@ -21,54 +22,3 @@
 
 ->In laravel uploading the large files such as the video(more than 10 gb) is not possible so we have to use the  Resumable.js and Laravel-Chunk-Upload package of the larvel.
 
-
-
- {/* <section class="   flex-1 p-8 transition-all duration-300 ease-in-out ">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-10">
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-
-              <div class="h-50 w-full bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                hello
-              </div>
-            </div>
-          </section> */}
