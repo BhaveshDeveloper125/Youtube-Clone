@@ -117,24 +117,24 @@ function ChannelOwner() {
 
               <nav className="h-fit w-full mb-2">
                 <ul className="flex">
-                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
                     Home
-                  </Link>
-                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  </li>
+                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
                     Video
-                  </Link>
-                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  </li>
+                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
                     Shorts
-                  </Link>
-                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  </li>
+                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
                     Live
-                  </Link>
-                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  </li>
+                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
                     Playlists
-                  </Link>
-                  <Link className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
+                  </li>
+                  <li className="p-2 font-bold text-gray-600 border-b-2 border-transparent hover:border-black">
                     Posts
-                  </Link>
+                  </li>
                 </ul>
               </nav>
 

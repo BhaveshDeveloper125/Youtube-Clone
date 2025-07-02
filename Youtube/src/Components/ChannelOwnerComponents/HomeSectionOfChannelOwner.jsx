@@ -3,7 +3,7 @@ import React from "react";
 function HomeSectionOfChannelOwner() {
   return (
     <>
-      <h1>Bhavesh</h1>
+      <h1>Home Section</h1>
     </>
   );
 }
