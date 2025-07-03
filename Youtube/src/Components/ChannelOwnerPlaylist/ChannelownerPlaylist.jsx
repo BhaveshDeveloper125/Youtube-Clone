@@ -8,7 +8,7 @@ function ChannelownerPlaylist() {
       <div className=" w-full ">
         <div className="w-full flex">
           <div className=" w-[92%] line-clamp-2">
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-2xl font-bold mt-2 mb-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               velit sed cum commodi animi quam reprehenderit alias, nulla quae!
               Adipisci quam omnis architecto laboriosam sequi animi sint eveniet
@@ -22,7 +22,7 @@ function ChannelownerPlaylist() {
             </Link>
           </div>
         </div>
-        <h1 className="text-gray-500 p-1 line-clamp-2">
+        <h1 className="text-gray-500 text-md p-1 mt-2 mb-2 line-clamp-2">
           Descrition of the playlist Lorem ipsum dolor sit amet consectetur,
           adipisicing elit. Placeat aspernatur tempora iure temporibus? Est
           itaque rem dolor nostrum odit accusamus vero, sit debitis quasi harum
