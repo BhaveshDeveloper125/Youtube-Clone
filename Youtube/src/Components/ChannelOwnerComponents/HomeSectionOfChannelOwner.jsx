@@ -18,6 +18,9 @@ function HomeSectionOfChannelOwner() {
         time="1 year"
       />
       <ChannelownerPlaylist />
+      <ChannelownerPlaylist />
+      <ChannelownerPlaylist />
+      <ChannelownerPlaylist />
     </>
   );
 }

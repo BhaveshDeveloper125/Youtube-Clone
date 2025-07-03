@@ -29,11 +29,16 @@ function Cards() {
               dolore et exercitationem dolores animi, incidunt voluptates
               perspiciatis nostrum ipsa, iure expedita cum quia!
             </h1>
-            <div className="h-fit w-full line-clamp-1">
-              Channel name Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Vitae nostrum tenetur sequi eum, officia nisi exercitationem
-              fugiat laboriosam doloremque sint quae consequatur error quibusdam
-              in perferendis, iure, magnam beatae praesentium.
+
+            <div className="h-fit w-full flex justify-center items-center ">
+              <p className="w-[90%] line-clamp-1">
+                Channel name Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Vitae nostrum tenetur sequi eum, officia nisi
+                exercitationem fugiat laboriosam doloremque sint quae
+                consequatur error quibusdam in perferendis, iure, magnam beatae
+                praesentium.
+              </p>
+              <i className="fas fa-check size-4 bg-gray-400 text-white text-center text-md rounded-full"></i>
             </div>
             <div>1M views : 1 hour ago</div>
           </div>
