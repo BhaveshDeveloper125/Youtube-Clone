@@ -22,25 +22,38 @@ function Cards() {
             alt="channel logo"
             className="size-10 rounded-full object-cover"
           />
-          <div className="h-fit flex flex-col flex-1 ">
-            <h1 className="h-fit w-full p-1 font-bold line-clamp-2">
-              Vide title Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Quae numquam asperiores neque esse non doloremque nulla
-              dolore et exercitationem dolores animi, incidunt voluptates
-              perspiciatis nostrum ipsa, iure expedita cum quia!
-            </h1>
+          <div className="h-fit flex flex-1 ">
+            <div className="h-fit w-[95%] flex flex-col ">
+              <h1 className="h-fit w-full p-1 font-bold line-clamp-2">
+                Vide title Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Quae numquam asperiores neque esse non doloremque nulla
+                dolore et exercitationem dolores animi, incidunt voluptates
+                perspiciatis nostrum ipsa, iure expedita cum quia!
+              </h1>
 
-            <div className="h-fit w-full flex justify-center items-center ">
-              <p className="w-[90%] line-clamp-1">
-                Channel name Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Vitae nostrum tenetur sequi eum, officia nisi
-                exercitationem fugiat laboriosam doloremque sint quae
-                consequatur error quibusdam in perferendis, iure, magnam beatae
-                praesentium.
-              </p>
-              <i className="fas fa-check size-4 bg-gray-400 text-white text-center text-md rounded-full"></i>
+              <div className="h-fit w-full flex justify-center items-center ">
+                <p className="w-[90%] line-clamp-1">
+                  Channel name Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Vitae nostrum tenetur sequi eum, officia
+                  nisi exercitationem fugiat laboriosam doloremque sint quae
+                  consequatur error quibusdam in perferendis, iure, magnam
+                  beatae praesentium.
+                </p>
+                <i className="fas fa-check size-4 bg-gray-400 text-white text-center text-md rounded-full"></i>
+              </div>
+              <div>1M views : 1 hour ago</div>
             </div>
-            <div>1M views : 1 hour ago</div>
+            <div className=" w-[5%] flex flex-col gap-1 justify-center items-center">
+              <button className="w-full p-2 flex flex-col gap-1 justify-center items-center relative cursor-pointer group">
+                <div className="size-[4px] bg-black rounded-full"></div>
+                <div className="size-[4px] bg-black rounded-full"></div>
+                <div className="size-[4px] bg-black rounded-full"></div>
+                <ul className="absolute top-0 left-0 hidden group-hover:block ">
+                  <li>asaf</li>
+                  <li>asaf</li>
+                </ul>
+              </button>
+            </div>
           </div>
         </div>
       </Link>

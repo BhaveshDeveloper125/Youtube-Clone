@@ -17,10 +17,19 @@ function HomeSectionOfChannelOwner() {
         views="1M"
         time="1 year"
       />
+      <br />
       <ChannelownerPlaylist />
+      <br />
+      <br />
       <ChannelownerPlaylist />
+      <br />
+      <br />
       <ChannelownerPlaylist />
+      <br />
+      <br />
       <ChannelownerPlaylist />
+      <br />
+      <br />
     </>
   );
 }
