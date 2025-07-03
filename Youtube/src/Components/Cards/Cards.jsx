@@ -1,16 +1,46 @@
-import React, { useEffect, useRef, useState } from 'react';
-import goku from '../../assets/Images/5.jpg';
-import checkmark from '../../assets/Icons/checked.svg';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from "react";
+import goku from "../../assets/Images/5.jpg";
+import checkmark from "../../assets/Icons/checked.svg";
+import { Link } from "react-router-dom";
 
 function Cards() {
   const [showbar, setshowbar] = useState(false);
-  let subcard = 'absolute  bg-white rounded-sm';
-  let subcardstyle = 'text-center hover:bg-gray-200 p-2';
+  let subcard = "absolute  bg-white rounded-sm";
+  let subcardstyle = "text-center hover:bg-gray-200 p-2";
 
   return (
     <>
-      <Link className="h-100 w-121  rounded-xl p-2 cursor-pointer hover:bg-gray-200 active:bg-gray-300">
+      <Link className="size-full hover:bg-gray-200 active:bg-gray-300 rounded-xl p-2 flex flex-col justify-center items-center cursor-pointer ">
+        <img
+          src={goku}
+          alt="thumbnail"
+          className="h-[70%] w-full rounded-xl object-cover"
+        />
+        <div className="h-[30%] w-full p-2 flex ">
+          <img
+            src={goku}
+            alt="channel logo"
+            className="size-10 rounded-full object-cover"
+          />
+          <div className="h-fit flex flex-col flex-1 ">
+            <h1 className="h-fit w-full p-1 font-bold line-clamp-2">
+              Vide title Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Quae numquam asperiores neque esse non doloremque nulla
+              dolore et exercitationem dolores animi, incidunt voluptates
+              perspiciatis nostrum ipsa, iure expedita cum quia!
+            </h1>
+            <div className="h-fit w-full line-clamp-1">
+              Channel name Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Vitae nostrum tenetur sequi eum, officia nisi exercitationem
+              fugiat laboriosam doloremque sint quae consequatur error quibusdam
+              in perferendis, iure, magnam beatae praesentium.
+            </div>
+            <div>1M views : 1 hour ago</div>
+          </div>
+        </div>
+      </Link>
+
+      {/* <Link className="h-100 w-121  rounded-xl p-2 cursor-pointer hover:bg-gray-200 active:bg-gray-300">
         <div className="h-70 w-full  rounded-xl">
           <img
             src={goku}
@@ -35,12 +65,12 @@ function Cards() {
             </h1>
             <span
               className={`relative ${
-                showbar ? ' w-[80%] left-22 z-50' : 'hidden'
+                showbar ? " w-[80%] left-22 z-50" : "hidden"
               }`}
             >
               <div
                 className={`absolute bg-white rounded-sm ${
-                  showbar ? 'block ' : 'hidden'
+                  showbar ? "block " : "hidden"
                 } right-4`}
               >
                 <ul className="">
@@ -86,7 +116,7 @@ function Cards() {
             <div className="size-0.5 bg-black rounded-full p-0.5"></div>
           </span>
         </div>
-      </Link>
+      </Link> */}
     </>
   );
 }
