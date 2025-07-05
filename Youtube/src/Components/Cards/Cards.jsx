@@ -48,9 +48,16 @@ function Cards() {
                 <div className="size-[4px] bg-black rounded-full"></div>
                 <div className="size-[4px] bg-black rounded-full"></div>
                 <div className="size-[4px] bg-black rounded-full"></div>
-                <ul className="absolute top-0 left-0 hidden group-hover:block ">
-                  <li>asaf</li>
-                  <li>asaf</li>
+                <ul className=" w-sm bg-white absolute bottom-0 right-4 hidden group-hover:block ">
+                  <li className={subcardstyle}>Add to queue</li>
+                  <li className={subcardstyle}>Save to watch Later</li>
+                  <li className={subcardstyle}>Save to Playlist</li>
+                  <li className={subcardstyle}>Download</li>
+                  <li className={subcardstyle}>Sahre</li>
+                  <hr />
+                  <li className={subcardstyle}>Not interested</li>
+                  <li className={subcardstyle}>Dont Recommend This Channel</li>
+                  <li className={subcardstyle}>Report</li>
                 </ul>
               </button>
             </div>
