@@ -1,0 +1,4 @@
+#featured_channel{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+}

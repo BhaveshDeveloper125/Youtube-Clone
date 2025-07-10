@@ -22,6 +22,7 @@ import rengoku from "../../assets/Images/rengoku.jpg";
 function ChannelOwner() {
   const params = useParams();
   const [ActiveComponent, setActiveComponent] = useState(1);
+  const [channelData, setchannelData] = useState(false);
 
   const ChannelOwnerComponents = {
     1: <HomeSectionOfChannelOwner />,
@@ -94,10 +95,115 @@ function ChannelOwner() {
                       className="text-blue-700"
                     >
                       Youtube
-                    </Link>
-                    and 2 more
+                    </Link>{" "}
+                    &nbsp;{" "}
+                    <button
+                      onClick={() => setchannelData(!channelData)}
+                      className="cursor-pointer"
+                    >
+                      and 2 more
+                    </button>
+                    <div
+                      className={`h-screen w-screen bg-black/50 justify-center items-center absolute top-0 left-0 z-10 ${
+                        channelData ? `flex` : "hidden"
+                      } `}
+                    >
+                      <div className="h-150 w-[50%] bg-white relative overflow-auto">
+                        <button
+                          onClick={() => setchannelData(!channelData)}
+                          className="w-full bg-white p-2 text-2xl text-black flex justify-end sticky top-1 cursor-pointer"
+                        >
+                          <i className="fa-solid fa-xmark"></i>
+                        </button>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Distinctio neque accusantium voluptate ut dignissimos
+                        odit? Iusto quas repudiandae, asperiores ullam
+                        laboriosam enim impedit minima suscipit, nihil delectus
+                        itaque nulla accusamus. Consectetur et perspiciatis
+                        inventore vitae adipisci eveniet quis obcaecati odit
+                        voluptas voluptatum non ex, incidunt illum aspernatur
+                        officiis, ipsa quia accusamus suscipit, omnis aliquam
+                        reiciendis numquam quo rerum soluta! Reprehenderit.
+                        Laudantium magnam praesentium delectus dolores quia qui,
+                        nam sunt voluptatum nihil esse similique quaerat! Quo
+                        odio maiores perferendis accusamus placeat officiis
+                        incidunt molestias, quisquam vero itaque ipsa, veritatis
+                        soluta voluptates! Debitis numquam animi perferendis
+                        rerum odio aliquam in eos non quam architecto inventore
+                        explicabo iure soluta itaque et corporis hic, excepturi
+                        similique quibusdam perspiciatis? Eaque a neque et
+                        fugiat voluptatibus. Accusantium quisquam, itaque
+                        nostrum voluptatibus suscipit earum ab cumque soluta
+                        tempora qui nesciunt nobis optio fugiat cum odio maxime
+                        corporis obcaecati at hic illum magni veniam facere
+                        temporibus neque! Quidem? Incidunt enim magni excepturi
+                        aperiam autem iusto laboriosam doloremque distinctio?
+                        Repudiandae sunt, nemo dolor dolores aut eveniet magni.
+                        Optio assumenda eos distinctio consequatur, vitae
+                        doloremque ea error laborum numquam tenetur. Deserunt
+                        ducimus ipsum a quos fuga error quae, accusantium aut
+                        sunt! Dolorum, voluptatibus amet soluta impedit, non
+                        consectetur nulla deleniti molestiae quo hic eum
+                        facilis, facere dolor neque delectus? Consequuntur! Quae
+                        iusto harum iure unde consectetur doloribus consequuntur
+                        nesciunt sequi incidunt officia. Nam soluta sunt fugit
+                        voluptatem, iusto sed asperiores iure, quis unde a culpa
+                        quas quibusdam eaque odio maxime. Quod vitae
+                        necessitatibus provident quaerat sunt placeat aut itaque
+                        veniam nisi ipsa magnam sed expedita quis, porro
+                        praesentium qui corporis. Distinctio fugit atque
+                        assumenda? Consequatur provident eius modi minus
+                        consequuntur. Delectus dolore molestias incidunt labore
+                        nostrum voluptates, exercitationem id similique omnis et
+                        nemo nihil harum voluptatem ipsa quas! Veniam debitis
+                        natus corrupti enim iusto. Deleniti ab cupiditate
+                        suscipit qui at. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Distinctio neque accusantium voluptate
+                        ut dignissimos odit? Iusto quas repudiandae, asperiores
+                        ullam laboriosam enim impedit minima suscipit, nihil
+                        delectus itaque nulla accusamus. Consectetur et
+                        perspiciatis inventore vitae adipisci eveniet quis
+                        obcaecati odit voluptas voluptatum non ex, incidunt
+                        illum aspernatur officiis, ipsa quia accusamus suscipit,
+                        omnis aliquam reiciendis numquam quo rerum soluta!
+                        Reprehenderit. Laudantium magnam praesentium delectus
+                        dolores quia qui, nam sunt voluptatum nihil esse
+                        similique quaerat! Quo odio maiores perferendis
+                        accusamus placeat officiis incidunt molestias, quisquam
+                        vero itaque ipsa, veritatis soluta voluptates! Debitis
+                        numquam animi perferendis rerum odio aliquam in eos non
+                        quam architecto inventore explicabo iure soluta itaque
+                        et corporis hic, excepturi similique quibusdam
+                        perspiciatis? Eaque a neque et fugiat voluptatibus.
+                        Accusantium quisquam, itaque nostrum voluptatibus
+                        suscipit earum ab cumque soluta tempora qui nesciunt
+                        nobis optio fugiat cum odio maxime corporis obcaecati at
+                        hic illum magni veniam facere temporibus neque! Quidem?
+                        Incidunt enim magni excepturi aperiam autem iusto
+                        laboriosam doloremque distinctio? Repudiandae sunt, nemo
+                        dolor dolores aut eveniet magni. Optio assumenda eos
+                        distinctio consequatur, vitae doloremque ea error
+                        laborum numquam tenetur. Deserunt ducimus ipsum a quos
+                        fuga error quae, accusantium aut sunt! Dolorum,
+                        voluptatibus amet soluta impedit, non consectetur nulla
+                        deleniti molestiae quo hic eum facilis, facere dolor
+                        neque delectus? Consequuntur! Quae iusto harum iure unde
+                        consectetur doloribus consequuntur nesciunt sequi
+                        incidunt officia. Nam soluta sunt fugit voluptatem,
+                        iusto sed asperiores iure, quis unde a culpa quas
+                        quibusdam eaque odio maxime. Quod vitae necessitatibus
+                        provident quaerat sunt placeat aut itaque veniam nisi
+                        ipsa magnam sed expedita quis, porro praesentium qui
+                        corporis. Distinctio fugit atque assumenda? Consequatur
+                        provident eius modi minus consequuntur. Delectus dolore
+                        molestias incidunt labore nostrum voluptates,
+                        exercitationem id similique omnis et nemo nihil harum
+                        voluptatem ipsa quas! Veniam debitis natus corrupti enim
+                        iusto. Deleniti ab cupiditate suscipit qui at.
+                      </div>
+                    </div>
                   </div>
-                  <button className="w-fit bg-gray-200 hover:bg-gray-300 rounded-xl p-2  relative cursor-pointer group ">
+                  <button className="w-fit bg-gray-200 hover:bg-gray-300 rounded-xl p-2  relative cursor-pointer group z-0 ">
                     <div className="flex gap-2 justify-center items-center">
                       <i className="fas fa-bell"></i>
                       personalized

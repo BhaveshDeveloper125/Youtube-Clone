@@ -2,10 +2,12 @@ import React from "react";
 import WatchLaterVideo from "../WatchLaterVideo/WatchLaterVideo";
 import Cards from "../Cards/Cards";
 import ChannelownerPlaylist from "../ChannelOwnerPlaylist/ChannelownerPlaylist";
+import "./ChannelOwner.css";
 
 // Import Images
 import goku from "../../assets/Images/5.jpg";
 import { Link } from "react-router-dom";
+import FeaturedChannel from "../FeaturedChannels/FeaturedChannel";
 
 function HomeSectionOfChannelOwner() {
   return (
@@ -30,6 +32,17 @@ function HomeSectionOfChannelOwner() {
       <ChannelownerPlaylist />
       <br />
       <br />
+
+      <div id="featured_channel" className="h-fit w-full">
+        <FeaturedChannel />
+        <FeaturedChannel />
+        <FeaturedChannel />
+        <FeaturedChannel />
+        <FeaturedChannel />
+        <FeaturedChannel />
+        <FeaturedChannel />
+        <FeaturedChannel />
+      </div>
     </>
   );
 }
