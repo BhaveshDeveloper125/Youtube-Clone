@@ -33,6 +33,10 @@ function HomeSectionOfChannelOwner() {
       <br />
       <br />
 
+      <h1 className="font-bold text-2xl">Featured Channel</h1>
+      <br />
+      <br />
+
       <div id="featured_channel" className="h-fit w-full">
         <FeaturedChannel />
         <FeaturedChannel />

@@ -81,7 +81,14 @@ function ChannelOwner() {
                       ProvidentLorem ipsum dolor sit amet consectetur
                       adipisicing elit. Provident
                     </div>
-                    ..more
+                    <span
+                      onClick={() => {
+                        setchannelData(!channelData);
+                      }}
+                      className="cursor-pointer"
+                    >
+                      ..more
+                    </span>
                   </div>
                   <div>
                     <Link
@@ -111,10 +118,18 @@ function ChannelOwner() {
                       <div className="h-150 w-[50%] bg-white relative overflow-auto">
                         <button
                           onClick={() => setchannelData(!channelData)}
-                          className="w-full bg-white p-2 text-2xl text-black flex justify-end sticky top-1 cursor-pointer"
+                          className="w-full bg-white p-2 text-2xl text-black flex justify-between  sticky top-0 cursor-pointer"
                         >
+                          <span className="h-10 w-[90%] line-clamp-1">
+                            Channel Name Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Ipsam accusamus cumque facilis.
+                            Natus, minima ipsum unde molestias inventore eveniet
+                            a sed suscipit mollitia. Reiciendis porro vero qui,
+                            error nobis ipsa?
+                          </span>
                           <i className="fa-solid fa-xmark"></i>
                         </button>
+                        <h1 className="font-bold text-4xl p-4">Description</h1>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Distinctio neque accusantium voluptate ut dignissimos
                         odit? Iusto quas repudiandae, asperiores ullam
@@ -123,83 +138,78 @@ function ChannelOwner() {
                         inventore vitae adipisci eveniet quis obcaecati odit
                         voluptas voluptatum non ex, incidunt illum aspernatur
                         officiis, ipsa quia accusamus suscipit, omnis aliquam
-                        reiciendis numquam quo rerum soluta! Reprehenderit.
-                        Laudantium magnam praesentium delectus dolores quia qui,
-                        nam sunt voluptatum nihil esse similique quaerat! Quo
-                        odio maiores perferendis accusamus placeat officiis
-                        incidunt molestias, quisquam vero itaque ipsa, veritatis
-                        soluta voluptates! Debitis numquam animi perferendis
-                        rerum odio aliquam in eos non quam architecto inventore
-                        explicabo iure soluta itaque et corporis hic, excepturi
-                        similique quibusdam perspiciatis? Eaque a neque et
-                        fugiat voluptatibus. Accusantium quisquam, itaque
-                        nostrum voluptatibus suscipit earum ab cumque soluta
-                        tempora qui nesciunt nobis optio fugiat cum odio maxime
-                        corporis obcaecati at hic illum magni veniam facere
-                        temporibus neque! Quidem? Incidunt enim magni excepturi
-                        aperiam autem iusto laboriosam doloremque distinctio?
-                        Repudiandae sunt, nemo dolor dolores aut eveniet magni.
-                        Optio assumenda eos distinctio consequatur, vitae
-                        doloremque ea error laborum numquam tenetur. Deserunt
-                        ducimus ipsum a quos fuga error quae, accusantium aut
-                        sunt! Dolorum, voluptatibus amet soluta impedit, non
-                        consectetur nulla deleniti molestiae quo hic eum
-                        facilis, facere dolor neque delectus? Consequuntur! Quae
-                        iusto harum iure unde consectetur doloribus consequuntur
-                        nesciunt sequi incidunt officia. Nam soluta sunt fugit
-                        voluptatem, iusto sed asperiores iure, quis unde a culpa
-                        quas quibusdam eaque odio maxime. Quod vitae
-                        necessitatibus provident quaerat sunt placeat aut itaque
-                        veniam nisi ipsa magnam sed expedita quis, porro
-                        praesentium qui corporis. Distinctio fugit atque
-                        assumenda? Consequatur provident eius modi minus
-                        consequuntur. Delectus dolore molestias incidunt labore
-                        nostrum voluptates, exercitationem id similique omnis et
-                        nemo nihil harum voluptatem ipsa quas! Veniam debitis
-                        natus corrupti enim iusto. Deleniti ab cupiditate
-                        suscipit qui at. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Distinctio neque accusantium voluptate
-                        ut dignissimos odit? Iusto quas repudiandae, asperiores
-                        ullam laboriosam enim impedit minima suscipit, nihil
-                        delectus itaque nulla accusamus. Consectetur et
-                        perspiciatis inventore vitae adipisci eveniet quis
-                        obcaecati odit voluptas voluptatum non ex, incidunt
-                        illum aspernatur officiis, ipsa quia accusamus suscipit,
-                        omnis aliquam reiciendis numquam quo rerum soluta!
-                        Reprehenderit. Laudantium magnam praesentium delectus
-                        dolores quia qui, nam sunt voluptatum nihil esse
-                        similique quaerat! Quo odio maiores perferendis
-                        accusamus placeat officiis incidunt molestias, quisquam
-                        vero itaque ipsa, veritatis soluta voluptates! Debitis
-                        numquam animi perferendis rerum odio aliquam in eos non
-                        quam architecto inventore explicabo iure soluta itaque
-                        et corporis hic, excepturi similique quibusdam
-                        perspiciatis? Eaque a neque et fugiat voluptatibus.
-                        Accusantium quisquam, itaque nostrum voluptatibus
-                        suscipit earum ab cumque soluta tempora qui nesciunt
-                        nobis optio fugiat cum odio maxime corporis obcaecati at
-                        hic illum magni veniam facere temporibus neque! Quidem?
-                        Incidunt enim magni excepturi aperiam autem iusto
-                        laboriosam doloremque distinctio? Repudiandae sunt, nemo
-                        dolor dolores aut eveniet magni. Optio assumenda eos
-                        distinctio consequatur, vitae doloremque ea error
-                        laborum numquam tenetur. Deserunt ducimus ipsum a quos
-                        fuga error quae, accusantium aut sunt! Dolorum,
-                        voluptatibus amet soluta impedit, non consectetur nulla
-                        deleniti molestiae quo hic eum facilis, facere dolor
-                        neque delectus? Consequuntur! Quae iusto harum iure unde
-                        consectetur doloribus consequuntur nesciunt sequi
-                        incidunt officia. Nam soluta sunt fugit voluptatem,
-                        iusto sed asperiores iure, quis unde a culpa quas
-                        quibusdam eaque odio maxime. Quod vitae necessitatibus
-                        provident quaerat sunt placeat aut itaque veniam nisi
-                        ipsa magnam sed expedita quis, porro praesentium qui
-                        corporis. Distinctio fugit atque assumenda? Consequatur
-                        provident eius modi minus consequuntur. Delectus dolore
-                        molestias incidunt labore nostrum voluptates,
-                        exercitationem id similique omnis et nemo nihil harum
-                        voluptatem ipsa quas! Veniam debitis natus corrupti enim
-                        iusto. Deleniti ab cupiditate suscipit qui at.
+                        <h1 className="text-2xl font-bold p-8">Links</h1>
+                        <div className="h-fit w-full p-4 ">
+                          <ul className="size-full">
+                            {(() => {
+                              const item = [];
+                              for (let i = 0; i <= 4; i++) {
+                                item.push(
+                                  <li className="size-full p-2 flex">
+                                    <img
+                                      src={rengoku}
+                                      alt="link-icon"
+                                      className="size-10  object-cover"
+                                    />
+                                    <div className="flex flex-col flex-1">
+                                      <span className="flex-1 pl-2 pr-2">
+                                        Instagram
+                                      </span>
+                                      <span className="flex-1 pl-2 pr-2">
+                                        <Link className="w-full line-clamp-1">
+                                          http:// Lorem ipsum dolor sit amet
+                                          consectetur adipisicing elit.
+                                          Blanditiis saepe unde quasi ex rerum!
+                                          Amet, totam! Velit adipisci
+                                          exercitationem molestiae sint,
+                                          deleniti provident incidunt tempore
+                                          unde cum cupiditate porro aut.
+                                        </Link>
+                                      </span>
+                                    </div>
+                                  </li>
+                                );
+                              }
+                              return item;
+                            })()}
+                          </ul>
+                        </div>
+                        <h1 className="text-2xl font-bold p-8">More Info</h1>
+                        <ul className="flex-1 p-2">
+                          <li className="w-full p-2 flex gap-4">
+                            <i className=" fa-solid fa-envelope-open h-full justify-center items-center"></i>
+                            <span>bhavesh2103m@gmail.com adipisicing</span>
+                          </li>
+                          <li className="w-full p-2 flex gap-4">
+                            <i className="fas fa-globe text-xl"></i>
+                            <span>
+                              http:// Lorem ipsum dolor sit, amet consectetur
+                              adipisicing
+                            </span>
+                          </li>
+                          <li className="w-full p-2 flex gap-4">
+                            <i className="fa-solid fa-circle-exclamation text-xl"></i>
+                            <span>joined 1 january 2025</span>
+                          </li>
+                          <li className="w-full p-2 flex gap-4">
+                            <i className="fa-solid fa-user text-xl"></i>
+                            <span>1000000 Subscribers</span>
+                          </li>
+                          <li className="w-full p-2 flex gap-4">
+                            <i className=" fab fa-youtube h-full justify-center items-center"></i>
+                            <span>100 Videos</span>
+                          </li>
+                          <li className="w-full p-2 flex gap-4">
+                            <i class="fas fa-arrow-trend-up h-full justify-center items-center"></i>
+                            <span>1000000 Views</span>
+                          </li>
+                          <li className="w-full  p-2 flex gap-4">
+                            <span className="bg-gray-200 hover:bg-gray-300 rounded-2xl p-3 flex gap-2 justify-center items-center cursor-pointer">
+                              <i class="fas fa-flag h-full justify-center items-center"></i>
+                              Report User
+                            </span>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
