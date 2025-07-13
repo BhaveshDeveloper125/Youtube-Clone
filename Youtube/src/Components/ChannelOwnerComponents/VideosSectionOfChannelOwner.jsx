@@ -1,5 +1,9 @@
 import React from "react";
 import WatchLaterVideo from "../WatchLaterVideo/WatchLaterVideo";
+import Cards from "../Cards/Cards";
+
+// Import Css
+import "./VideosSectionOfChannelOwner.css";
 
 // Importing Images
 import cutie from "../../assets/Images/1.jpeg";
@@ -19,14 +23,18 @@ function VideosSectionOfChannelOwner() {
             Oldest
           </button>
         </div>
-        <div className="bg-green-500">
-          <WatchLaterVideo
-            img={cutie}
-            title=" Most Viewed videos : video title this is the video title this is the video title  this is the video titlethis is the video titlethis is the video titlethis is the video title"
-            channelName="Channel Name Channel Name Channel Name Channel Name "
-            views="1M"
-            time="1 year"
-          />
+        <div
+          id="ChannelOwnerVideoContainer"
+          className=" grid gap-2 grid-cols-4"
+        >
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
         </div>
       </div>
     </>
