@@ -208,6 +208,18 @@ function ChannelOwner() {
                               <i class="fas fa-flag h-full justify-center items-center"></i>
                               Report User
                             </span>
+                            <span
+                              onClick={() => {
+                                navigator.clipboard.writeText(
+                                  window.location.href
+                                );
+                              }}
+                              tabIndex={0}
+                              className="bg-gray-200 hover:bg-gray-300 focus:bg-gray-100 rounded-2xl p-3 flex gap-2 justify-center items-center cursor-pointer"
+                            >
+                              <i className="fas fa-share h-full justify-center items-center"></i>
+                              copy channel link
+                            </span>
                           </li>
                         </ul>
                       </div>
