@@ -17,9 +17,9 @@ function Latest() {
         description={description}
         setdescription={setdescription}
       /> */}
-      <div className="flex-1 bg-red-500 grid gap-4 grid-cols-4 ">
-        {[...Array(4)].map((_, i) => (
-          <div className="aspect=[9/16] bg-yellow-500">
+      <div className="h-fit flex-1 grid gap-4 grid-cols-4 ">
+        {[...Array(8)].map((_, i) => (
+          <div className=" aspect-[1/1.5]">
             <ShortsComponent key={i} />
           </div>
         ))}
