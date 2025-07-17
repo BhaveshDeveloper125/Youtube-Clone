@@ -145,7 +145,7 @@ function ChannelOwner() {
                               const item = [];
                               for (let i = 0; i <= 4; i++) {
                                 item.push(
-                                  <li className="size-full p-2 flex">
+                                  <li key={i} className="size-full p-2 flex">
                                     <img
                                       src={rengoku}
                                       alt="link-icon"
@@ -200,12 +200,12 @@ function ChannelOwner() {
                             <span>100 Videos</span>
                           </li>
                           <li className="w-full p-2 flex gap-4">
-                            <i class="fas fa-arrow-trend-up h-full justify-center items-center"></i>
+                            <i className="fas fa-arrow-trend-up h-full justify-center items-center"></i>
                             <span>1000000 Views</span>
                           </li>
                           <li className="w-full  p-2 flex gap-4">
                             <span className="bg-gray-200 hover:bg-gray-300 rounded-2xl p-3 flex gap-2 justify-center items-center cursor-pointer">
-                              <i class="fas fa-flag h-full justify-center items-center"></i>
+                              <i className="fas fa-flag h-full justify-center items-center"></i>
                               Report User
                             </span>
                             <span
