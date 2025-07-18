@@ -1,9 +1,14 @@
 import React from "react";
+import Post from "../PostsComponent/Post";
 
 function PostSectionOfChannelOwner() {
   return (
     <>
-      <h1>PostSection </h1>
+      <div className="h-fit w-full flex gap-2 flex-col justify-center items-center">
+        {[...Array(4)].map((_, i) => (
+          <Post key={i} />
+        ))}
+      </div>
     </>
   );
 }
