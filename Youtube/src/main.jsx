@@ -1,98 +1,99 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import App from './App.jsx';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Import Pages
 
-import Home from './Pages/Home/Home.jsx';
-import Shorts from './Pages/Shorts/Shorts.jsx';
-import Subscription from './Pages/Subscription/Subscription.jsx';
-import You from './Pages/You/You.jsx';
-import YourSection from './Pages/YouSection/YourSection.jsx';
-import History from './Pages/History/History.jsx';
-import Playlist from './Pages/PlayList/Playlist.jsx';
-import YourVideos from './Pages/YourVideos/YourVideos.jsx';
-import WatchLater from './Pages/WatchLater/WatchLater.jsx';
-import LikedVideos from './Pages/LikedVideos/LikedVideos.jsx';
-import ChannelOwner from './Pages/ChannelOwner/ChannelOwner.jsx';
-import AllPlaylist from './Pages/AllPlaylist/AllPlaylist.jsx';
-import Trending from './Pages/Trending/Trending.jsx';
-import Films from './Pages/Films/Films.jsx';
-import Live from './Pages/Live/Live.jsx';
-import News from './Pages/News/News.jsx';
-import Sports from './Pages/Sports/Sports.jsx';
-import Settings from './Pages/Settings/Settings.jsx';
-import ReportHistory from './Pages/ReportHistory/ReportHistory.jsx';
-import Help from './Pages/Help/Help.jsx';
-import Feedback from './Pages/FeedBack/Feedback.jsx';
-import SwitchAccount from '../src/Pages/SwitchAccount/SwitchAccount.jsx';
-import CreaterStudioDashboard from './Pages/CreaterStudioDashboard/CreaterStudioDashboard.jsx';
-import YourDataInYoutube from './Pages/YourDataInYoutube/YourDataInYoutube.jsx';
-import Restriction from './Pages/Restrictions/Restriction.jsx';
-import TopMenuSettings from './Pages/Settings/Settings.jsx';
-import TopMenuHelp from './Pages/Help/Help.jsx';
-import TopMenuFeedback from './Pages/TopMenuUserMenu/TopMenuUserMenu.jsx';
-import AllSubscription from './Pages/AllSubscription/AllSubscription.jsx';
-import ChannelOwnerPage from './Pages/ChannelOwnerPage/ChannelOwnerPage.jsx';
-import ViewPages from './Pages/ViewPages/ViewPages.jsx';
-import VideoPlayer from './Pages/VideoPlayer/VideoPlayer.jsx';
-import PlaylistVideos from './Pages/PlaylistVideos/PlaylistVideos.jsx';
+import Home from "./Pages/Home/Home.jsx";
+import Shorts from "./Pages/Shorts/Shorts.jsx";
+import Subscription from "./Pages/Subscription/Subscription.jsx";
+import You from "./Pages/You/You.jsx";
+import YourSection from "./Pages/YouSection/YourSection.jsx";
+import History from "./Pages/History/History.jsx";
+import Playlist from "./Pages/PlayList/Playlist.jsx";
+import YourVideos from "./Pages/YourVideos/YourVideos.jsx";
+import WatchLater from "./Pages/WatchLater/WatchLater.jsx";
+import LikedVideos from "./Pages/LikedVideos/LikedVideos.jsx";
+import ChannelOwner from "./Pages/ChannelOwner/ChannelOwner.jsx";
+import AllPlaylist from "./Pages/AllPlaylist/AllPlaylist.jsx";
+import Trending from "./Pages/Trending/Trending.jsx";
+import Films from "./Pages/Films/Films.jsx";
+import Live from "./Pages/Live/Live.jsx";
+import News from "./Pages/News/News.jsx";
+import Sports from "./Pages/Sports/Sports.jsx";
+import Settings from "./Pages/Settings/Settings.jsx";
+import ReportHistory from "./Pages/ReportHistory/ReportHistory.jsx";
+import Help from "./Pages/Help/Help.jsx";
+import Feedback from "./Pages/FeedBack/Feedback.jsx";
+import SwitchAccount from "../src/Pages/SwitchAccount/SwitchAccount.jsx";
+import CreaterStudioDashboard from "./Pages/CreaterStudioDashboard/CreaterStudioDashboard.jsx";
+import YourDataInYoutube from "./Pages/YourDataInYoutube/YourDataInYoutube.jsx";
+import Restriction from "./Pages/Restrictions/Restriction.jsx";
+import TopMenuSettings from "./Pages/Settings/Settings.jsx";
+import TopMenuHelp from "./Pages/Help/Help.jsx";
+import TopMenuFeedback from "./Pages/TopMenuUserMenu/TopMenuUserMenu.jsx";
+import AllSubscription from "./Pages/AllSubscription/AllSubscription.jsx";
+import ChannelOwnerPage from "./Pages/ChannelOwnerPage/ChannelOwnerPage.jsx";
+import ViewPages from "./Pages/ViewPages/ViewPages.jsx";
+import VideoPlayer from "./Pages/VideoPlayer/VideoPlayer.jsx";
+import PlaylistVideos from "./Pages/PlaylistVideos/PlaylistVideos.jsx";
+import DisplayPost from "./Pages/DisplayPost/DisplayPost.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Home />,
   },
 
   {
-    path: '/shorts',
+    path: "/shorts",
     element: <Shorts />,
   },
 
   {
-    path: '/subs',
+    path: "/subs",
     element: <Subscription />,
   },
 
   {
-    path: '/You',
+    path: "/You",
     element: <You />,
   },
 
   {
-    path: '/Yoursection',
+    path: "/Yoursection",
     element: <YourSection />,
   },
 
   {
-    path: '/history',
+    path: "/history",
     element: <History />,
   },
 
   {
-    path: '/playlist',
+    path: "/playlist",
     element: <Playlist />,
   },
 
   {
-    path: '/yourvideos',
+    path: "/yourvideos",
     element: <YourVideos />,
   },
 
   {
-    path: '/watchlater',
+    path: "/watchlater",
     element: <WatchLater />,
   },
 
   {
-    path: '/likedvideos',
+    path: "/likedvideos",
     element: <LikedVideos />,
   },
 
   {
-    path: '/channelowner/:id',
+    path: "/channelowner/:id",
     element: <ChannelOwner />,
   },
 
@@ -102,123 +103,127 @@ const router = createBrowserRouter([
   // },
 
   {
-    path: '/trending',
+    path: "/trending",
     element: <Trending />,
   },
 
   {
-    path: '/films',
+    path: "/films",
     element: <Films />,
   },
 
   {
-    path: '/live',
+    path: "/live",
     element: <Live />,
   },
 
   {
-    path: '/news',
+    path: "/news",
     element: <News />,
   },
 
   {
-    path: '/sports',
+    path: "/sports",
     element: <Sports />,
   },
 
   {
-    path: '/settings',
+    path: "/settings",
     element: <Settings />,
   },
 
   {
-    path: '/reporthistory',
+    path: "/reporthistory",
     element: <ReportHistory />,
   },
 
   {
-    path: '/help',
+    path: "/help",
     element: <Help />,
   },
 
   {
-    path: '/feedback',
+    path: "/feedback",
     element: <Feedback />,
   },
 
   {
-    path: '/switchAccount',
+    path: "/switchAccount",
     element: <SwitchAccount />,
   },
 
   {
-    path: '/createrStudio/:ownerID',
+    path: "/createrStudio/:ownerID",
     element: <CreaterStudioDashboard />,
   },
 
   {
-    path: '/yourdatainyoutube',
+    path: "/yourdatainyoutube",
     element: <YourDataInYoutube />,
   },
 
   {
-    path: '/restriction',
+    path: "/restriction",
     element: <Restriction />,
   },
 
   {
-    path: '/topSettings',
+    path: "/topSettings",
     element: <TopMenuSettings />,
   },
 
   {
-    path: '/topHelp',
+    path: "/topHelp",
     element: <TopMenuHelp />,
   },
 
   {
-    path: '/topfeedback',
+    path: "/topfeedback",
     element: <TopMenuFeedback />,
   },
 
   {
-    path: '/allsubs',
+    path: "/allsubs",
     element: <AllSubscription />,
   },
 
   {
-    path: '/user/:id',
+    path: "/user/:id",
     element: <ChannelOwner />,
   },
 
   {
-    path: '/mychannel/:id',
+    path: "/mychannel/:id",
     element: <ChannelOwnerPage />,
   },
 
   {
-    path: '/history_of/:his',
+    path: "/history_of/:his",
     element: <ViewPages />,
   },
 
   {
-    path: '/playlistPlayer/:list',
+    path: "/playlistPlayer/:list",
     element: <VideoPlayer />,
   },
 
   {
-    path: '/playlists/:playlist',
+    path: "/playlists/:playlist",
     element: <PlaylistVideos />,
   },
 
   {
-    path: '/Allplaylist/:allplay',
+    path: "/Allplaylist/:allplay",
     element: <AllPlaylist />,
+  },
+  {
+    path: "channelownerPost/:id",
+    element: <DisplayPost />,
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
+  </StrictMode>
 );

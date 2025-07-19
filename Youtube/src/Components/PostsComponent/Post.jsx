@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, Links } from "react-router-dom";
 
 // Importing images
 import cutie from "../../assets/Images/1.jpeg";
@@ -7,17 +8,18 @@ function Post() {
   const [like, setlike] = useState(false);
   const [dislike, setdislike] = useState(false);
   const [report, setreport] = useState(false);
+  const [readmore, setreadmore] = useState(false);
 
   return (
     <>
-      <div className="h-fit w-1/2 bg-gray-100 hover:bg-gray-200 border active:bg-gray-100 border-black rounded-xl p-4 m-4 cursor-pointer">
+      <div className="h-fit w-1/2 bg-gray-100 border border-black rounded-xl p-4 m-4 cursor-pointer">
         <div className="h-fit w-full flex gap-0.5">
           <img
             src={cutie}
             alt="channel-logo"
             className="size-10 rounded-full object-cover"
           />
-          <div className="w-[95%] text-xl font-semibold truncate">
+          <div className="w-[95%] p-1 text-xl font-semibold truncate">
             channel name qwertyuiopasdfghjklzxcvbnm, Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Minima iusto perspiciatis ducimus,
             accusantium sit voluptatem ullam eveniet velit. At quidem eum nemo
@@ -32,14 +34,14 @@ function Post() {
             <div className="size-[4px] bg-black rounded-full"></div>
             <div className="size-[4px] bg-black rounded-full"></div>
             {report ? (
-              <div className=" bg-white shadow-2xl shadow-black rounded-2xl p-3 pl-4 pr-4 absolute top-5 right-8 flex gap-2 justify-center items-center">
+              <div className=" bg-white hover:bg-gray-200 shadow-2xl shadow-black rounded-2xl p-3 pl-4 pr-4 absolute top-5 right-8 flex gap-2 justify-center items-center">
                 <i className="fas fa-flag" /> <div>Report</div>
               </div>
             ) : null}
           </button>
         </div>
         <div className="h-fit w-full flex flex-col gap-3 ">
-          <p className="line-clamp-4 after:content-read-more">
+          <p className={readmore ? `h-fit` : `line-clamp-4`}>
             perspiciatis dolores, praesentium rerum quia cumque pariatur? Ipsa
             possimus corporis, deleniti odit accusantium excepturi porro minima
             vel quod nam ab amet! Qui rem cumque, molestiae et quis dolores
@@ -52,8 +54,25 @@ function Post() {
             assumenda! Cupiditate alias tempora rerum dicta non accusantium ab
             ratione vitae debitis repudiandae quae dolorem in nisi, perspiciatis
             tenetur molestiae voluptas eligendi aliquid! Culpa sed optio
-            consectetur rerum, distinctio consequatur. Consequuntur.{" "}
+            consectetur rerum, distinctio consequatur. Consequuntur.
           </p>
+
+          {readmore ? (
+            <button
+              onClick={() => setreadmore(!readmore)}
+              className="w-fit p-2 cursor-pointer font-bold text-gray-600 hover:text-gray-400"
+            >
+              Read less
+            </button>
+          ) : (
+            <button
+              onClick={() => setreadmore(!readmore)}
+              className="w-fit p-2 cursor-pointer font-bold text-gray-600 hover:text-gray-400"
+            >
+              Read more
+            </button>
+          )}
+
           <img
             src={cutie}
             alt="image"
@@ -74,6 +93,7 @@ function Post() {
                 }
               />
             </div>
+            1M likes
             <div>
               <i
                 onClick={() => {
@@ -92,13 +112,16 @@ function Post() {
               style={{ "-webkit-text-stroke": "1px black" }}
               className="fas fa-share hover:bg-gray-400 rounded-full text-xl text-transparent p-2"
             />
-            <div className="">
+            <Link
+              to="/channelownerPost/12"
+              className="hover:bg-gray-400 rounded-full pl-1 pr-2"
+            >
               <i
                 style={{ "-webkit-text-stroke": "1px black" }}
-                className="fas fa-comment hover:bg-gray-400 rounded-full text-xl text-transparent p-2"
+                className="fas fa-comment rounded-full text-xl text-transparent p-2"
               />
               <span>1M</span>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
