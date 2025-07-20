@@ -1,10 +1,10 @@
-import React from 'react';
-import TopMenu from '../../Components/TopMenu/TopMenu';
-import SideMenu from '../../Components/SideMenu/SideMenu';
-import Context from '../../Context/Context';
-import Cards from '../../Components/Cards/Cards';
+import React from "react";
+import TopMenu from "../../Components/TopMenu/TopMenu";
+import SideMenu from "../../Components/SideMenu/SideMenu";
+import Context from "../../Context/Context";
+import Cards from "../../Components/Cards/Cards";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Subscription() {
   return (
@@ -25,31 +25,17 @@ function Subscription() {
             <br />
             <br />
             <br />
-            <div className="flex flex-1 flex-wrap  overflow-auto">
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
+            <div
+              className="flex-1 grid 
+                          md:grid-cols-2
+                          lg:grid-cols-3
+                          xl:grid-cols-3
+                          2xl:grid-cols-4  
+                          overflow-auto"
+            >
+              {[...Array(25)].map((i) => (
+                <Cards key={i} />
+              ))}
             </div>
           </div>
         </div>
