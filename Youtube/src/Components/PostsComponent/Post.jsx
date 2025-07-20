@@ -79,7 +79,7 @@ function Post() {
             </button>
           )}
 
-          <div className="h-fit w-full bg-red-500">
+          <div className="h-fit w-full">
             {/* <div
               className={`flex relative transition-transform duration-500 overflow-hidden translate-x-${CurrentImage}`}
             >

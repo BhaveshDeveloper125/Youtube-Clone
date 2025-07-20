@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Importing Images
-import cutie from '../../assets/Images/cute.jpg';
-import like from '../../assets/Icons/like.svg';
+import cutie from "../../assets/Images/cute.jpg";
+import like from "../../assets/Icons/like.svg";
 
 function Comments() {
   const [expand, setexpand] = useState(false);
@@ -22,18 +22,18 @@ function Comments() {
             <Link className="text-black font-bold">@Bhavesh</Link>
             <span className="text-gray-400 p-2">1 hour ago</span>
           </span>
-          <span className={expand ? '' : 'line-clamp-4'}>
+          <span className={expand ? "" : "line-clamp-3"}>
             comment comment comment comment comment comment comment comment
             comment comment comment comment comment comment comment comment
             comment comment comment comment comment comment comment comment
             comment comment comment comment comment comment comment comment
-            comment comment comment comment comment comment comment comment{' '}
+            comment comment comment comment comment comment comment comment{" "}
           </span>
           <Link
             onClick={() => setexpand(!expand)}
             className="text-gray-500 hover:underline"
           >
-            {expand ? 'show less ' : 'show more'}{' '}
+            {expand ? "show less " : "show more"}{" "}
           </Link>
           <div className="  flex gap-9 ">
             <button>
