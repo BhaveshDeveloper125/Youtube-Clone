@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { Link, Links } from "react-router-dom";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 // Importing images
 import cutie from "../../assets/Images/1.jpeg";
+import five from "../../assets/Images/5.jpg";
+import cute from "../../assets/Images/cute.jpg";
+import rengoku from "../../assets/Images/rengoku.jpg";
 
 function Post() {
   const [like, setlike] = useState(false);
   const [dislike, setdislike] = useState(false);
   const [report, setreport] = useState(false);
   const [readmore, setreadmore] = useState(false);
+
+  const images = [cutie, five, cute, rengoku];
 
   return (
     <>
@@ -73,11 +79,51 @@ function Post() {
             </button>
           )}
 
-          <img
-            src={cutie}
-            alt="image"
-            className=" h-full w-full rounded-2xl object-cover "
-          />
+          <div className="h-fit w-full bg-red-500">
+            {/* <div
+              className={`flex relative transition-transform duration-500 overflow-hidden translate-x-${CurrentImage}`}
+            >
+              <img
+                src={cutie}
+                alt="image"
+                className=" h-full w-full rounded-2xl object-cover "
+              />{" "}
+              <img
+                src={cutie}
+                alt="image"
+                className=" h-full w-full rounded-2xl object-cover "
+              />{" "}
+              <img
+                src={cutie}
+                alt="image"
+                className=" h-full w-full rounded-2xl object-cover "
+              />{" "}
+              <img
+                src={cutie}
+                alt="image"
+                className=" h-full w-full rounded-2xl object-cover "
+              />
+              <div className="h-full w-full text-2xl absolute top-0 flex justify-between items-center">
+                <button
+                  onClick={() => {
+                    CurrentImage++;
+                  }}
+                  className="size-fit bg-white rounded-full p-1 text-xl text-black cursor-pointer"
+                >
+                  <i className="fas fa-arrow-left"></i>
+                </button>
+                <button
+                  onClick={() => {
+                    CurrentImage--;
+                  }}
+                  className="size-fit bg-white rounded-full p-1 text-xl text-black cursor-pointer"
+                >
+                  <i className="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div> */}
+            <ImageCarousel img={images} />
+          </div>
           <div className="h-fit w-full p-2 flex gap-2">
             <div>
               <i
@@ -85,7 +131,7 @@ function Post() {
                   setlike(!like);
                   dislike ? setdislike(false) : null;
                 }}
-                style={{ "-webkit-text-stroke": "1px black" }}
+                style={{ WebkitTextStroke: "1px black" }}
                 className={
                   like
                     ? ` hover:bg-gray-400 rounded-full fas fa-thumbs-up p-2 text-black text-xl`
