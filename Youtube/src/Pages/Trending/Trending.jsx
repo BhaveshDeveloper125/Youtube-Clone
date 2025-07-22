@@ -24,7 +24,7 @@ function Trending() {
         <TopMenu />
         <div className="h-screen w-screen flex overflow-y-auto">
           <SideMenu />
-          <div className=" w-full flex-1 mx-auto px-24">
+          <div className="h-fit w-full mx-auto px-24">
             <div className="h-fit w-full flex gap-2 items-center ">
               <img
                 src={fire}
