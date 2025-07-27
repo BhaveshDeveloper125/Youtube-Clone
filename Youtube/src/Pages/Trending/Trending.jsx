@@ -18,66 +18,53 @@ function Trending() {
     2: <FilmTrending />,
     3: <SportsTrending />,
   };
+  let menustyle =
+    "p-2 text-xl font-semibold hover:text-black border-2 border-t-transparent border-l-transparent border-r-transparent border-b-transparent outline-none hover:border-b-black text-gray-400 cursor-pointer";
+
+  let clickedmenustyle =
+    "p-2 text-xl font-semibold text-black border-2 border-t-transparent border-l-transparent border-r-transparent outline-none cursor-pointer";
   return (
     <>
       <Context>
         <TopMenu />
-        <div className="h-screen w-screen flex overflow-y-auto">
+        <div className="flex">
           <SideMenu />
-          <div className="h-fit w-full mx-auto px-24">
+          <div className="h-screen flex-1 overflow-auto mx-auto px-16">
             <div className="h-fit w-full flex gap-2 items-center ">
               <img
                 src={fire}
                 alt="trending-icon"
-                className="size-18 border-red-600  rounded-full rotate-20 mix-blend-multiply"
+                className="size-18 border-red-600 rounded-full rotate-20 mix-blend-multiply"
               />
               <h1 className="text-4xl font-bold">Trending</h1>
             </div>
-
-            <ul className="h-fit w-full border-[1.5px] border-transparent border-b-gray-400 flex gap-16">
+            <ul className="p-4 flex gap-16 hover:">
               <li
                 onClick={() => settrendingsection(0)}
-                className={`${
-                  trendingsection === 0
-                    ? `border-[2px] border-transparent border-b-black outline-none p-1.5 text-[20px] text-black font-semibold cursor-pointer`
-                    : `border-[2px] border-transparent hover:border-b-black outline-none p-1.5 text-[20px] hover:text-black text-gray-400 font-semibold cursor-pointer`
-                }`}
+                className={trendingsection == 0 ? clickedmenustyle : menustyle}
               >
                 Now
               </li>
               <li
                 onClick={() => settrendingsection(1)}
-                className={`${
-                  trendingsection === 1
-                    ? `border-[2px] border-transparent border-b-black outline-none p-1.5 text-[20px] text-black font-semibold cursor-pointer`
-                    : `border-[2px] border-transparent hover:border-b-black outline-none p-1.5 text-[20px] hover:text-black text-gray-400 font-semibold cursor-pointer`
-                }`}
+                className={trendingsection == 1 ? clickedmenustyle : menustyle}
               >
                 Music
               </li>
               <li
                 onClick={() => settrendingsection(2)}
-                className={`${
-                  trendingsection === 2
-                    ? `border-[2px] border-transparent border-b-black outline-none p-1.5 text-[20px] text-black font-semibold cursor-pointer`
-                    : `border-[2px] border-transparent hover:border-b-black outline-none p-1.5 text-[20px] hover:text-black text-gray-400 font-semibold cursor-pointer`
-                }`}
+                className={trendingsection == 2 ? clickedmenustyle : menustyle}
               >
-                Film
+                Sports
               </li>
               <li
                 onClick={() => settrendingsection(3)}
-                className={`${
-                  trendingsection === 3
-                    ? `border-[2px] border-transparent border-b-black outline-none p-1.5 text-[20px] text-black font-semibold cursor-pointer`
-                    : `border-[2px] border-transparent hover:border-b-black outline-none p-1.5 text-[20px] hover:text-black text-gray-400 font-semibold cursor-pointer`
-                }`}
+                className={trendingsection == 3 ? clickedmenustyle : menustyle}
               >
-                Sport
+                Film
               </li>
             </ul>
-
-            {trendingsections[trendingsection]}
+            <div className="flex-1">{trendingsections[trendingsection]}</div>
           </div>
         </div>
       </Context>
