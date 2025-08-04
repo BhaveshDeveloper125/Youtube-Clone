@@ -13,7 +13,10 @@ function Browse() {
                 <h1 className="text-2xl font-bold">Premium Movies For you</h1>
               </div>
               <div>
-                <Link className="hover:bg-blue-500/20 rounded-2xl p-2 text-blue-500 font-semibold">
+                <Link
+                  to={"/film/view/comedy"}
+                  className="hover:bg-blue-500/20 rounded-2xl p-2 text-blue-500 font-semibold"
+                >
                   view all
                 </Link>
               </div>

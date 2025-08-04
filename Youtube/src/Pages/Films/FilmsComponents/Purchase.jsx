@@ -7,9 +7,9 @@ import FilmCard from "../../../Components/FilmComponents/FilmCard";
 function Purchase() {
   return (
     <>
-      <div className=" p-4 flex justify-center items-center flex-wrap">
+      <div className=" flex gap-2 justify-center items-center flex-wrap">
         {[...Array(10)].map((_, i) => (
-          <div className="h-80 w-60 p-2">
+          <div className="h-fit w-60 p-2">
             <FilmCard key={i} />
           </div>
         ))}

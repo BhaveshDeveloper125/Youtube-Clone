@@ -40,6 +40,7 @@ import ViewPages from "./Pages/ViewPages/ViewPages.jsx";
 import VideoPlayer from "./Pages/VideoPlayer/VideoPlayer.jsx";
 import PlaylistVideos from "./Pages/PlaylistVideos/PlaylistVideos.jsx";
 import DisplayPost from "./Pages/DisplayPost/DisplayPost.jsx";
+import FilmViewAll from "./Pages/FilmViewAll/FilmViewAll.jsx";
 
 const router = createBrowserRouter([
   {
@@ -219,6 +220,11 @@ const router = createBrowserRouter([
   {
     path: "channelownerPost/:id",
     element: <DisplayPost />,
+  },
+
+  {
+    path: "/film/view/:category",
+    element: <FilmViewAll />,
   },
 ]);
 
