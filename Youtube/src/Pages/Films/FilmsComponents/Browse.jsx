@@ -20,7 +20,7 @@ function Browse() {
             </div>
             <div className="h-fit w-[99%] flex gap-2 p-2 overflow-x-auto ">
               {[...Array(10)].map((_, i) => (
-                <div className="h-80 min-w-60">
+                <div className="h-fit min-w-60">
                   <FilmCard key={i} />
                 </div>
               ))}
