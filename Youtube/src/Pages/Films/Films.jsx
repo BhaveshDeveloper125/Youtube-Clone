@@ -6,7 +6,8 @@ import Browse from "./FilmsComponents/Browse";
 import Purchase from "./FilmsComponents/Purchase";
 
 // Import Icons
-import movie from "../../assets/Gif/cinema.gif";
+// import movie from "../../assets/Gif/cinema.gif";
+import movie from "../../assets/Gif/film.webp";
 
 function Films() {
   const [movies, setmovies] = useState(0);
